@@ -1,0 +1,24 @@
+html, body
+  height: 100%
+
+body
+  transition: padding-left 0.3s ease-out
+
+  @media #{$desktop}
+    padding-left: 250px
+  
+a, a:hover, a:focus
+  text-decoration: none
+
+
+// useful classes
+.fa-double-chevron-left:before,
+.fa-double-chevron-right:before
+  letter-spacing: -0.25rem
+  margin-right: 0.25rem
+
+.fa-double-chevron-left:before
+  content: ''
+
+.fa-double-chevron-right:before
+  content: ''

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Demo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/dist/font-awesome-4.5.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/dist/admin.css">
+    <link rel="stylesheet" href="/src/pages/demo.css">
+  </head>
+
+  <body>
+    <nav>
+      <a id="menu-close" href="#" class="fa fa-angle-left hidden-lg-up pull-right"></a>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#data-table" class="icon fa-user">Data Table</a></li>
+        <li><a href="#forms" class="icon fa-home">Form</a></li>
+        <li><a href="#">Test 1</a></li>
+        <li><a href="#">Test 2</a></li>
+        <li><a href="#" class="icon fa-cog">Test 3</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <a id="user-settings" href="#" class="fa fa-cogs pull-right"></a>
+      <a id="menu-toggle" href="#" class="fa fa-bars hidden-lg-up"></a>
+    </header>
+
+    <section data-link="#data-table">
+      <h1>Table</h1>
+      <section class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Field 1</th>
+              <th>Field 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>001</td>
+              <td>001</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>002</td>
+              <td>002</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>003</td>
+              <td>003</td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>004</td>
+              <td>004</td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>005</td>
+              <td>005</td>
+            </tr>
+            <tr>
+              <td>006</td>
+              <td>006</td>
+              <td>006</td>
+            </tr>
+            <tr>
+              <td>007</td>
+              <td>007</td>
+              <td>007</td>
+            </tr>
+            <tr>
+              <td>008</td>
+              <td>008</td>
+              <td>008</td>
+            </tr>
+            <tr>
+              <td>009</td>
+              <td>009</td>
+              <td>009</td>
+            </tr>
+            <tr>
+              <td>010</td>
+              <td>010</td>
+              <td>010</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav>
+          <p>Showing 333 - 363 of 9999 records.</p>
+          <div>
+            <div class="left">
+              <a class="fa fa-double-chevron-left"></a>
+              <a class="fa fa-chevron-left"></a>
+            </div>
+            <div class="page_num">Page <input type="text" value="333" /> of 999</div>
+            <div class="right">
+              <a class="fa fa-chevron-right"></a>
+              <a class="fa fa-double-chevron-right"></a>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </section>
+
+    <section data-link="#forms">
+      <h1>Forms</h1>
+      <h2>Single</h2>
+      <form class="single">
+        <div>
+          <label for="input1">Test</label>
+          <input id="input1" type="text" value="value" />
+          <p>A help text.</p>
+          <p class="error">An error message</p>
+        </div>
+
+        <div class="error">
+          <label for="input2">Test with error</label>
+          <input id="input2" type="text" value="error value" />
+          <p>A help text.</p>
+          <p class="error">An error message</p>
+        </div>
+      </form>
+    </section>
+
+    <script src="/src/pages/demo.js"></script>
+  </body>
+</html>
