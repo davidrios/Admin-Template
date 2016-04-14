@@ -16,7 +16,6 @@ section.data-table
         margin-top: 0.5rem
 
     > div
-      margin-bottom: 1rem
       display: flex
       flex-wrap: wrap
 
@@ -24,6 +23,8 @@ section.data-table
         display: block
 
     > div > div
+      margin-bottom: 0.5rem
+
       &.page_num
         text-align: center
         order: 1
@@ -40,7 +41,6 @@ section.data-table
       &.left,
       &.right
         width: 50%
-        margin-bottom: 0.5rem
 
         @media #{$phablet}
           width: auto
