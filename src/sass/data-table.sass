@@ -2,6 +2,9 @@ section.data-table
   > table
     @extend .table
 
+    td
+      border-bottom: 1px solid #ECEEEF
+
   > nav
     position: relative
 
@@ -12,14 +15,39 @@ section.data-table
         float: right
         margin-top: 0.5rem
 
+    > div
+      margin-bottom: 1rem
+      display: flex
+      flex-wrap: wrap
+
+      @media #{$phablet}
+        display: block
+
     > div > div
       &.page_num
         text-align: center
+        order: 1
+        width: 100%
+
+        @media #{$phablet}
+          width: auto
+          display: inline-block
+          margin: 0px 0.5rem
+          padding: 0px 0.5rem
+          border-right: 1px solid $button-border-color
+          border-left: 1px solid $button-border-color
+
+      &.left,
+      &.right
+        width: 50%
+        margin-bottom: 0.5rem
+
+        @media #{$phablet}
+          width: auto
+          display: inline-block
 
       &.right
-        position: absolute
-        top: 3.4rem
-        right: 0
+        text-align: right
 
       > a
         @extend .btn, .btn-secondary
@@ -28,20 +56,8 @@ section.data-table
           font-size: 1rem
 
       > input
+        @extend .form-control
+
         width: 7rem
-
-      @media #{$phablet}
+        margin: 0 0.3rem
         display: inline-block
-
-        &.page_num
-          margin: 0px 0.5rem
-          padding: 0px 0.5rem
-          border-right: 1px solid $button-border-color
-          border-left: 1px solid $button-border-color
-
-        &.right
-          position: relative
-          top: 0
-
-        > input
-          margin: 0
