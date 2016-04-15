@@ -118,15 +118,24 @@
         <div>
           <label for="input1">Test</label>
           <input id="input1" type="text" value="value" />
-          <p>A help text.</p>
-          <p class="error">An error message</p>
+          <small>A help text.</small>
+          <small>Another help text.</small>
+          <small class="error">An error message</small>
         </div>
 
-        <div class="error">
+        <fieldset disabled="">
+          <div>
+            <label for="input1">Disabled</label>
+            <input id="input1" type="text" value="value" />
+            <small>A help text.</small>
+          </div>
+        </fieldset>
+
+        <div class="has-danger">
           <label for="input2">Test with error</label>
           <input id="input2" type="text" value="error value" />
-          <p>A help text.</p>
-          <p class="error">An error message</p>
+          <small>A help text.</small>
+          <small class="error">An error message</small>
         </div>
       </form>
     </section>

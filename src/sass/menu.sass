@@ -27,7 +27,7 @@ body > nav:first-child
   transition: left 0.3s ease-out
   z-index: 999
   
-  @media #{$desktop}
+  @include media-breakpoint-up(lg)
     left: 0
   
   &.show

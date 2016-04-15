@@ -1,16 +1,38 @@
-form.single > div
-  margin-bottom: 1.5rem
+form.single
+  max-width: 900px
 
-  > :not(label)
-    margin-bottom: 0
+form.single > div,
+form.single > fieldset > div
+  @extend .form-group
 
-  > *
-    display: block
-    width: 100%
+  &.has-danger
+    color: $brand-danger
 
-  > p
-    font-size: 1.3rem
-    color: lighten($text-color, 30%)
+    > input
+      @extend .form-control-danger
 
-  > p.error
-    display: none
+      color: inherit
+      border-color: $brand-danger
+
+  @include media-breakpoint-up(xl)
+    display: flex
+    flex-wrap: wrap
+
+  > label
+    @include media-breakpoint-up(xl)
+      padding: $input-padding-y $input-padding-x
+      margin-bottom: 0
+      width: 25%
+      text-align: right
+      margin: 0
+
+  > input
+    @extend .form-control
+    @include media-breakpoint-up(xl)
+      width: 75%
+
+  > small
+    @include media-breakpoint-up(xl)
+      width: 100%
+      margin-left: 25%
+      line-height: 1.2

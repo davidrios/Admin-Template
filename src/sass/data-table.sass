@@ -11,7 +11,7 @@ section.data-table
     > p
       margin-bottom: 1rem
 
-      @media #{$desktop-hd}
+      @include media-breakpoint-up(xl)
         float: right
         margin-top: 0.5rem
 
@@ -19,7 +19,7 @@ section.data-table
       display: flex
       flex-wrap: wrap
 
-      @media #{$phablet}
+      @include media-breakpoint-up(sm)
         display: block
 
     > div > div
@@ -30,7 +30,7 @@ section.data-table
         order: 1
         width: 100%
 
-        @media #{$phablet}
+        @include media-breakpoint-up(sm)
           width: auto
           display: inline-block
           margin: 0px 0.5rem
@@ -42,7 +42,7 @@ section.data-table
       &.right
         width: 50%
 
-        @media #{$phablet}
+        @include media-breakpoint-up(sm)
           width: auto
           display: inline-block
 
