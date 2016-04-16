@@ -12,7 +12,7 @@ ul.tagsinput
     &:not(:last-child)
       @extend .label, .label-default
       font-size: 80%
-      
+
       > i
         margin-left: 0.3rem
         cursor: pointer
@@ -55,7 +55,9 @@ form.single > fieldset > div
         position: absolute
         left: 0
 
-  > input
+  > input,
+  > textarea,
+  > select
     @extend .form-control
 
   > .inline-checkboxes,
