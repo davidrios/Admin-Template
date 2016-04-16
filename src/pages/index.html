@@ -36,9 +36,10 @@
         <table>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Field 1</th>
+              <th class="sortable">ID</th>
+              <th class="sortable asc">Field 1</th>
               <th>Field 2</th>
+              <th class="sortable desc">Field 3</th>
             </tr>
           </thead>
           <tbody>
@@ -46,8 +47,10 @@
               <td>001</td>
               <td>001</td>
               <td>001</td>
+              <td>001</td>
             </tr>
             <tr>
+              <td>002</td>
               <td>002</td>
               <td>002</td>
               <td>002</td>
@@ -56,8 +59,10 @@
               <td>003</td>
               <td>003</td>
               <td>003</td>
+              <td>003</td>
             </tr>
             <tr>
+              <td>004</td>
               <td>004</td>
               <td>004</td>
               <td>004</td>
@@ -66,8 +71,10 @@
               <td>005</td>
               <td>005</td>
               <td>005</td>
+              <td>005</td>
             </tr>
             <tr>
+              <td>006</td>
               <td>006</td>
               <td>006</td>
               <td>006</td>
@@ -76,8 +83,10 @@
               <td>007</td>
               <td>007</td>
               <td>007</td>
+              <td>007</td>
             </tr>
             <tr>
+              <td>008</td>
               <td>008</td>
               <td>008</td>
               <td>008</td>
@@ -86,8 +95,10 @@
               <td>009</td>
               <td>009</td>
               <td>009</td>
+              <td>009</td>
             </tr>
             <tr>
+              <td>010</td>
               <td>010</td>
               <td>010</td>
               <td>010</td>
@@ -117,10 +128,8 @@
       <form class="single">
         <div>
           <label for="input1">Test</label>
-          <input id="input1" type="text" value="value" />
+          <input id="input1" type="text" value="" placeholder="test" />
           <small>A help text.</small>
-          <small>Another help text.</small>
-          <small class="error">An error message</small>
         </div>
 
         <fieldset disabled="">
@@ -134,8 +143,26 @@
         <div class="has-danger">
           <label for="input2">Test with error</label>
           <input id="input2" type="text" value="error value" />
-          <small>A help text.</small>
-          <small class="error">An error message</small>
+          <small>A help text. <br/>An error message.</small>
+        </div>
+
+        <div>
+          <label for="input2">Radios</label>
+          <label class="radio"><input type="radio" />Test radio with a long text</label>
+          <label class="radio"><input type="radio" />Another radio</label>
+        </div>
+
+        <div>
+          <label class="checkbox"><input type="checkbox" />Test checkbox 1</label>
+        </div>
+
+        <div>
+          <label>Test checkbox 2</label>
+          <input type="checkbox" />
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </section>

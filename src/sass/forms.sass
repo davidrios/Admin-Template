@@ -1,12 +1,16 @@
-form.single
-  max-width: 900px
-
 form.single > div,
 form.single > fieldset > div
   @extend .form-group
 
+  @include media-breakpoint-up(xl)
+    position: relative
+    padding: 0 20%
+
   &.has-danger
     color: $brand-danger
+
+    > small
+      color: $brand-danger
 
     > input
       @extend .form-control-danger
@@ -14,25 +18,41 @@ form.single > fieldset > div
       color: inherit
       border-color: $brand-danger
 
-  @include media-breakpoint-up(xl)
-    display: flex
-    flex-wrap: wrap
-
   > label
     @include media-breakpoint-up(xl)
       padding: $input-padding-y $input-padding-x
-      margin-bottom: 0
-      width: 25%
+      width: 20%
       text-align: right
       margin: 0
+      position: absolute
+      left: 0
+
+    &.checkbox, &.radio
+      padding-left: 1.3rem
+
+      @include media-breakpoint-up(xl)
+        position: relative
+        width: auto
+        text-align: left
+
+        > input[type='checkbox'],
+        > input[type='radio']
+          margin-left: -1.3rem
 
   > input
     @extend .form-control
+
+  > input[type='checkbox']
+    width: auto
     @include media-breakpoint-up(xl)
-      width: 75%
+      height: 2.2rem
 
   > small
+    @extend .text-muted
+
     @include media-breakpoint-up(xl)
       width: 100%
-      margin-left: 25%
-      line-height: 1.2
+      margin-top: 0.1rem
+
+  > button[type='submit']
+    @extend .btn, .btn-primary

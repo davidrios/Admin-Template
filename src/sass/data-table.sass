@@ -5,6 +5,21 @@ section.data-table
     td
       border-bottom: 1px solid #ECEEEF
 
+    th.sortable
+      cursor: pointer
+
+      &:after
+        @extend %fa-font-settings
+        content: ''
+        float: right
+        padding: 0.25rem 0
+
+      &.asc:after
+        content: ''
+
+      &.desc:after
+        content: ''
+
   > nav
     position: relative
 
