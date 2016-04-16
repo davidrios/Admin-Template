@@ -19,32 +19,34 @@ form.single > fieldset > div
       border-color: $brand-danger
 
   > label
-    display: block
+    padding: $input-padding-y $input-padding-x $input-padding-y 0
+    margin-bottom: 0
 
-    @include media-breakpoint-up(xl)
-      padding: $input-padding-y $input-padding-x
-      width: 20%
-      text-align: right
-      margin: 0
-      position: absolute
-      left: 0
-
-    &.checkbox, &.radio
-      padding-left: 1.3rem
-      display: inline-block
-      margin-right: 1rem
+    &:first-child
+      display: block
 
       @include media-breakpoint-up(xl)
-        position: relative
-        width: auto
-        text-align: left
-
-        > input[type='checkbox'],
-        > input[type='radio']
-          margin-left: -1.3rem
+        width: 20%
+        text-align: right
+        margin: 0
+        position: absolute
+        left: 0
 
   > input
     @extend .form-control
+
+  > .inline-checkboxes,
+  > .inline-radios
+    > label
+      padding: $input-padding-y $input-padding-x
+      padding-left: 1.3rem
+      display: inline-block
+      margin-bottom: 0
+
+      > input[type='checkbox'],
+      > input[type='radio']
+        margin-left: -1.3rem
+        margin-right: 0.3rem
 
   > input[type='checkbox']
     width: auto
