@@ -1,3 +1,27 @@
+ul.tagsinput
+  @extend .form-control
+  list-style: none
+  cursor: text
+
+  &.active
+    @extend .form-control:focus
+
+  > li
+    display: inline-block
+
+    &:not(:last-child)
+      @extend .label, .label-default
+      font-size: 80%
+      
+      > i
+        margin-left: 0.3rem
+        cursor: pointer
+        padding: 0.15rem
+
+    > input
+      border: 0
+      font-size: 0.8rem
+
 form.single > div,
 form.single > fieldset > div
   @extend .form-group
@@ -14,7 +38,6 @@ form.single > fieldset > div
 
     > input
       @extend .form-control-danger
-
       color: inherit
       border-color: $brand-danger
 
