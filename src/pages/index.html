@@ -134,31 +134,35 @@
 
         <fieldset disabled="">
           <div>
-            <label for="input1">Disabled</label>
-            <input id="input1" type="text" value="value" />
+            <label for="input2">Disabled</label>
+            <input id="input2" type="text" value="value" />
             <small>A help text.</small>
           </div>
         </fieldset>
 
         <div class="has-danger">
-          <label for="input2">Test with error</label>
-          <input id="input2" type="text" value="error value" />
+          <label for="input3">Test with error</label>
+          <input id="input3" type="text" value="error value" />
           <small>A help text. <br/>An error message.</small>
         </div>
 
         <div>
-          <label for="input2">Radios</label>
-          <label class="radio"><input type="radio" />Test radio with a long text</label>
-          <label class="radio"><input type="radio" />Another radio</label>
+          <label>Radio choices</label>
+          <label class="radio"><input type="radio" name="radiochoice" />Test radio with a long text</label>
+          <label class="radio"><input type="radio" name="radiochoice" />Another radio</label>
+          <label class="radio"><input type="radio" name="radiochoice" />Other choice</label>
         </div>
 
         <div>
-          <label class="checkbox"><input type="checkbox" />Test checkbox 1</label>
+          <label>Multiple checkbox choices</label>
+          <label class="checkbox"><input type="checkbox" />choice 1</label>
+          <label class="checkbox"><input type="checkbox" />choice 2</label>
+          <label class="checkbox"><input type="checkbox" />choice 3</label>
         </div>
 
         <div>
-          <label>Test checkbox 2</label>
-          <input type="checkbox" />
+          <label for="single-checkbox">Single yes/no checkbox</label>
+          <input id="single-checkbox" type="checkbox" />
         </div>
 
         <div>
