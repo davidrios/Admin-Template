@@ -72,4 +72,50 @@
   window.addEventListener('hashchange', handleHashChange);
   handleHashChange({newURL: window.location.toString(), oldURL: null});
   // END CONTENT
+
+  // TAGS INPUT
+  var tagsInputs = document.querySelectorAll('ul.tags-input');
+  for (var i = 0; i < tagsInputs.length; i++) {
+    !function() {
+      var tagsInput = tagsInputs[i];
+      var textField = tagsInput.querySelector('input');
+
+      tagsInput.addEventListener('click', function(ev) {
+        textField.focus();
+      });
+
+      textField.addEventListener('blur', function(ev) {
+        tagsInput.classList.remove('active');
+      });
+
+      textField.addEventListener('focus', function(ev) {
+        tagsInput.classList.add('active');
+      });
+    }();
+  }
+  // END TAGS INPUT
+
+  // MODIFIERS INPUT
+  var modifiersInputs = document.querySelectorAll('ul.modifiers-input');
+  for (var i = 0; i < modifiersInputs.length; i++) {
+    var modifiersInput = modifiersInputs[i];
+
+    for (var j = 0; j < modifiersInput.children.length; j++) {
+      !function() {
+        var item = modifiersInput.children[j];
+        var inputs = item.querySelectorAll('input');
+
+        for (var k = 0; k < inputs.length; k++) {
+          inputs[k].addEventListener('blur', function(ev) {
+            item.classList.remove('active');
+          });
+
+          inputs[k].addEventListener('focus', function(ev) {
+            item.classList.add('active');
+          });
+        }
+      }();
+    }
+  }
+  // END MODIFIERS INPUT
 }();

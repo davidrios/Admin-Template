@@ -1,0 +1,58 @@
+ul.tags-input
+  @extend .form-control
+  list-style: none
+  cursor: text
+
+  &.active
+    @extend .form-control:focus
+
+  > li
+    display: inline-block
+    margin-bottom: 1px
+
+    &:not(:last-child)
+      @extend .label, .label-default
+      font-size: 80%
+
+      > i
+        margin-left: 0.3rem
+        cursor: pointer
+        padding: 0.15rem
+
+    > input
+      border: 0
+      padding: 0 0 0 0.2rem
+      outline: none
+
+
+ul.modifiers-input
+  list-style: none
+  padding: 0
+
+  > li
+    margin-bottom: 0.6rem
+
+    &.active
+      > ul,
+      > input
+        @extend .form-control:focus
+
+      > input
+        border-bottom-color: $input-border-color
+
+    > i
+      cursor: pointer
+      padding: 0.25rem
+
+    > input
+      @extend .form-control
+      display: inline-block
+      width: 14rem
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      border-bottom-style: dashed
+
+    > ul
+      @extend ul.tags-input
+      margin-top: -1px
+      border-top-left-radius: 0

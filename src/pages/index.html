@@ -18,8 +18,8 @@
       <h2>Menu</h2>
       <ul>
         <li><a href="#data-table" class="icon fa-user">Data Table</a></li>
-        <li><a href="#forms" class="icon fa-home">Form</a></li>
-        <li><a href="#">Test 1</a></li>
+        <li><a href="#forms" class="icon fa-home">Simple Form</a></li>
+        <li><a href="#forms2">Form Components</a></li>
         <li><a href="#">Test 2</a></li>
         <li><a href="#" class="icon fa-cog">Test 3</a></li>
       </ul>
@@ -206,12 +206,48 @@
         </div>
 
         <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <section data-link="#forms2">
+      <h1>Form Components</h1>
+      <form class="single">
+        <div>
           <label for="tags-input">Tags input</label>
-          <ul class="tagsinput">
+          <ul class="tags-input">
             <li>tag1<i class="fa fa-close"></i></li>
             <li>tag2<i class="fa fa-close"></i></li>
             <li>other tag<i class="fa fa-close"></i></li>
+            <li>tag3<i class="fa fa-close"></i></li>
+            <li>tag4<i class="fa fa-close"></i></li>
+            <li>yet another tag<i class="fa fa-close"></i></li>
             <li><input id="tags-input" type="text" /></li>
+          </ul>
+        </div>
+
+        <div>
+          <label>Modifiers input</label>
+          <ul class="modifiers-input">
+            <li>
+              <input type="text" value="modifier1" />
+              <i class="fa fa-close"></i>
+              <ul>
+                <li>val1<i class="fa fa-close"></i></li>
+                <li>val2<i class="fa fa-close"></i></li>
+                <li><input id="tags-input" type="text" /></li>
+              </ul>
+            </li>
+            <li>
+              <input type="text" value="modifier2" />
+              <i class="fa fa-close"></i>
+              <ul>
+                <li>2val1<i class="fa fa-close"></i></li>
+                <li>2val2<i class="fa fa-close"></i></li>
+                <li><input id="tags-input" type="text" value="2newval" /></li>
+              </ul>
+            </li>
           </ul>
         </div>
 
