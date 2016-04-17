@@ -60,12 +60,16 @@ form.single > fieldset > div
   > select
     @extend .form-control
 
-  > .inline-checkboxes,
-  > .inline-radios
+  > .checkboxes,
+  > .radios
+    &.inline
+      > label
+        display: inline-block
+        
     > label
       padding: $input-padding-y $input-padding-x
       padding-left: 1.3rem
-      display: inline-block
+      display: block
       margin-bottom: 0
 
       > input[type='checkbox'],
