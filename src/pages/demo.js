@@ -2,6 +2,7 @@
   var menuElement = document.querySelector('body > nav:first-child');
   function menuToggleClick(ev) {
     ev.preventDefault();
+    ev.stopPropagation();
     menuElement.classList.toggle('show');
   }
 
@@ -12,6 +13,10 @@
   document
     .getElementById('menu-close')
     .addEventListener('click', menuToggleClick);
+
+  document.addEventListener('click', function(ev) {
+    menuElement.classList.remove('show');
+  });
 
   // MENU ITEMS
   var menuListItems = menuElement.querySelectorAll('ul > li');
@@ -104,6 +109,10 @@
       !function() {
         var item = modifiersInput.children[j];
         var inputs = item.querySelectorAll('input');
+
+        item.querySelector('ul').addEventListener('click', function(ev) {
+          inputs[1].focus();
+        });
 
         for (var k = 0; k < inputs.length; k++) {
           inputs[k].addEventListener('blur', function(ev) {

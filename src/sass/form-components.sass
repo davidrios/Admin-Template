@@ -31,6 +31,8 @@ ul.modifiers-input
 
   > li
     margin-bottom: 0.6rem
+    @include media-breakpoint-up(md)
+      display: flex
 
     &.active
       > ul,
@@ -38,21 +40,44 @@ ul.modifiers-input
         @extend .form-control:focus
 
       > input
-        border-bottom-color: $input-border-color
+        @include media-breakpoint-down(sm)
+          border-bottom-color: $input-border-color
+
+      > ul
+        @include media-breakpoint-up(md)
+          border-left-color: $input-border-color
 
     > i
       cursor: pointer
       padding: 0.25rem
 
+      @include media-breakpoint-up(md)
+        order: 0
+        padding: $input-padding-x $input-padding-x 0 0
+
     > input
       @extend .form-control
       display: inline-block
       width: 14rem
-      border-bottom-left-radius: 0
       border-bottom-right-radius: 0
-      border-bottom-style: dashed
+      
+      @include media-breakpoint-down(sm)
+        border-bottom-left-radius: 0
+        border-bottom-style: dashed
+
+      @include media-breakpoint-up(md)
+        order: 1
+        border-top-right-radius: 0
 
     > ul
       @extend ul.tags-input
-      margin-top: -1px
       border-top-left-radius: 0
+
+      @include media-breakpoint-down(sm)
+        margin-top: -1px
+
+      @include media-breakpoint-up(md)
+        order: 2
+        margin-left: -1px
+        border-bottom-left-radius: 0
+        border-left-style: dashed
