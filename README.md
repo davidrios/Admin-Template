@@ -1,6 +1,6 @@
 # Admin Template
 
-A basic, pure CSS, bootstrap 4 based admin template, with the goal of requiring as little manual styling as possible.
+A basic, pure CSS, mobile-first, bootstrap4-based admin template, with the goal of requiring as little manual styling as possible.
 
 Check out the demo at <https://davidrios.github.io/Admin-Template>.
 
