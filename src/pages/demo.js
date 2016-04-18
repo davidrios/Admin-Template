@@ -127,4 +127,21 @@
     }
   }
   // END MODIFIERS INPUT
+
+  // SEARCHABLE SELECT
+  var searchableSelects = document.querySelectorAll('div.searchable-select');
+  for (var i = 0; i < modifiersInputs.length; i++) {
+    !function() {
+      var select = searchableSelects[i];
+      var ul = select.querySelector('ul');
+      var input = select.querySelector('input');
+
+      select.addEventListener('click', function(ev) {
+        if (ev.target !== input) {
+          ul.classList.toggle('visible');
+        }
+      });
+    }();
+  }
+  // END SEARCHABLE SELECT
 }();

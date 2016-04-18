@@ -5,3 +5,7 @@ body > section {
 body > section.active {
 	display: block;
 }
+
+.visible {
+	display: block !important;
+}

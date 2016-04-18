@@ -80,3 +80,31 @@ ul.modifiers-input
       @include media-breakpoint-up(md)
         order: 2
         margin-left: -1px
+
+
+div.searchable-select
+  @extend .btn, .btn-secondary
+  position: relative
+
+  > select
+    display: none
+
+  > span:after
+    @extend %fa-font-settings
+    content: ''
+    float: right
+    margin-left: 1rem
+
+  > ul
+    @extend .dropdown-menu
+    cursor: default
+
+    > li:not(.divider)
+      @extend .dropdown-item
+
+    > li.divider
+      @extend .dropdown-divider
+
+    > li > input
+      @extend .form-control
+      min-width: 15rem
