@@ -139,6 +139,9 @@
       select.addEventListener('click', function(ev) {
         if (ev.target !== input) {
           ul.classList.toggle('visible');
+          if (ul.classList.contains('visible')) {
+            input.focus();
+          }
         }
       });
     }();

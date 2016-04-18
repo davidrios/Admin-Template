@@ -98,12 +98,25 @@ div.searchable-select
   > ul
     @extend .dropdown-menu
     cursor: default
+    overflow: auto
 
-    > li:not(.divider)
+    @include media-breakpoint-down(sm)
+      position: fixed
+      top: 0
+      height: 100%
+      padding-top: 3.7rem
+
+      > li:first-child
+        position: fixed
+        top: 3px
+        background-color: #FFF
+
+    > li:first-child
+      border-bottom: 1px solid $dropdown-divider-bg
+      padding: 8px 20px
+
+    > li
       @extend .dropdown-item
-
-    > li.divider
-      @extend .dropdown-divider
 
     > li > input
       @extend .form-control
