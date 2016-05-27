@@ -4,7 +4,7 @@ A basic, pure CSS, mobile-first, bootstrap4-based admin template, with the goal 
 
 Check out the demo at <https://davidrios.github.io/Admin-Template>.
 
-React components coming soon!
+[React components](https://github.com/davidrios/admin-components)
 
 
 ## Dev
