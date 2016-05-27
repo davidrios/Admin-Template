@@ -1,6 +1,10 @@
 # Admin Template
 
-A minimalist admin template, requiring as little manual styling as possible.
+A basic, pure CSS, mobile-first, bootstrap4-based admin template, with the goal of requiring as little manual styling as possible.
+
+Check out the demo at <https://davidrios.github.io/Admin-Template>.
+
+React components coming soon!
 
 
 ## Dev
