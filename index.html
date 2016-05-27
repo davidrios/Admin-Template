@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Demo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="demo.css">
+  </head>
+
+  <body>
+    <nav>
+      <a id="menu-close" href="#" class="fa fa-angle-left hidden-lg-up pull-right"></a>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#data-table" class="icon fa-user">Data Table</a></li>
+        <li><a href="#forms" class="icon fa-home">Simple Form</a></li>
+        <li><a href="#forms2">Form Components</a></li>
+        <li><a href="#">Test 2</a></li>
+        <li><a href="#" class="icon fa-cog">Test 3</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <a id="user-settings" href="#" class="fa fa-cogs pull-right"></a>
+      <a id="menu-toggle" href="#" class="fa fa-bars hidden-lg-up"></a>
+    </header>
+
+    <section data-link="#data-table">
+      <h1>Table</h1>
+      <section class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="sortable">ID</th>
+              <th class="sortable asc">Field 1</th>
+              <th>Field 2</th>
+              <th class="sortable desc">Field 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>001</td>
+              <td>001</td>
+              <td>001</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>002</td>
+              <td>002</td>
+              <td>002</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>003</td>
+              <td>003</td>
+              <td>003</td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>004</td>
+              <td>004</td>
+              <td>004</td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>005</td>
+              <td>005</td>
+              <td>005</td>
+            </tr>
+            <tr>
+              <td>006</td>
+              <td>006</td>
+              <td>006</td>
+              <td>006</td>
+            </tr>
+            <tr>
+              <td>007</td>
+              <td>007</td>
+              <td>007</td>
+              <td>007</td>
+            </tr>
+            <tr>
+              <td>008</td>
+              <td>008</td>
+              <td>008</td>
+              <td>008</td>
+            </tr>
+            <tr>
+              <td>009</td>
+              <td>009</td>
+              <td>009</td>
+              <td>009</td>
+            </tr>
+            <tr>
+              <td>010</td>
+              <td>010</td>
+              <td>010</td>
+              <td>010</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav>
+          <p>Showing 333 - 363 of 9999 records.</p>
+          <div>
+            <div class="left">
+              <a class="fa fa-double-chevron-left"></a>
+              <a class="fa fa-chevron-left"></a>
+            </div>
+            <div class="page_num">Page <input type="text" value="333" /> of 999</div>
+            <div class="right">
+              <a class="fa fa-chevron-right"></a>
+              <a class="fa fa-double-chevron-right"></a>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </section>
+
+    <section data-link="#forms">
+      <h1>Forms</h1>
+      <h2>Single</h2>
+      <form class="single">
+        <div>
+          <label for="input1">Test</label>
+          <input id="input1" type="text" value="" placeholder="test" />
+          <small>A help text.</small>
+        </div>
+
+        <fieldset disabled="">
+          <div>
+            <label for="input2">Disabled</label>
+            <input id="input2" type="text" value="value" />
+            <small>A help text.</small>
+          </div>
+        </fieldset>
+
+        <div class="has-danger">
+          <label for="input3">Test with error</label>
+          <input id="input3" type="text" value="error value" />
+          <small>A help text. <br/>An error message.</small>
+        </div>
+
+        <div>
+          <label for="input4">Text area</label>
+          <textarea id="input4">Example text</textarea>
+        </div>
+
+        <div>
+          <label for="exampleSelect1">Single select</label>
+          <select id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="exampleSelect2">Multiple select</label>
+          <select id="exampleSelect2" multiple>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Radio choices</label>
+          <div class="radios">
+            <label><input type="radio" name="radiochoice" />Test radio with a long text</label>
+            <label><input type="radio" name="radiochoice" />Another radio</label>
+            <label><input type="radio" name="radiochoice" />Other choice</label>
+          </div>
+        </div>
+
+        <div>
+          <label>Radio inline choices</label>
+          <div class="radios inline">
+            <label><input type="radio" name="radiochoice" />Test radio with a long text</label>
+            <label><input type="radio" name="radiochoice" />Another radio</label>
+            <label><input type="radio" name="radiochoice" />Other choice</label>
+          </div>
+        </div>
+
+        <div>
+          <label>Multiple checkbox choices</label>
+          <div class="checkboxes inline">
+            <label><input type="checkbox" />choice 1</label>
+            <label><input type="checkbox" />choice 2</label>
+            <label><input type="checkbox" />choice 3</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="single-checkbox">Single yes/no checkbox</label>
+          <input id="single-checkbox" type="checkbox" />
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <section data-link="#forms2">
+      <h1>Form Components</h1>
+      <form class="single">
+        <div>
+          <label for="tags-input">Tags input</label>
+          <ul class="tags-input">
+            <li>tag1<i class="fa fa-close"></i></li>
+            <li>tag2<i class="fa fa-close"></i></li>
+            <li>other tag<i class="fa fa-close"></i></li>
+            <li>tag3<i class="fa fa-close"></i></li>
+            <li>tag4<i class="fa fa-close"></i></li>
+            <li>yet another tag<i class="fa fa-close"></i></li>
+            <li><input id="tags-input" type="text" /></li>
+          </ul>
+        </div>
+        <div><label for="tags-input">Tags input no spaces</label><ul class="tags-input nospaces"><li>tag1<i class="fa fa-close"></i></li><li>tag2<i class="fa fa-close"></i></li><li>other tag<i class="fa fa-close"></i></li><li>tag3<i class="fa fa-close"></i></li><li>tag4<i class="fa fa-close"></i></li><li>yet another tag<i class="fa fa-close"></i></li><li><input id="tags-input" type="text" /></li></ul></div>
+
+        <div>
+          <label>Modifiers input</label>
+          <ul class="modifiers-input">
+            <li>
+              <input type="text" value="modifier1" />
+              <i class="fa fa-close"></i>
+              <ul>
+                <li>val1<i class="fa fa-close"></i></li>
+                <li>val2<i class="fa fa-close"></i></li>
+                <li>val2<i class="fa fa-close"></i></li>
+                <li>val2<i class="fa fa-close"></i></li>
+                <li>val2<i class="fa fa-close"></i></li>
+                <li>val2<i class="fa fa-close"></i></li>
+                <li>val2<i class="fa fa-close"></i></li>
+                <li><input id="tags-input" type="text" /></li>
+              </ul>
+            </li>
+            <li>
+              <input type="text" value="modifier2" />
+              <i class="fa fa-close"></i>
+              <ul>
+                <li>2val1<i class="fa fa-close"></i></li>
+                <li>2val2<i class="fa fa-close"></i></li>
+                <li><input id="tags-input" type="text" value="2newval" /></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <label>Searchable Select</label>
+          <div class="searchable-select">
+            <select>
+              <option>1</option>
+              <option>2</option>
+            </select>
+            <span>Selected value</span>
+            <ul>
+              <li><input type="text" /></li>
+              <li>Value 1</li>
+              <li>Value 2</li>
+              <li>Value 3</li>
+              <li>Value 4</li>
+              <li>Value 5</li>
+              <li>Value 6</li>
+              <li>Value 7</li>
+              <li>Value 8</li>
+              <li>Value 9</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="demo.js"></script>
+  </body>
+</html>

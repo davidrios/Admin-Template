@@ -1,0 +1,11 @@
+body > section {
+	display: none;
+}
+
+body > section.active {
+	display: block;
+}
+
+.visible {
+	display: block !important;
+}
