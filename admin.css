@@ -233,12 +233,13 @@ th {
   .navbar {
     display: none; }
   .btn > .caret, section.data-table > nav > div > div > a > .caret, form.single > div > button[type='submit'] > .caret,
-  form.single > fieldset > div > button[type='submit'] > .caret, div.searchable-select > .caret,
+  form.single > fieldset > div > button[type='submit'] > .caret, ul.modifiers-input > li > button > .caret, div.searchable-select > .caret,
   .dropup > .btn > .caret, section.data-table > nav > div >
   div.dropup > a > .caret, form.single >
   div.dropup > button[type='submit'] > .caret,
   form.single > fieldset >
-  div.dropup > button[type='submit'] > .caret,
+  div.dropup > button[type='submit'] > .caret, ul.modifiers-input >
+  li.dropup > button > .caret,
   .dropup > div.searchable-select > .caret {
     border-top-color: #000 !important; }
   .label, ul.tags-input > li:not(:last-child), ul.modifiers-input > li > ul > li:not(:last-child) {
@@ -1673,6 +1674,7 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single.input-group-sm > div.input-group-btn > button.form-control-static[type='submit'],
   form.single >
   fieldset.input-group-sm > div.input-group-btn > button.form-control-static[type='submit'],
+  ul.modifiers-input.input-group-sm > li.input-group-btn > button.form-control-static,
   .input-group-sm > .input-group-btn > div.form-control-static.searchable-select, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, section.data-table > nav > div > div.input-group-lg > input.form-control-static, form.single > div.input-group-lg > input.form-control-static,
   form.single > div.input-group-lg > textarea.form-control-static,
   form.single > div.input-group-lg > select.form-control-static,
@@ -1685,6 +1687,7 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single.input-group-lg > div.input-group-btn > button.form-control-static[type='submit'],
   form.single >
   fieldset.input-group-lg > div.input-group-btn > button.form-control-static[type='submit'],
+  ul.modifiers-input.input-group-lg > li.input-group-btn > button.form-control-static,
   .input-group-lg > .input-group-btn > div.form-control-static.searchable-select {
     padding-right: 0;
     padding-left: 0; }
@@ -1701,6 +1704,7 @@ div.input-group-sm > div.input-group-btn > a,
 form.single.input-group-sm > div.input-group-btn > button[type='submit'],
 form.single >
 fieldset.input-group-sm > div.input-group-btn > button[type='submit'],
+ul.modifiers-input.input-group-sm > li.input-group-btn > button,
 .input-group-sm > .input-group-btn > div.searchable-select {
   padding: 0.275rem 0.75rem;
   font-size: 0.875rem;
@@ -1719,6 +1723,7 @@ div.input-group-lg > div.input-group-btn > a,
 form.single.input-group-lg > div.input-group-btn > button[type='submit'],
 form.single >
 fieldset.input-group-lg > div.input-group-btn > button[type='submit'],
+ul.modifiers-input.input-group-lg > li.input-group-btn > button,
 .input-group-lg > .input-group-btn > div.searchable-select {
   padding: 0.75rem 1.25rem;
   font-size: 1.25rem;
@@ -1955,7 +1960,7 @@ form.single > fieldset > div.has-danger > input {
     top: 0; } }
 
 .btn, section.data-table > nav > div > div > a, form.single > div > button[type='submit'],
-form.single > fieldset > div > button[type='submit'], div.searchable-select {
+form.single > fieldset > div > button[type='submit'], ul.modifiers-input > li > button, div.searchable-select {
   display: inline-block;
   font-weight: normal;
   text-align: center;
@@ -1969,30 +1974,30 @@ form.single > fieldset > div > button[type='submit'], div.searchable-select {
   line-height: 1.5;
   border-radius: 0.25rem; }
   .btn:focus, section.data-table > nav > div > div > a:focus, form.single > div > button[type='submit']:focus,
-  form.single > fieldset > div > button[type='submit']:focus, div.searchable-select:focus, .btn.focus, section.data-table > nav > div > div > a.focus, form.single > div > button.focus[type='submit'],
-  form.single > fieldset > div > button.focus[type='submit'], div.focus.searchable-select, .btn:active:focus, section.data-table > nav > div > div > a:active:focus, form.single > div > button[type='submit']:active:focus,
-  form.single > fieldset > div > button[type='submit']:active:focus, div.searchable-select:active:focus, .btn:active.focus, section.data-table > nav > div > div > a:active.focus, form.single > div > button[type='submit']:active.focus,
-  form.single > fieldset > div > button[type='submit']:active.focus, div.searchable-select:active.focus, .btn.active:focus, section.data-table > nav > div > div > a.active:focus, form.single > div > button.active[type='submit']:focus,
-  form.single > fieldset > div > button.active[type='submit']:focus, div.active.searchable-select:focus, .btn.active.focus, section.data-table > nav > div > div > a.active.focus, form.single > div > button.active.focus[type='submit'],
-  form.single > fieldset > div > button.active.focus[type='submit'], div.active.focus.searchable-select {
+  form.single > fieldset > div > button[type='submit']:focus, ul.modifiers-input > li > button:focus, div.searchable-select:focus, .btn.focus, section.data-table > nav > div > div > a.focus, form.single > div > button.focus[type='submit'],
+  form.single > fieldset > div > button.focus[type='submit'], ul.modifiers-input > li > button.focus, div.focus.searchable-select, .btn:active:focus, section.data-table > nav > div > div > a:active:focus, form.single > div > button[type='submit']:active:focus,
+  form.single > fieldset > div > button[type='submit']:active:focus, ul.modifiers-input > li > button:active:focus, div.searchable-select:active:focus, .btn:active.focus, section.data-table > nav > div > div > a:active.focus, form.single > div > button[type='submit']:active.focus,
+  form.single > fieldset > div > button[type='submit']:active.focus, ul.modifiers-input > li > button:active.focus, div.searchable-select:active.focus, .btn.active:focus, section.data-table > nav > div > div > a.active:focus, form.single > div > button.active[type='submit']:focus,
+  form.single > fieldset > div > button.active[type='submit']:focus, ul.modifiers-input > li > button.active:focus, div.active.searchable-select:focus, .btn.active.focus, section.data-table > nav > div > div > a.active.focus, form.single > div > button.active.focus[type='submit'],
+  form.single > fieldset > div > button.active.focus[type='submit'], ul.modifiers-input > li > button.active.focus, div.active.focus.searchable-select {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:focus, section.data-table > nav > div > div > a:focus, form.single > div > button[type='submit']:focus,
-  form.single > fieldset > div > button[type='submit']:focus, div.searchable-select:focus, .btn:hover, section.data-table > nav > div > div > a:hover, form.single > div > button[type='submit']:hover,
-  form.single > fieldset > div > button[type='submit']:hover, div.searchable-select:hover {
+  form.single > fieldset > div > button[type='submit']:focus, ul.modifiers-input > li > button:focus, div.searchable-select:focus, .btn:hover, section.data-table > nav > div > div > a:hover, form.single > div > button[type='submit']:hover,
+  form.single > fieldset > div > button[type='submit']:hover, ul.modifiers-input > li > button:hover, div.searchable-select:hover {
     text-decoration: none; }
   .btn.focus, section.data-table > nav > div > div > a.focus, form.single > div > button.focus[type='submit'],
-  form.single > fieldset > div > button.focus[type='submit'], div.focus.searchable-select {
+  form.single > fieldset > div > button.focus[type='submit'], ul.modifiers-input > li > button.focus, div.focus.searchable-select {
     text-decoration: none; }
   .btn:active, section.data-table > nav > div > div > a:active, form.single > div > button[type='submit']:active,
-  form.single > fieldset > div > button[type='submit']:active, div.searchable-select:active, .btn.active, section.data-table > nav > div > div > a.active, form.single > div > button.active[type='submit'],
-  form.single > fieldset > div > button.active[type='submit'], div.active.searchable-select {
+  form.single > fieldset > div > button[type='submit']:active, ul.modifiers-input > li > button:active, div.searchable-select:active, .btn.active, section.data-table > nav > div > div > a.active, form.single > div > button.active[type='submit'],
+  form.single > fieldset > div > button.active[type='submit'], ul.modifiers-input > li > button.active, div.active.searchable-select {
     background-image: none;
     outline: 0; }
   .btn.disabled, section.data-table > nav > div > div > a.disabled, form.single > div > button.disabled[type='submit'],
-  form.single > fieldset > div > button.disabled[type='submit'], div.disabled.searchable-select, .btn:disabled, section.data-table > nav > div > div > a:disabled, form.single > div > button[type='submit']:disabled,
-  form.single > fieldset > div > button[type='submit']:disabled, div.searchable-select:disabled {
+  form.single > fieldset > div > button.disabled[type='submit'], ul.modifiers-input > li > button.disabled, div.disabled.searchable-select, .btn:disabled, section.data-table > nav > div > div > a:disabled, form.single > div > button[type='submit']:disabled,
+  form.single > fieldset > div > button[type='submit']:disabled, ul.modifiers-input > li > button:disabled, div.searchable-select:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
@@ -2063,43 +2068,47 @@ form.single > fieldset > div > button[type='submit'] {
     background-color: #0275d8;
     border-color: #0275d8; }
 
-.btn-secondary, section.data-table > nav > div > div > a, div.searchable-select {
+.btn-secondary, section.data-table > nav > div > div > a, ul.modifiers-input > li > button, div.searchable-select {
   color: #373a3c;
   background-color: #fff;
   border-color: #ccc; }
-  .btn-secondary:hover, section.data-table > nav > div > div > a:hover, div.searchable-select:hover {
+  .btn-secondary:hover, section.data-table > nav > div > div > a:hover, ul.modifiers-input > li > button:hover, div.searchable-select:hover {
     color: #373a3c;
     background-color: #e6e6e6;
     border-color: #adadad; }
-  .btn-secondary:focus, section.data-table > nav > div > div > a:focus, div.searchable-select:focus, .btn-secondary.focus, section.data-table > nav > div > div > a.focus, div.focus.searchable-select {
+  .btn-secondary:focus, section.data-table > nav > div > div > a:focus, ul.modifiers-input > li > button:focus, div.searchable-select:focus, .btn-secondary.focus, section.data-table > nav > div > div > a.focus, ul.modifiers-input > li > button.focus, div.focus.searchable-select {
     color: #373a3c;
     background-color: #e6e6e6;
     border-color: #adadad; }
-  .btn-secondary:active, section.data-table > nav > div > div > a:active, div.searchable-select:active, .btn-secondary.active, section.data-table > nav > div > div > a.active, div.active.searchable-select,
+  .btn-secondary:active, section.data-table > nav > div > div > a:active, ul.modifiers-input > li > button:active, div.searchable-select:active, .btn-secondary.active, section.data-table > nav > div > div > a.active, ul.modifiers-input > li > button.active, div.active.searchable-select,
   .open > .btn-secondary.dropdown-toggle, section.data-table > nav > div >
-  div.open > a.dropdown-toggle,
+  div.open > a.dropdown-toggle, ul.modifiers-input >
+  li.open > button.dropdown-toggle,
   .open > div.dropdown-toggle.searchable-select {
     color: #373a3c;
     background-color: #e6e6e6;
     border-color: #adadad;
     background-image: none; }
-    .btn-secondary:active:hover, section.data-table > nav > div > div > a:active:hover, div.searchable-select:active:hover, .btn-secondary:active:focus, section.data-table > nav > div > div > a:active:focus, div.searchable-select:active:focus, .btn-secondary:active.focus, section.data-table > nav > div > div > a:active.focus, div.searchable-select:active.focus, .btn-secondary.active:hover, section.data-table > nav > div > div > a.active:hover, div.active.searchable-select:hover, .btn-secondary.active:focus, section.data-table > nav > div > div > a.active:focus, div.active.searchable-select:focus, .btn-secondary.active.focus, section.data-table > nav > div > div > a.active.focus, div.active.focus.searchable-select,
+    .btn-secondary:active:hover, section.data-table > nav > div > div > a:active:hover, ul.modifiers-input > li > button:active:hover, div.searchable-select:active:hover, .btn-secondary:active:focus, section.data-table > nav > div > div > a:active:focus, ul.modifiers-input > li > button:active:focus, div.searchable-select:active:focus, .btn-secondary:active.focus, section.data-table > nav > div > div > a:active.focus, ul.modifiers-input > li > button:active.focus, div.searchable-select:active.focus, .btn-secondary.active:hover, section.data-table > nav > div > div > a.active:hover, ul.modifiers-input > li > button.active:hover, div.active.searchable-select:hover, .btn-secondary.active:focus, section.data-table > nav > div > div > a.active:focus, ul.modifiers-input > li > button.active:focus, div.active.searchable-select:focus, .btn-secondary.active.focus, section.data-table > nav > div > div > a.active.focus, ul.modifiers-input > li > button.active.focus, div.active.focus.searchable-select,
     .open > .btn-secondary.dropdown-toggle:hover, section.data-table > nav > div >
-    div.open > a.dropdown-toggle:hover,
+    div.open > a.dropdown-toggle:hover, ul.modifiers-input >
+    li.open > button.dropdown-toggle:hover,
     .open > div.dropdown-toggle.searchable-select:hover,
     .open > .btn-secondary.dropdown-toggle:focus, section.data-table > nav > div >
-    div.open > a.dropdown-toggle:focus,
+    div.open > a.dropdown-toggle:focus, ul.modifiers-input >
+    li.open > button.dropdown-toggle:focus,
     .open > div.dropdown-toggle.searchable-select:focus,
     .open > .btn-secondary.dropdown-toggle.focus, section.data-table > nav > div >
-    div.open > a.dropdown-toggle.focus,
+    div.open > a.dropdown-toggle.focus, ul.modifiers-input >
+    li.open > button.dropdown-toggle.focus,
     .open > div.dropdown-toggle.focus.searchable-select {
       color: #373a3c;
       background-color: #d4d4d4;
       border-color: #8c8c8c; }
-  .btn-secondary.disabled:focus, section.data-table > nav > div > div > a.disabled:focus, div.disabled.searchable-select:focus, .btn-secondary.disabled.focus, section.data-table > nav > div > div > a.disabled.focus, div.disabled.focus.searchable-select, .btn-secondary:disabled:focus, section.data-table > nav > div > div > a:disabled:focus, div.searchable-select:disabled:focus, .btn-secondary:disabled.focus, section.data-table > nav > div > div > a:disabled.focus, div.searchable-select:disabled.focus {
+  .btn-secondary.disabled:focus, section.data-table > nav > div > div > a.disabled:focus, ul.modifiers-input > li > button.disabled:focus, div.disabled.searchable-select:focus, .btn-secondary.disabled.focus, section.data-table > nav > div > div > a.disabled.focus, ul.modifiers-input > li > button.disabled.focus, div.disabled.focus.searchable-select, .btn-secondary:disabled:focus, section.data-table > nav > div > div > a:disabled:focus, ul.modifiers-input > li > button:disabled:focus, div.searchable-select:disabled:focus, .btn-secondary:disabled.focus, section.data-table > nav > div > div > a:disabled.focus, ul.modifiers-input > li > button:disabled.focus, div.searchable-select:disabled.focus {
     background-color: #fff;
     border-color: #ccc; }
-  .btn-secondary.disabled:hover, section.data-table > nav > div > div > a.disabled:hover, div.disabled.searchable-select:hover, .btn-secondary:disabled:hover, section.data-table > nav > div > div > a:disabled:hover, div.searchable-select:disabled:hover {
+  .btn-secondary.disabled:hover, section.data-table > nav > div > div > a.disabled:hover, ul.modifiers-input > li > button.disabled:hover, div.disabled.searchable-select:hover, .btn-secondary:disabled:hover, section.data-table > nav > div > div > a:disabled:hover, ul.modifiers-input > li > button:disabled:hover, div.searchable-select:disabled:hover {
     background-color: #fff;
     border-color: #ccc; }
 
@@ -2364,14 +2373,14 @@ form.single > fieldset > div > button[type='submit'] {
     text-decoration: none; }
 
 .btn-lg, .btn-group-lg > .btn, section.data-table > nav > div > div.btn-group-lg > a, form.single > div.btn-group-lg > button[type='submit'],
-form.single > fieldset > div.btn-group-lg > button[type='submit'], .btn-group-lg > div.searchable-select {
+form.single > fieldset > div.btn-group-lg > button[type='submit'], ul.modifiers-input > li.btn-group-lg > button, .btn-group-lg > div.searchable-select {
   padding: 0.75rem 1.25rem;
   font-size: 1.25rem;
   line-height: 1.33333;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn, section.data-table > nav > div > div.btn-group-sm > a, form.single > div.btn-group-sm > button[type='submit'],
-form.single > fieldset > div.btn-group-sm > button[type='submit'], .btn-group-sm > div.searchable-select {
+form.single > fieldset > div.btn-group-sm > button[type='submit'], ul.modifiers-input > li.btn-group-sm > button, .btn-group-sm > div.searchable-select, ul.modifiers-input > li > button {
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2539,65 +2548,72 @@ input[type="button"].btn-block {
   display: inline-block;
   vertical-align: middle; }
   .btn-group > .btn, section.data-table > nav > div > div.btn-group > a, form.single > div.btn-group > button[type='submit'],
-  form.single > fieldset > div.btn-group > button[type='submit'], .btn-group > div.searchable-select,
+  form.single > fieldset > div.btn-group > button[type='submit'], ul.modifiers-input > li.btn-group > button, .btn-group > div.searchable-select,
   .btn-group-vertical > .btn, section.data-table > nav > div >
   div.btn-group-vertical > a, form.single >
   div.btn-group-vertical > button[type='submit'],
   form.single > fieldset >
-  div.btn-group-vertical > button[type='submit'],
+  div.btn-group-vertical > button[type='submit'], ul.modifiers-input >
+  li.btn-group-vertical > button,
   .btn-group-vertical > div.searchable-select {
     position: relative;
     float: left; }
     .btn-group > .btn:focus, section.data-table > nav > div > div.btn-group > a:focus, form.single > div.btn-group > button[type='submit']:focus,
-    form.single > fieldset > div.btn-group > button[type='submit']:focus, .btn-group > div.searchable-select:focus, .btn-group > .btn:active, section.data-table > nav > div > div.btn-group > a:active, form.single > div.btn-group > button[type='submit']:active,
-    form.single > fieldset > div.btn-group > button[type='submit']:active, .btn-group > div.searchable-select:active, .btn-group > .btn.active, section.data-table > nav > div > div.btn-group > a.active, form.single > div.btn-group > button.active[type='submit'],
-    form.single > fieldset > div.btn-group > button.active[type='submit'], .btn-group > div.active.searchable-select,
+    form.single > fieldset > div.btn-group > button[type='submit']:focus, ul.modifiers-input > li.btn-group > button:focus, .btn-group > div.searchable-select:focus, .btn-group > .btn:active, section.data-table > nav > div > div.btn-group > a:active, form.single > div.btn-group > button[type='submit']:active,
+    form.single > fieldset > div.btn-group > button[type='submit']:active, ul.modifiers-input > li.btn-group > button:active, .btn-group > div.searchable-select:active, .btn-group > .btn.active, section.data-table > nav > div > div.btn-group > a.active, form.single > div.btn-group > button.active[type='submit'],
+    form.single > fieldset > div.btn-group > button.active[type='submit'], ul.modifiers-input > li.btn-group > button.active, .btn-group > div.active.searchable-select,
     .btn-group-vertical > .btn:focus, section.data-table > nav > div >
     div.btn-group-vertical > a:focus, form.single >
     div.btn-group-vertical > button[type='submit']:focus,
     form.single > fieldset >
-    div.btn-group-vertical > button[type='submit']:focus,
+    div.btn-group-vertical > button[type='submit']:focus, ul.modifiers-input >
+    li.btn-group-vertical > button:focus,
     .btn-group-vertical > div.searchable-select:focus,
     .btn-group-vertical > .btn:active, section.data-table > nav > div >
     div.btn-group-vertical > a:active, form.single >
     div.btn-group-vertical > button[type='submit']:active,
     form.single > fieldset >
-    div.btn-group-vertical > button[type='submit']:active,
+    div.btn-group-vertical > button[type='submit']:active, ul.modifiers-input >
+    li.btn-group-vertical > button:active,
     .btn-group-vertical > div.searchable-select:active,
     .btn-group-vertical > .btn.active, section.data-table > nav > div >
     div.btn-group-vertical > a.active, form.single >
     div.btn-group-vertical > button.active[type='submit'],
     form.single > fieldset >
-    div.btn-group-vertical > button.active[type='submit'],
+    div.btn-group-vertical > button.active[type='submit'], ul.modifiers-input >
+    li.btn-group-vertical > button.active,
     .btn-group-vertical > div.active.searchable-select {
       z-index: 2; }
     .btn-group > .btn:hover, section.data-table > nav > div > div.btn-group > a:hover, form.single > div.btn-group > button[type='submit']:hover,
-    form.single > fieldset > div.btn-group > button[type='submit']:hover, .btn-group > div.searchable-select:hover,
+    form.single > fieldset > div.btn-group > button[type='submit']:hover, ul.modifiers-input > li.btn-group > button:hover, .btn-group > div.searchable-select:hover,
     .btn-group-vertical > .btn:hover, section.data-table > nav > div >
     div.btn-group-vertical > a:hover, form.single >
     div.btn-group-vertical > button[type='submit']:hover,
     form.single > fieldset >
-    div.btn-group-vertical > button[type='submit']:hover,
+    div.btn-group-vertical > button[type='submit']:hover, ul.modifiers-input >
+    li.btn-group-vertical > button:hover,
     .btn-group-vertical > div.searchable-select:hover {
       z-index: 2; }
 
 .btn-group .btn + .btn, .btn-group section.data-table > nav > div > div > a + .btn, .btn-group form.single > div > button[type='submit'] + .btn, .btn-group
-form.single > fieldset > div > button[type='submit'] + .btn, .btn-group div.searchable-select + .btn, .btn-group section.data-table > nav > div > div > .btn + a, .btn-group section.data-table > nav > div > div > a + a, .btn-group section.data-table > nav > div > div > div.searchable-select + a, .btn-group form.single > div > .btn + button[type='submit'], .btn-group form.single > div > button[type='submit'] + button[type='submit'], .btn-group form.single > div > div.searchable-select + button[type='submit'], .btn-group
+form.single > fieldset > div > button[type='submit'] + .btn, .btn-group ul.modifiers-input > li > button + .btn, .btn-group div.searchable-select + .btn, .btn-group section.data-table > nav > div > div > .btn + a, .btn-group section.data-table > nav > div > div > a + a, .btn-group section.data-table > nav > div > div > div.searchable-select + a, .btn-group form.single > div > .btn + button[type='submit'], .btn-group form.single > div > button[type='submit'] + button[type='submit'], .btn-group form.single > div > div.searchable-select + button[type='submit'], .btn-group
 form.single > fieldset > div > .btn + button[type='submit'], .btn-group
 form.single > fieldset > div > button[type='submit'] + button[type='submit'], .btn-group
-form.single > fieldset > div > div.searchable-select + button[type='submit'], .btn-group .btn + div.searchable-select, .btn-group section.data-table > nav > div > div > a + div.searchable-select, .btn-group form.single > div > button[type='submit'] + div.searchable-select, .btn-group
-form.single > fieldset > div > button[type='submit'] + div.searchable-select, .btn-group div.searchable-select + div.searchable-select,
+form.single > fieldset > div > div.searchable-select + button[type='submit'], .btn-group ul.modifiers-input > li > .btn + button, .btn-group ul.modifiers-input > li > button + button, .btn-group ul.modifiers-input > li > div.searchable-select + button, .btn-group .btn + div.searchable-select, .btn-group section.data-table > nav > div > div > a + div.searchable-select, .btn-group form.single > div > button[type='submit'] + div.searchable-select, .btn-group
+form.single > fieldset > div > button[type='submit'] + div.searchable-select, .btn-group ul.modifiers-input > li > button + div.searchable-select, .btn-group div.searchable-select + div.searchable-select,
 .btn-group .btn + .btn-group,
 .btn-group section.data-table > nav > div > div > a + .btn-group,
 .btn-group form.single > div > button[type='submit'] + .btn-group,
 .btn-group
 form.single > fieldset > div > button[type='submit'] + .btn-group,
+.btn-group ul.modifiers-input > li > button + .btn-group,
 .btn-group div.searchable-select + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group section.data-table > nav > div > div > .btn-group + a,
 .btn-group form.single > div > .btn-group + button[type='submit'],
 .btn-group
 form.single > fieldset > div > .btn-group + button[type='submit'],
+.btn-group ul.modifiers-input > li > .btn-group + button,
 .btn-group .btn-group + div.searchable-select,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
@@ -2612,25 +2628,25 @@ form.single > fieldset > div > .btn-group + button[type='submit'],
   .btn-toolbar .input-group {
     float: left; }
   .btn-toolbar > .btn, section.data-table > nav > div > div.btn-toolbar > a, form.single > div.btn-toolbar > button[type='submit'],
-  form.single > fieldset > div.btn-toolbar > button[type='submit'], .btn-toolbar > div.searchable-select,
+  form.single > fieldset > div.btn-toolbar > button[type='submit'], ul.modifiers-input > li.btn-toolbar > button, .btn-toolbar > div.searchable-select,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), section.data-table > nav > div > div.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), form.single > div.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle),
-form.single > fieldset > div.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+form.single > fieldset > div.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle), ul.modifiers-input > li.btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
 .btn-group > .btn:first-child, section.data-table > nav > div > div.btn-group > a:first-child, form.single > div.btn-group > button[type='submit']:first-child,
-form.single > fieldset > div.btn-group > button[type='submit']:first-child, .btn-group > div.searchable-select:first-child {
+form.single > fieldset > div.btn-group > button[type='submit']:first-child, ul.modifiers-input > li.btn-group > button:first-child, .btn-group > div.searchable-select:first-child {
   margin-left: 0; }
   .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), section.data-table > nav > div > div.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), form.single > div.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle),
-  form.single > fieldset > div.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:first-child:not(:last-child):not(.dropdown-toggle) {
+  form.single > fieldset > div.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle), ul.modifiers-input > li.btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group > .btn:last-child:not(:first-child), section.data-table > nav > div > div.btn-group > a:last-child:not(:first-child), form.single > div.btn-group > button[type='submit']:last-child:not(:first-child),
-form.single > fieldset > div.btn-group > button[type='submit']:last-child:not(:first-child), .btn-group > div.searchable-select:last-child:not(:first-child),
+form.single > fieldset > div.btn-group > button[type='submit']:last-child:not(:first-child), ul.modifiers-input > li.btn-group > button:last-child:not(:first-child), .btn-group > div.searchable-select:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2639,17 +2655,17 @@ form.single > fieldset > div.btn-group > button[type='submit']:last-child:not(:f
   float: left; }
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, section.data-table > nav > div.btn-group > div.btn-group:not(:first-child):not(:last-child) > a, form.single.btn-group > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'],
-form.single > fieldset.btn-group > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
+form.single > fieldset.btn-group > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], ul.modifiers-input.btn-group > li.btn-group:not(:first-child):not(:last-child) > button, .btn-group > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
   border-radius: 0; }
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, section.data-table > nav > div.btn-group > div.btn-group:first-child:not(:last-child) > a:last-child, form.single.btn-group > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child,
-form.single > fieldset.btn-group > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
+form.single > fieldset.btn-group > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, ul.modifiers-input.btn-group > li.btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, section.data-table > nav > div.btn-group > div.btn-group:last-child:not(:first-child) > a:first-child, form.single.btn-group > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child,
-form.single > fieldset.btn-group > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
+form.single > fieldset.btn-group > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, ul.modifiers-input.btn-group > li.btn-group:last-child:not(:first-child) > button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2658,36 +2674,37 @@ form.single > fieldset.btn-group > div.btn-group:last-child:not(:first-child) > 
   outline: 0; }
 
 .btn-group > .btn + .dropdown-toggle, section.data-table > nav > div > div.btn-group > a + .dropdown-toggle, form.single > div.btn-group > button[type='submit'] + .dropdown-toggle,
-form.single > fieldset > div.btn-group > button[type='submit'] + .dropdown-toggle, .btn-group > div.searchable-select + .dropdown-toggle {
+form.single > fieldset > div.btn-group > button[type='submit'] + .dropdown-toggle, ul.modifiers-input > li.btn-group > button + .dropdown-toggle, .btn-group > div.searchable-select + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px; }
 
 .btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, section.data-table > nav > div > div.btn-group-lg.btn-group > a + .dropdown-toggle, form.single > div.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle,
-form.single > fieldset > div.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle, .btn-group-lg.btn-group > div.searchable-select + .dropdown-toggle {
+form.single > fieldset > div.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle, ul.modifiers-input > li.btn-group-lg.btn-group > button + .dropdown-toggle, .btn-group-lg.btn-group > div.searchable-select + .dropdown-toggle {
   padding-right: 12px;
   padding-left: 12px; }
 
 .btn .caret, section.data-table > nav > div > div > a .caret, form.single > div > button[type='submit'] .caret,
-form.single > fieldset > div > button[type='submit'] .caret, div.searchable-select .caret {
+form.single > fieldset > div > button[type='submit'] .caret, ul.modifiers-input > li > button .caret, div.searchable-select .caret {
   margin-left: 0; }
 
 .btn-lg .caret, .btn-group-lg > .btn .caret, section.data-table > nav > div > div.btn-group-lg > a .caret, form.single > div.btn-group-lg > button[type='submit'] .caret,
-form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, .btn-group-lg > div.searchable-select .caret {
+form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, ul.modifiers-input > li.btn-group-lg > button .caret, .btn-group-lg > div.searchable-select .caret {
   border-width: 0.3em 0.3em 0;
   border-bottom-width: 0; }
 
 .dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup section.data-table > nav > div > div.btn-group-lg > a .caret, .dropup form.single > div.btn-group-lg > button[type='submit'] .caret, .dropup
-form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, .dropup .btn-group-lg > div.searchable-select .caret {
+form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, .dropup ul.modifiers-input > li.btn-group-lg > button .caret, .dropup .btn-group-lg > div.searchable-select .caret {
   border-width: 0 0.3em 0.3em; }
 
 .btn-group-vertical > .btn, section.data-table > nav > div > div.btn-group-vertical > a, form.single > div.btn-group-vertical > button[type='submit'],
-form.single > fieldset > div.btn-group-vertical > button[type='submit'], .btn-group-vertical > div.searchable-select,
+form.single > fieldset > div.btn-group-vertical > button[type='submit'], ul.modifiers-input > li.btn-group-vertical > button, .btn-group-vertical > div.searchable-select,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn, section.data-table > nav >
 div.btn-group-vertical > div.btn-group > a,
 form.single.btn-group-vertical > div.btn-group > button[type='submit'],
 form.single >
 fieldset.btn-group-vertical > div.btn-group > button[type='submit'],
+ul.modifiers-input.btn-group-vertical > li.btn-group > button,
 .btn-group-vertical > .btn-group > div.searchable-select {
   display: block;
   float: none;
@@ -2700,81 +2717,86 @@ fieldset.btn-group-vertical > div.btn-group > button[type='submit'],
   clear: both; }
 
 .btn-group-vertical > .btn-group > .btn, section.data-table > nav > div.btn-group-vertical > div.btn-group > a, form.single.btn-group-vertical > div.btn-group > button[type='submit'],
-form.single > fieldset.btn-group-vertical > div.btn-group > button[type='submit'], .btn-group-vertical > .btn-group > div.searchable-select {
+form.single > fieldset.btn-group-vertical > div.btn-group > button[type='submit'], ul.modifiers-input.btn-group-vertical > li.btn-group > button, .btn-group-vertical > .btn-group > div.searchable-select {
   float: none; }
 
 .btn-group-vertical > .btn + .btn, section.data-table > nav > div > div.btn-group-vertical > a + .btn, form.single > div.btn-group-vertical > button[type='submit'] + .btn,
-form.single > fieldset > div.btn-group-vertical > button[type='submit'] + .btn, .btn-group-vertical > div.searchable-select + .btn, section.data-table > nav > div > div.btn-group-vertical > .btn + a, section.data-table > nav > div > div.btn-group-vertical > a + a, section.data-table > nav > div > div.btn-group-vertical > div.searchable-select + a, form.single > div.btn-group-vertical > .btn + button[type='submit'], form.single > div.btn-group-vertical > button[type='submit'] + button[type='submit'], form.single > div.btn-group-vertical > div.searchable-select + button[type='submit'],
+form.single > fieldset > div.btn-group-vertical > button[type='submit'] + .btn, ul.modifiers-input > li.btn-group-vertical > button + .btn, .btn-group-vertical > div.searchable-select + .btn, section.data-table > nav > div > div.btn-group-vertical > .btn + a, section.data-table > nav > div > div.btn-group-vertical > a + a, section.data-table > nav > div > div.btn-group-vertical > div.searchable-select + a, form.single > div.btn-group-vertical > .btn + button[type='submit'], form.single > div.btn-group-vertical > button[type='submit'] + button[type='submit'], form.single > div.btn-group-vertical > div.searchable-select + button[type='submit'],
 form.single > fieldset > div.btn-group-vertical > .btn + button[type='submit'],
 form.single > fieldset > div.btn-group-vertical > button[type='submit'] + button[type='submit'],
-form.single > fieldset > div.btn-group-vertical > div.searchable-select + button[type='submit'], .btn-group-vertical > .btn + div.searchable-select, section.data-table > nav > div > div.btn-group-vertical > a + div.searchable-select, form.single > div.btn-group-vertical > button[type='submit'] + div.searchable-select,
-form.single > fieldset > div.btn-group-vertical > button[type='submit'] + div.searchable-select, .btn-group-vertical > div.searchable-select + div.searchable-select,
+form.single > fieldset > div.btn-group-vertical > div.searchable-select + button[type='submit'], ul.modifiers-input > li.btn-group-vertical > .btn + button, ul.modifiers-input > li.btn-group-vertical > button + button, ul.modifiers-input > li.btn-group-vertical > div.searchable-select + button, .btn-group-vertical > .btn + div.searchable-select, section.data-table > nav > div > div.btn-group-vertical > a + div.searchable-select, form.single > div.btn-group-vertical > button[type='submit'] + div.searchable-select,
+form.single > fieldset > div.btn-group-vertical > button[type='submit'] + div.searchable-select, ul.modifiers-input > li.btn-group-vertical > button + div.searchable-select, .btn-group-vertical > div.searchable-select + div.searchable-select,
 .btn-group-vertical > .btn + .btn-group, section.data-table > nav > div >
 div.btn-group-vertical > a + .btn-group, form.single >
 div.btn-group-vertical > button[type='submit'] + .btn-group,
 form.single > fieldset >
-div.btn-group-vertical > button[type='submit'] + .btn-group,
+div.btn-group-vertical > button[type='submit'] + .btn-group, ul.modifiers-input >
+li.btn-group-vertical > button + .btn-group,
 .btn-group-vertical > div.searchable-select + .btn-group,
 .btn-group-vertical > .btn-group + .btn, section.data-table > nav > div >
 div.btn-group-vertical > .btn-group + a, form.single >
 div.btn-group-vertical > .btn-group + button[type='submit'],
 form.single > fieldset >
-div.btn-group-vertical > .btn-group + button[type='submit'],
+div.btn-group-vertical > .btn-group + button[type='submit'], ul.modifiers-input >
+li.btn-group-vertical > .btn-group + button,
 .btn-group-vertical > .btn-group + div.searchable-select,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child), section.data-table > nav > div > div.btn-group-vertical > a:not(:first-child):not(:last-child), form.single > div.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child),
-form.single > fieldset > div.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child), .btn-group-vertical > div.searchable-select:not(:first-child):not(:last-child) {
+form.single > fieldset > div.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child), ul.modifiers-input > li.btn-group-vertical > button:not(:first-child):not(:last-child), .btn-group-vertical > div.searchable-select:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
 .btn-group-vertical > .btn:first-child:not(:last-child), section.data-table > nav > div > div.btn-group-vertical > a:first-child:not(:last-child), form.single > div.btn-group-vertical > button[type='submit']:first-child:not(:last-child),
-form.single > fieldset > div.btn-group-vertical > button[type='submit']:first-child:not(:last-child), .btn-group-vertical > div.searchable-select:first-child:not(:last-child) {
+form.single > fieldset > div.btn-group-vertical > button[type='submit']:first-child:not(:last-child), ul.modifiers-input > li.btn-group-vertical > button:first-child:not(:last-child), .btn-group-vertical > div.searchable-select:first-child:not(:last-child) {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn:last-child:not(:first-child), section.data-table > nav > div > div.btn-group-vertical > a:last-child:not(:first-child), form.single > div.btn-group-vertical > button[type='submit']:last-child:not(:first-child),
-form.single > fieldset > div.btn-group-vertical > button[type='submit']:last-child:not(:first-child), .btn-group-vertical > div.searchable-select:last-child:not(:first-child) {
+form.single > fieldset > div.btn-group-vertical > button[type='submit']:last-child:not(:first-child), ul.modifiers-input > li.btn-group-vertical > button:last-child:not(:first-child), .btn-group-vertical > div.searchable-select:last-child:not(:first-child) {
   border-bottom-left-radius: 0.25rem;
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, section.data-table > nav > div.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > a, form.single.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'],
-form.single > fieldset.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
+form.single > fieldset.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], ul.modifiers-input.btn-group-vertical > li.btn-group:not(:first-child):not(:last-child) > button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
   border-radius: 0; }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, section.data-table > nav > div.btn-group-vertical > div.btn-group:first-child:not(:last-child) > a:last-child, form.single.btn-group-vertical > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child,
-form.single > fieldset.btn-group-vertical > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
+form.single > fieldset.btn-group-vertical > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, ul.modifiers-input.btn-group-vertical > li.btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, section.data-table > nav > div.btn-group-vertical > div.btn-group:last-child:not(:first-child) > a:first-child, form.single.btn-group-vertical > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child,
-form.single > fieldset.btn-group-vertical > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
+form.single > fieldset.btn-group-vertical > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, ul.modifiers-input.btn-group-vertical > li.btn-group:last-child:not(:first-child) > button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
 [data-toggle="buttons"] > .btn input[type="radio"], section.data-table > nav > div > div[data-toggle="buttons"] > a input[type="radio"], form.single > div[data-toggle="buttons"] > button[type='submit'] input[type="radio"],
-form.single > fieldset > div[data-toggle="buttons"] > button[type='submit'] input[type="radio"], [data-toggle="buttons"] > div.searchable-select input[type="radio"],
+form.single > fieldset > div[data-toggle="buttons"] > button[type='submit'] input[type="radio"], ul.modifiers-input > li[data-toggle="buttons"] > button input[type="radio"], [data-toggle="buttons"] > div.searchable-select input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], section.data-table > nav > div >
 div[data-toggle="buttons"] > a input[type="checkbox"], form.single >
 div[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"],
 form.single > fieldset >
-div[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"],
+div[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"], ul.modifiers-input >
+li[data-toggle="buttons"] > button input[type="checkbox"],
 [data-toggle="buttons"] > div.searchable-select input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], section.data-table > nav >
 div[data-toggle="buttons"] > div.btn-group > a input[type="radio"],
 form.single[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="radio"],
 form.single >
 fieldset[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="radio"],
+ul.modifiers-input[data-toggle="buttons"] > li.btn-group > button input[type="radio"],
 [data-toggle="buttons"] > .btn-group > div.searchable-select input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], section.data-table > nav >
 div[data-toggle="buttons"] > div.btn-group > a input[type="checkbox"],
 form.single[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="checkbox"],
 form.single >
 fieldset[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="checkbox"],
+ul.modifiers-input[data-toggle="buttons"] > li.btn-group > button input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > div.searchable-select input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -2860,6 +2882,7 @@ form.single > fieldset > div > select:not(:first-child):not(:last-child),
   form.single.input-group-sm > div.input-group-btn > button.input-group-addon[type='submit'],
   form.single >
   fieldset.input-group-sm > div.input-group-btn > button.input-group-addon[type='submit'],
+  ul.modifiers-input.input-group-sm > li.input-group-btn > button.input-group-addon,
   .input-group-sm > .input-group-btn > div.input-group-addon.searchable-select {
     padding: 0.275rem 0.75rem;
     font-size: 0.875rem;
@@ -2876,6 +2899,7 @@ form.single > fieldset > div > select:not(:first-child):not(:last-child),
   form.single.input-group-lg > div.input-group-btn > button.input-group-addon[type='submit'],
   form.single >
   fieldset.input-group-lg > div.input-group-btn > button.input-group-addon[type='submit'],
+  ul.modifiers-input.input-group-lg > li.input-group-btn > button.input-group-addon,
   .input-group-lg > .input-group-btn > div.input-group-addon.searchable-select {
     padding: 0.75rem 1.25rem;
     font-size: 1.25rem;
@@ -2895,26 +2919,30 @@ form.single > fieldset > div > select:first-child, .input-group ul.tags-input:fi
 div.input-group-btn:first-child > a, form.single >
 div.input-group-btn:first-child > button[type='submit'],
 form.single > fieldset >
-div.input-group-btn:first-child > button[type='submit'],
+div.input-group-btn:first-child > button[type='submit'], ul.modifiers-input >
+li.input-group-btn:first-child > button,
 .input-group-btn:first-child > div.searchable-select,
 .input-group-btn:first-child > .btn-group > .btn, section.data-table > nav >
 div.input-group-btn:first-child > div.btn-group > a,
 form.single.input-group-btn:first-child > div.btn-group > button[type='submit'],
 form.single >
 fieldset.input-group-btn:first-child > div.btn-group > button[type='submit'],
+ul.modifiers-input.input-group-btn:first-child > li.btn-group > button,
 .input-group-btn:first-child > .btn-group > div.searchable-select,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), section.data-table > nav > div >
 div.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), form.single >
 div.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle),
 form.single > fieldset >
-div.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle),
+div.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle), ul.modifiers-input >
+li.input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > div.searchable-select:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, section.data-table > nav >
 div.input-group-btn:last-child > div.btn-group:not(:last-child) > a,
 form.single.input-group-btn:last-child > div.btn-group:not(:last-child) > button[type='submit'],
 form.single >
 fieldset.input-group-btn:last-child > div.btn-group:not(:last-child) > button[type='submit'],
+ul.modifiers-input.input-group-btn:last-child > li.btn-group:not(:last-child) > button,
 .input-group-btn:last-child > .btn-group:not(:last-child) > div.searchable-select {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
@@ -2933,26 +2961,30 @@ form.single > fieldset > div > select:last-child, .input-group ul.tags-input:las
 div.input-group-btn:last-child > a, form.single >
 div.input-group-btn:last-child > button[type='submit'],
 form.single > fieldset >
-div.input-group-btn:last-child > button[type='submit'],
+div.input-group-btn:last-child > button[type='submit'], ul.modifiers-input >
+li.input-group-btn:last-child > button,
 .input-group-btn:last-child > div.searchable-select,
 .input-group-btn:last-child > .btn-group > .btn, section.data-table > nav >
 div.input-group-btn:last-child > div.btn-group > a,
 form.single.input-group-btn:last-child > div.btn-group > button[type='submit'],
 form.single >
 fieldset.input-group-btn:last-child > div.btn-group > button[type='submit'],
+ul.modifiers-input.input-group-btn:last-child > li.btn-group > button,
 .input-group-btn:last-child > .btn-group > div.searchable-select,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child), section.data-table > nav > div >
 div.input-group-btn:first-child > a:not(:first-child), form.single >
 div.input-group-btn:first-child > button[type='submit']:not(:first-child),
 form.single > fieldset >
-div.input-group-btn:first-child > button[type='submit']:not(:first-child),
+div.input-group-btn:first-child > button[type='submit']:not(:first-child), ul.modifiers-input >
+li.input-group-btn:first-child > button:not(:first-child),
 .input-group-btn:first-child > div.searchable-select:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, section.data-table > nav >
 div.input-group-btn:first-child > div.btn-group:not(:first-child) > a,
 form.single.input-group-btn:first-child > div.btn-group:not(:first-child) > button[type='submit'],
 form.single >
 fieldset.input-group-btn:first-child > div.btn-group:not(:first-child) > button[type='submit'],
+ul.modifiers-input.input-group-btn:first-child > li.btn-group:not(:first-child) > button,
 .input-group-btn:first-child > .btn-group:not(:first-child) > div.searchable-select {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2965,33 +2997,33 @@ fieldset.input-group-btn:first-child > div.btn-group:not(:first-child) > button[
   font-size: 0;
   white-space: nowrap; }
   .input-group-btn > .btn, section.data-table > nav > div > div.input-group-btn > a, form.single > div.input-group-btn > button[type='submit'],
-  form.single > fieldset > div.input-group-btn > button[type='submit'], .input-group-btn > div.searchable-select {
+  form.single > fieldset > div.input-group-btn > button[type='submit'], ul.modifiers-input > li.input-group-btn > button, .input-group-btn > div.searchable-select {
     position: relative; }
     .input-group-btn > .btn + .btn, section.data-table > nav > div > div.input-group-btn > a + .btn, form.single > div.input-group-btn > button[type='submit'] + .btn,
-    form.single > fieldset > div.input-group-btn > button[type='submit'] + .btn, .input-group-btn > div.searchable-select + .btn, section.data-table > nav > div > div.input-group-btn > .btn + a, section.data-table > nav > div > div.input-group-btn > a + a, section.data-table > nav > div > div.input-group-btn > div.searchable-select + a, form.single > div.input-group-btn > .btn + button[type='submit'], form.single > div.input-group-btn > button[type='submit'] + button[type='submit'], form.single > div.input-group-btn > div.searchable-select + button[type='submit'],
+    form.single > fieldset > div.input-group-btn > button[type='submit'] + .btn, ul.modifiers-input > li.input-group-btn > button + .btn, .input-group-btn > div.searchable-select + .btn, section.data-table > nav > div > div.input-group-btn > .btn + a, section.data-table > nav > div > div.input-group-btn > a + a, section.data-table > nav > div > div.input-group-btn > div.searchable-select + a, form.single > div.input-group-btn > .btn + button[type='submit'], form.single > div.input-group-btn > button[type='submit'] + button[type='submit'], form.single > div.input-group-btn > div.searchable-select + button[type='submit'],
     form.single > fieldset > div.input-group-btn > .btn + button[type='submit'],
     form.single > fieldset > div.input-group-btn > button[type='submit'] + button[type='submit'],
-    form.single > fieldset > div.input-group-btn > div.searchable-select + button[type='submit'], .input-group-btn > .btn + div.searchable-select, section.data-table > nav > div > div.input-group-btn > a + div.searchable-select, form.single > div.input-group-btn > button[type='submit'] + div.searchable-select,
-    form.single > fieldset > div.input-group-btn > button[type='submit'] + div.searchable-select, .input-group-btn > div.searchable-select + div.searchable-select {
+    form.single > fieldset > div.input-group-btn > div.searchable-select + button[type='submit'], ul.modifiers-input > li.input-group-btn > .btn + button, ul.modifiers-input > li.input-group-btn > button + button, ul.modifiers-input > li.input-group-btn > div.searchable-select + button, .input-group-btn > .btn + div.searchable-select, section.data-table > nav > div > div.input-group-btn > a + div.searchable-select, form.single > div.input-group-btn > button[type='submit'] + div.searchable-select,
+    form.single > fieldset > div.input-group-btn > button[type='submit'] + div.searchable-select, ul.modifiers-input > li.input-group-btn > button + div.searchable-select, .input-group-btn > div.searchable-select + div.searchable-select {
       margin-left: -1px; }
     .input-group-btn > .btn:focus, section.data-table > nav > div > div.input-group-btn > a:focus, form.single > div.input-group-btn > button[type='submit']:focus,
-    form.single > fieldset > div.input-group-btn > button[type='submit']:focus, .input-group-btn > div.searchable-select:focus, .input-group-btn > .btn:active, section.data-table > nav > div > div.input-group-btn > a:active, form.single > div.input-group-btn > button[type='submit']:active,
-    form.single > fieldset > div.input-group-btn > button[type='submit']:active, .input-group-btn > div.searchable-select:active, .input-group-btn > .btn:hover, section.data-table > nav > div > div.input-group-btn > a:hover, form.single > div.input-group-btn > button[type='submit']:hover,
-    form.single > fieldset > div.input-group-btn > button[type='submit']:hover, .input-group-btn > div.searchable-select:hover {
+    form.single > fieldset > div.input-group-btn > button[type='submit']:focus, ul.modifiers-input > li.input-group-btn > button:focus, .input-group-btn > div.searchable-select:focus, .input-group-btn > .btn:active, section.data-table > nav > div > div.input-group-btn > a:active, form.single > div.input-group-btn > button[type='submit']:active,
+    form.single > fieldset > div.input-group-btn > button[type='submit']:active, ul.modifiers-input > li.input-group-btn > button:active, .input-group-btn > div.searchable-select:active, .input-group-btn > .btn:hover, section.data-table > nav > div > div.input-group-btn > a:hover, form.single > div.input-group-btn > button[type='submit']:hover,
+    form.single > fieldset > div.input-group-btn > button[type='submit']:hover, ul.modifiers-input > li.input-group-btn > button:hover, .input-group-btn > div.searchable-select:hover {
       z-index: 3; }
   .input-group-btn:first-child > .btn, section.data-table > nav > div > div.input-group-btn:first-child > a, form.single > div.input-group-btn:first-child > button[type='submit'],
-  form.single > fieldset > div.input-group-btn:first-child > button[type='submit'], .input-group-btn:first-child > div.searchable-select,
+  form.single > fieldset > div.input-group-btn:first-child > button[type='submit'], ul.modifiers-input > li.input-group-btn:first-child > button, .input-group-btn:first-child > div.searchable-select,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
   .input-group-btn:last-child > .btn, section.data-table > nav > div > div.input-group-btn:last-child > a, form.single > div.input-group-btn:last-child > button[type='submit'],
-  form.single > fieldset > div.input-group-btn:last-child > button[type='submit'], .input-group-btn:last-child > div.searchable-select,
+  form.single > fieldset > div.input-group-btn:last-child > button[type='submit'], ul.modifiers-input > li.input-group-btn:last-child > button, .input-group-btn:last-child > div.searchable-select,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
     .input-group-btn:last-child > .btn:focus, section.data-table > nav > div > div.input-group-btn:last-child > a:focus, form.single > div.input-group-btn:last-child > button[type='submit']:focus,
-    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:focus, .input-group-btn:last-child > div.searchable-select:focus, .input-group-btn:last-child > .btn:active, section.data-table > nav > div > div.input-group-btn:last-child > a:active, form.single > div.input-group-btn:last-child > button[type='submit']:active,
-    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:active, .input-group-btn:last-child > div.searchable-select:active, .input-group-btn:last-child > .btn:hover, section.data-table > nav > div > div.input-group-btn:last-child > a:hover, form.single > div.input-group-btn:last-child > button[type='submit']:hover,
-    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:hover, .input-group-btn:last-child > div.searchable-select:hover,
+    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:focus, ul.modifiers-input > li.input-group-btn:last-child > button:focus, .input-group-btn:last-child > div.searchable-select:focus, .input-group-btn:last-child > .btn:active, section.data-table > nav > div > div.input-group-btn:last-child > a:active, form.single > div.input-group-btn:last-child > button[type='submit']:active,
+    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:active, ul.modifiers-input > li.input-group-btn:last-child > button:active, .input-group-btn:last-child > div.searchable-select:active, .input-group-btn:last-child > .btn:hover, section.data-table > nav > div > div.input-group-btn:last-child > a:hover, form.single > div.input-group-btn:last-child > button[type='submit']:hover,
+    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:hover, ul.modifiers-input > li.input-group-btn:last-child > button:hover, .input-group-btn:last-child > div.searchable-select:hover,
     .input-group-btn:last-child > .btn-group:focus,
     .input-group-btn:last-child > .btn-group:active,
     .input-group-btn:last-child > .btn-group:hover {
@@ -3699,9 +3731,9 @@ fieldset.input-group-btn:first-child > div.btn-group:not(:first-child) > button[
     display: none; }
 
 .btn .label, section.data-table > nav > div > div > a .label, form.single > div > button[type='submit'] .label,
-form.single > fieldset > div > button[type='submit'] .label, div.searchable-select .label, .btn ul.tags-input > li:not(:last-child), section.data-table > nav > div > div > a ul.tags-input > li:not(:last-child), form.single > div > button[type='submit'] ul.tags-input > li:not(:last-child),
-form.single > fieldset > div > button[type='submit'] ul.tags-input > li:not(:last-child), div.searchable-select ul.tags-input > li:not(:last-child), .btn ul.modifiers-input > li > ul > li:not(:last-child), section.data-table > nav > div > div > a ul.modifiers-input > li > ul > li:not(:last-child), form.single > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child),
-form.single > fieldset > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child), div.searchable-select ul.modifiers-input > li > ul > li:not(:last-child) {
+form.single > fieldset > div > button[type='submit'] .label, ul.modifiers-input > li > button .label, div.searchable-select .label, .btn ul.tags-input > li:not(:last-child), section.data-table > nav > div > div > a ul.tags-input > li:not(:last-child), form.single > div > button[type='submit'] ul.tags-input > li:not(:last-child),
+form.single > fieldset > div > button[type='submit'] ul.tags-input > li:not(:last-child), ul.modifiers-input > li > button ul.tags-input > li:not(:last-child), div.searchable-select ul.tags-input > li:not(:last-child), .btn ul.modifiers-input > li > ul > li:not(:last-child), section.data-table > nav > div > div > a ul.modifiers-input > li > ul > li:not(:last-child), form.single > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child),
+form.single > fieldset > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child), ul.modifiers-input > li > button ul.modifiers-input > li > ul > li:not(:last-child), div.searchable-select ul.modifiers-input > li > ul > li:not(:last-child) {
   position: relative;
   top: -1px; }
 
@@ -4270,19 +4302,19 @@ button.close {
     display: table;
     clear: both; }
   .modal-footer .btn + .btn, .modal-footer section.data-table > nav > div > div > a + .btn, .modal-footer form.single > div > button[type='submit'] + .btn, .modal-footer
-  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer div.searchable-select + .btn, .modal-footer section.data-table > nav > div > div > .btn + a, .modal-footer section.data-table > nav > div > div > a + a, .modal-footer section.data-table > nav > div > div > div.searchable-select + a, .modal-footer form.single > div > .btn + button[type='submit'], .modal-footer form.single > div > button[type='submit'] + button[type='submit'], .modal-footer form.single > div > div.searchable-select + button[type='submit'], .modal-footer
+  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer ul.modifiers-input > li > button + .btn, .modal-footer div.searchable-select + .btn, .modal-footer section.data-table > nav > div > div > .btn + a, .modal-footer section.data-table > nav > div > div > a + a, .modal-footer section.data-table > nav > div > div > div.searchable-select + a, .modal-footer form.single > div > .btn + button[type='submit'], .modal-footer form.single > div > button[type='submit'] + button[type='submit'], .modal-footer form.single > div > div.searchable-select + button[type='submit'], .modal-footer
   form.single > fieldset > div > .btn + button[type='submit'], .modal-footer
   form.single > fieldset > div > button[type='submit'] + button[type='submit'], .modal-footer
-  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer .btn + div.searchable-select, .modal-footer section.data-table > nav > div > div > a + div.searchable-select, .modal-footer form.single > div > button[type='submit'] + div.searchable-select, .modal-footer
-  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer div.searchable-select + div.searchable-select {
+  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer ul.modifiers-input > li > .btn + button, .modal-footer ul.modifiers-input > li > button + button, .modal-footer ul.modifiers-input > li > div.searchable-select + button, .modal-footer .btn + div.searchable-select, .modal-footer section.data-table > nav > div > div > a + div.searchable-select, .modal-footer form.single > div > button[type='submit'] + div.searchable-select, .modal-footer
+  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer ul.modifiers-input > li > button + div.searchable-select, .modal-footer div.searchable-select + div.searchable-select {
     margin-bottom: 0;
     margin-left: 5px; }
   .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group section.data-table > nav > div > div > a + .btn, .modal-footer .btn-group form.single > div > button[type='submit'] + .btn, .modal-footer .btn-group
-  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer .btn-group div.searchable-select + .btn, .modal-footer .btn-group section.data-table > nav > div > div > .btn + a, .modal-footer .btn-group section.data-table > nav > div > div > a + a, .modal-footer .btn-group section.data-table > nav > div > div > div.searchable-select + a, .modal-footer .btn-group form.single > div > .btn + button[type='submit'], .modal-footer .btn-group form.single > div > button[type='submit'] + button[type='submit'], .modal-footer .btn-group form.single > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group
+  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer .btn-group ul.modifiers-input > li > button + .btn, .modal-footer .btn-group div.searchable-select + .btn, .modal-footer .btn-group section.data-table > nav > div > div > .btn + a, .modal-footer .btn-group section.data-table > nav > div > div > a + a, .modal-footer .btn-group section.data-table > nav > div > div > div.searchable-select + a, .modal-footer .btn-group form.single > div > .btn + button[type='submit'], .modal-footer .btn-group form.single > div > button[type='submit'] + button[type='submit'], .modal-footer .btn-group form.single > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group
   form.single > fieldset > div > .btn + button[type='submit'], .modal-footer .btn-group
   form.single > fieldset > div > button[type='submit'] + button[type='submit'], .modal-footer .btn-group
-  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group .btn + div.searchable-select, .modal-footer .btn-group section.data-table > nav > div > div > a + div.searchable-select, .modal-footer .btn-group form.single > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group
-  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group div.searchable-select + div.searchable-select {
+  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group ul.modifiers-input > li > .btn + button, .modal-footer .btn-group ul.modifiers-input > li > button + button, .modal-footer .btn-group ul.modifiers-input > li > div.searchable-select + button, .modal-footer .btn-group .btn + div.searchable-select, .modal-footer .btn-group section.data-table > nav > div > div > a + div.searchable-select, .modal-footer .btn-group form.single > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group
+  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group ul.modifiers-input > li > button + div.searchable-select, .modal-footer .btn-group div.searchable-select + div.searchable-select {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -4628,7 +4660,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
   .carousel-caption .btn, .carousel-caption section.data-table > nav > div > div > a, .carousel-caption form.single > div > button[type='submit'], .carousel-caption
-  form.single > fieldset > div > button[type='submit'], .carousel-caption div.searchable-select {
+  form.single > fieldset > div > button[type='submit'], .carousel-caption ul.modifiers-input > li > button, .carousel-caption div.searchable-select {
     text-shadow: none; }
 
 @media (min-width: 544px) {
