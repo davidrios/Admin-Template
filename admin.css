@@ -1,5 +1,6 @@
 @charset "UTF-8";
-body > nav:first-child > ul > li > a.icon:before, section.data-table > table th.sortable:after, div.searchable-select > span:before {
+body > nav:first-child > ul > li > a.icon:before,
+div.app-root > nav:first-child > ul > li > a.icon:before, section.data-table > table th.sortable:after, div.searchable-select > span:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -629,22 +630,27 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, body > section {
+.container, body > section,
+div.app-root > section {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem; }
   @media (min-width: 544px) {
-    .container, body > section {
+    .container, body > section,
+    div.app-root > section {
       max-width: 576px; } }
   @media (min-width: 768px) {
-    .container, body > section {
+    .container, body > section,
+    div.app-root > section {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, body > section {
+    .container, body > section,
+    div.app-root > section {
       max-width: 940px; } }
   @media (min-width: 1200px) {
-    .container, body > section {
+    .container, body > section,
+    div.app-root > section {
       max-width: 1140px; } }
 
 .container-fluid {
@@ -5184,17 +5190,26 @@ a, a:hover, a:focus {
 .fa-double-chevron-right:before {
   content: ''; }
 
-body > nav:first-child > a, body > header > a {
+body > nav:first-child > a,
+div.app-root > nav:first-child > a, body > header > a,
+div.app-root > header > a {
   display: block;
   color: #CCC;
   font-size: 1.5rem;
   padding: 1rem; }
-  body > nav:first-child > a:hover, body > header > a:hover, body > nav:first-child > a:focus, body > header > a:focus {
+  body > nav:first-child > a:hover,
+  div.app-root > nav:first-child > a:hover, body > header > a:hover,
+  div.app-root > header > a:hover, body > nav:first-child > a:focus,
+  div.app-root > nav:first-child > a:focus, body > header > a:focus,
+  div.app-root > header > a:focus {
     color: #FFF; }
-  body > nav:first-child > a:focus, body > header > a:focus {
+  body > nav:first-child > a:focus,
+  div.app-root > nav:first-child > a:focus, body > header > a:focus,
+  div.app-root > header > a:focus {
     outline: none; }
 
-body > nav:first-child {
+body > nav:first-child,
+div.app-root > nav:first-child {
   background-color: #282828;
   color: #FFF;
   height: 100%;
@@ -5205,28 +5220,37 @@ body > nav:first-child {
   transition: left 0.3s ease-out;
   z-index: 999; }
   @media (min-width: 992px) {
-    body > nav:first-child {
+    body > nav:first-child,
+    div.app-root > nav:first-child {
       left: 0; } }
-  body > nav:first-child.show {
+  body > nav:first-child.show,
+  div.app-root > nav:first-child.show {
     left: 0; }
-  body > nav:first-child > h2 {
+  body > nav:first-child > h2,
+  div.app-root > nav:first-child > h2 {
     background-color: #222;
     padding: 10px;
     margin: 0;
     font-size: 1.4em; }
-  body > nav:first-child > ul {
+  body > nav:first-child > ul,
+  div.app-root > nav:first-child > ul {
     margin: 0;
     padding: 0;
     list-style: none; }
-    body > nav:first-child > ul > li {
+    body > nav:first-child > ul > li,
+    div.app-root > nav:first-child > ul > li {
       margin: 0;
       color: #CCC;
       font-weight: 600; }
-      body > nav:first-child > ul > li:hover, body > nav:first-child > ul > li.active {
+      body > nav:first-child > ul > li:hover, body > nav:first-child > ul > li.active,
+      div.app-root > nav:first-child > ul > li:hover,
+      div.app-root > nav:first-child > ul > li.active {
         color: #FFF;
         background-color: #222;
         position: relative; }
-        body > nav:first-child > ul > li:hover:before, body > nav:first-child > ul > li.active:before {
+        body > nav:first-child > ul > li:hover:before, body > nav:first-child > ul > li.active:before,
+        div.app-root > nav:first-child > ul > li:hover:before,
+        div.app-root > nav:first-child > ul > li.active:before {
           content: '';
           display: block;
           width: 2px;
@@ -5235,19 +5259,23 @@ body > nav:first-child {
           top: 0;
           left: 0;
           background-color: #FFF; }
-      body > nav:first-child > ul > li > a {
+      body > nav:first-child > ul > li > a,
+      div.app-root > nav:first-child > ul > li > a {
         display: block;
         padding: 10px 10px 10px 2.2em;
         color: inherit;
         position: relative; }
-        body > nav:first-child > ul > li > a.icon:before {
+        body > nav:first-child > ul > li > a.icon:before,
+        div.app-root > nav:first-child > ul > li > a.icon:before {
           position: absolute;
           left: 0.8em;
           top: 0.9em; }
-  body > nav:first-child > a {
+  body > nav:first-child > a,
+  div.app-root > nav:first-child > a {
     padding: 0.66rem; }
 
-body > header {
+body > header,
+div.app-root > header {
   background-color: #222;
   color: #FFF;
   height: 46px;
