@@ -1,6 +1,10 @@
 form.single > div,
-form.single > fieldset > div
+form.single > fieldset > div,
+.input-wrapper
   @extend .form-group
+
+  &.input-wrapper
+    margin-bottom: 0
 
   @include media-breakpoint-up(xl)
     position: relative

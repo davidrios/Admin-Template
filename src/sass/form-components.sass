@@ -92,23 +92,15 @@ ul.modifiers-input
         margin-left: -1px
 
 
-div.searchable-select
-  @extend .btn, .btn-secondary
+.autocompleted
+  @extend .input-wrapper
   position: relative
 
-  > select
-    display: none
-
-  > span:before
-    @extend %fa-font-settings
-    content: ''
-    float: right
-    margin-left: 1rem
-
-  > ul
+  > ul.autocomplete
     @extend .dropdown-menu
     cursor: default
     overflow: auto
+    width: 100%
 
     @include media-breakpoint-down(sm)
       position: fixed
@@ -125,9 +117,31 @@ div.searchable-select
       border-bottom: 1px solid $dropdown-divider-bg
       padding: 8px 20px
 
+    &.no-desktop-search
+      @include media-breakpoint-up(md)
+        > li:first-child
+          display: none
+
     > li
       @extend .dropdown-item
 
     > li > input
       @extend .form-control
       min-width: 15rem
+
+
+div.searchable-select
+  @extend .btn, .btn-secondary
+  @extend .autocompleted
+
+  > select
+    display: none
+
+  > span:before
+    @extend %fa-font-settings
+    content: ''
+    float: right
+    margin-left: 1rem
+
+  > ul
+    @extend ul.autocomplete
