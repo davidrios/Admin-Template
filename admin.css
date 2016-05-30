@@ -5666,23 +5666,14 @@ section.data-table > nav {
       margin: 0 0.3rem;
       display: inline-block; }
 
-form.single > div.input-wrapper, form.single > div.autocompleted, form.single > div.searchable-select,
-form.single > fieldset > div.input-wrapper,
-form.single > fieldset > div.autocompleted,
-form.single > fieldset > div.searchable-select,
-.input-wrapper.input-wrapper,
-.autocompleted,
-div.searchable-select {
-  margin-bottom: 0; }
-
 @media (min-width: 1200px) {
   form.single > div,
-  form.single > fieldset > div,
-  .input-wrapper,
-  .autocompleted,
-  div.searchable-select {
+  form.single > fieldset > div {
     position: relative;
     padding: 0 20%; } }
+
+.input-wrapper, .autocompleted, div.searchable-select {
+  margin-bottom: 0; }
 
 form.single > div.has-danger,
 form.single > fieldset > div.has-danger,
