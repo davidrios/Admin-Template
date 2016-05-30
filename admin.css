@@ -234,12 +234,16 @@ th {
   .navbar {
     display: none; }
   .btn > .caret, section.data-table > nav > div > div > a > .caret, form.single > div > button[type='submit'] > .caret,
-  form.single > fieldset > div > button[type='submit'] > .caret, ul.modifiers-input > li > button > .caret, div.searchable-select > .caret,
+  form.single > fieldset > div > button[type='submit'] > .caret,
+  .input-wrapper > button[type='submit'] > .caret, .autocompleted > button[type='submit'] > .caret, div.searchable-select > button[type='submit'] > .caret, ul.modifiers-input > li > button > .caret, div.searchable-select > .caret,
   .dropup > .btn > .caret, section.data-table > nav > div >
   div.dropup > a > .caret, form.single >
   div.dropup > button[type='submit'] > .caret,
   form.single > fieldset >
-  div.dropup > button[type='submit'] > .caret, ul.modifiers-input >
+  div.dropup > button[type='submit'] > .caret,
+  .input-wrapper.dropup > button[type='submit'] > .caret,
+  .autocompleted.dropup > button[type='submit'] > .caret,
+  div.searchable-select.dropup > button[type='submit'] > .caret, ul.modifiers-input >
   li.dropup > button > .caret,
   .dropup > div.searchable-select > .caret {
     border-top-color: #000 !important; }
@@ -1503,7 +1507,10 @@ form.single > div > textarea,
 form.single > div > select,
 form.single > fieldset > div > input,
 form.single > fieldset > div > textarea,
-form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > ul, ul.modifiers-input > li > input, div.searchable-select > ul > li > input {
+form.single > fieldset > div > select,
+.input-wrapper > input, .autocompleted > input, div.searchable-select > input,
+.input-wrapper > textarea, .autocompleted > textarea, div.searchable-select > textarea,
+.input-wrapper > select, .autocompleted > select, div.searchable-select > select, ul.tags-input, ul.modifiers-input > li > ul, ul.modifiers-input > li > input, .autocompleted > ul.autocomplete > li > input, div.searchable-select > ul.autocomplete > li > input, div.searchable-select.autocompleted > ul > li > input, div.searchable-select > ul > li > input {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -1519,7 +1526,10 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single > div > select::-ms-expand,
   form.single > fieldset > div > input::-ms-expand,
   form.single > fieldset > div > textarea::-ms-expand,
-  form.single > fieldset > div > select::-ms-expand, ul.tags-input::-ms-expand, ul.modifiers-input > li > ul::-ms-expand, ul.modifiers-input > li > input::-ms-expand, div.searchable-select > ul > li > input::-ms-expand {
+  form.single > fieldset > div > select::-ms-expand,
+  .input-wrapper > input::-ms-expand, .autocompleted > input::-ms-expand, div.searchable-select > input::-ms-expand,
+  .input-wrapper > textarea::-ms-expand, .autocompleted > textarea::-ms-expand, div.searchable-select > textarea::-ms-expand,
+  .input-wrapper > select::-ms-expand, .autocompleted > select::-ms-expand, div.searchable-select > select::-ms-expand, ul.tags-input::-ms-expand, ul.modifiers-input > li > ul::-ms-expand, ul.modifiers-input > li > input::-ms-expand, .autocompleted > ul.autocomplete > li > input::-ms-expand, div.searchable-select > ul.autocomplete > li > input::-ms-expand, div.searchable-select.autocompleted > ul > li > input::-ms-expand, div.searchable-select > ul > li > input::-ms-expand {
     background-color: transparent;
     border: 0; }
   .form-control:focus, section.data-table > nav > div > div > input:focus, form.single > div > input:focus,
@@ -1527,8 +1537,11 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single > div > select:focus,
   form.single > fieldset > div > input:focus,
   form.single > fieldset > div > textarea:focus,
-  form.single > fieldset > div > select:focus, ul.tags-input:focus, ul.modifiers-input > li > ul:focus, ul.tags-input.active, ul.modifiers-input > li > ul.active, ul.modifiers-input > li.active > ul,
-  ul.modifiers-input > li.active > input, ul.modifiers-input > li > input:focus, div.searchable-select > ul > li > input:focus {
+  form.single > fieldset > div > select:focus,
+  .input-wrapper > input:focus, .autocompleted > input:focus, div.searchable-select > input:focus,
+  .input-wrapper > textarea:focus, .autocompleted > textarea:focus, div.searchable-select > textarea:focus,
+  .input-wrapper > select:focus, .autocompleted > select:focus, div.searchable-select > select:focus, ul.tags-input:focus, ul.modifiers-input > li > ul:focus, ul.tags-input.active, ul.modifiers-input > li > ul.active, ul.modifiers-input > li.active > ul,
+  ul.modifiers-input > li.active > input, ul.modifiers-input > li > input:focus, .autocompleted > ul.autocomplete > li > input:focus, div.searchable-select > ul > li > input:focus {
     border-color: #66afe9;
     outline: none; }
   .form-control::placeholder, section.data-table > nav > div > div > input::placeholder, form.single > div > input::placeholder,
@@ -1536,7 +1549,10 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single > div > select::placeholder,
   form.single > fieldset > div > input::placeholder,
   form.single > fieldset > div > textarea::placeholder,
-  form.single > fieldset > div > select::placeholder, ul.tags-input::placeholder, ul.modifiers-input > li > ul::placeholder, ul.modifiers-input > li > input::placeholder, div.searchable-select > ul > li > input::placeholder {
+  form.single > fieldset > div > select::placeholder,
+  .input-wrapper > input::placeholder, .autocompleted > input::placeholder, div.searchable-select > input::placeholder,
+  .input-wrapper > textarea::placeholder, .autocompleted > textarea::placeholder, div.searchable-select > textarea::placeholder,
+  .input-wrapper > select::placeholder, .autocompleted > select::placeholder, div.searchable-select > select::placeholder, ul.tags-input::placeholder, ul.modifiers-input > li > ul::placeholder, ul.modifiers-input > li > input::placeholder, .autocompleted > ul.autocomplete > li > input::placeholder, div.searchable-select > ul.autocomplete > li > input::placeholder, div.searchable-select.autocompleted > ul > li > input::placeholder, div.searchable-select > ul > li > input::placeholder {
     color: #999;
     opacity: 1; }
   .form-control:disabled, section.data-table > nav > div > div > input:disabled, form.single > div > input:disabled,
@@ -1544,12 +1560,18 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single > div > select:disabled,
   form.single > fieldset > div > input:disabled,
   form.single > fieldset > div > textarea:disabled,
-  form.single > fieldset > div > select:disabled, ul.tags-input:disabled, ul.modifiers-input > li > ul:disabled, ul.modifiers-input > li > input:disabled, div.searchable-select > ul > li > input:disabled, .form-control[readonly], section.data-table > nav > div > div > input[readonly], form.single > div > input[readonly],
+  form.single > fieldset > div > select:disabled,
+  .input-wrapper > input:disabled, .autocompleted > input:disabled, div.searchable-select > input:disabled,
+  .input-wrapper > textarea:disabled, .autocompleted > textarea:disabled, div.searchable-select > textarea:disabled,
+  .input-wrapper > select:disabled, .autocompleted > select:disabled, div.searchable-select > select:disabled, ul.tags-input:disabled, ul.modifiers-input > li > ul:disabled, ul.modifiers-input > li > input:disabled, .autocompleted > ul.autocomplete > li > input:disabled, div.searchable-select > ul > li > input:disabled, .form-control[readonly], section.data-table > nav > div > div > input[readonly], form.single > div > input[readonly],
   form.single > div > textarea[readonly],
   form.single > div > select[readonly],
   form.single > fieldset > div > input[readonly],
   form.single > fieldset > div > textarea[readonly],
-  form.single > fieldset > div > select[readonly], ul[readonly].tags-input, ul.modifiers-input > li > ul[readonly], ul.modifiers-input > li > input[readonly], div.searchable-select > ul > li > input[readonly] {
+  form.single > fieldset > div > select[readonly],
+  .input-wrapper > input[readonly], .autocompleted > input[readonly], div.searchable-select > input[readonly],
+  .input-wrapper > textarea[readonly], .autocompleted > textarea[readonly], div.searchable-select > textarea[readonly],
+  .input-wrapper > select[readonly], .autocompleted > select[readonly], div.searchable-select > select[readonly], ul[readonly].tags-input, ul.modifiers-input > li > ul[readonly], ul.modifiers-input > li > input[readonly], .autocompleted > ul.autocomplete > li > input[readonly], div.searchable-select > ul > li > input[readonly] {
     background-color: #eceeef;
     opacity: 1; }
   .form-control:disabled, section.data-table > nav > div > div > input:disabled, form.single > div > input:disabled,
@@ -1557,7 +1579,10 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single > div > select:disabled,
   form.single > fieldset > div > input:disabled,
   form.single > fieldset > div > textarea:disabled,
-  form.single > fieldset > div > select:disabled, ul.tags-input:disabled, ul.modifiers-input > li > ul:disabled, ul.modifiers-input > li > input:disabled, div.searchable-select > ul > li > input:disabled {
+  form.single > fieldset > div > select:disabled,
+  .input-wrapper > input:disabled, .autocompleted > input:disabled, div.searchable-select > input:disabled,
+  .input-wrapper > textarea:disabled, .autocompleted > textarea:disabled, div.searchable-select > textarea:disabled,
+  .input-wrapper > select:disabled, .autocompleted > select:disabled, div.searchable-select > select:disabled, ul.tags-input:disabled, ul.modifiers-input > li > ul:disabled, ul.modifiers-input > li > input:disabled, .autocompleted > ul.autocomplete > li > input:disabled, div.searchable-select > ul > li > input:disabled {
     cursor: not-allowed; }
 
 .form-control-file,
@@ -1570,24 +1595,37 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control, section.data-table > nav > div > div > input[type="date"], form.single > div > input[type="date"],
-  form.single > fieldset > div > input[type="date"], ul.modifiers-input > li > input[type="date"], div.searchable-select > ul > li > input[type="date"],
+  form.single > fieldset > div > input[type="date"],
+  .input-wrapper > input[type="date"], .autocompleted > input[type="date"], div.searchable-select > input[type="date"], ul.modifiers-input > li > input[type="date"], .autocompleted > ul.autocomplete > li > input[type="date"], div.searchable-select > ul > li > input[type="date"],
   input[type="time"].form-control,
   section.data-table > nav > div > div > input[type="time"],
   form.single > div > input[type="time"],
   form.single > fieldset > div > input[type="time"],
+  .input-wrapper > input[type="time"],
+  .autocompleted > input[type="time"],
+  div.searchable-select > input[type="time"],
   ul.modifiers-input > li > input[type="time"],
+  .autocompleted > ul.autocomplete > li > input[type="time"],
   div.searchable-select > ul > li > input[type="time"],
   input[type="datetime-local"].form-control,
   section.data-table > nav > div > div > input[type="datetime-local"],
   form.single > div > input[type="datetime-local"],
   form.single > fieldset > div > input[type="datetime-local"],
+  .input-wrapper > input[type="datetime-local"],
+  .autocompleted > input[type="datetime-local"],
+  div.searchable-select > input[type="datetime-local"],
   ul.modifiers-input > li > input[type="datetime-local"],
+  .autocompleted > ul.autocomplete > li > input[type="datetime-local"],
   div.searchable-select > ul > li > input[type="datetime-local"],
   input[type="month"].form-control,
   section.data-table > nav > div > div > input[type="month"],
   form.single > div > input[type="month"],
   form.single > fieldset > div > input[type="month"],
+  .input-wrapper > input[type="month"],
+  .autocompleted > input[type="month"],
+  div.searchable-select > input[type="month"],
   ul.modifiers-input > li > input[type="month"],
+  .autocompleted > ul.autocomplete > li > input[type="month"],
   div.searchable-select > ul > li > input[type="month"] {
     line-height: 2.25rem; }
   input[type="date"].input-sm,
@@ -1596,7 +1634,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-sm form.single > div > input[type="date"],
   .input-group-sm
   form.single > fieldset > div > input[type="date"],
+  .input-group-sm
+  .input-wrapper > input[type="date"],
+  .input-group-sm .autocompleted > input[type="date"],
+  .input-group-sm div.searchable-select > input[type="date"],
   .input-group-sm ul.modifiers-input > li > input[type="date"],
+  .input-group-sm .autocompleted > ul.autocomplete > li > input[type="date"],
   .input-group-sm div.searchable-select > ul > li > input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm
@@ -1605,7 +1648,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-sm form.single > div > input[type="time"],
   .input-group-sm
   form.single > fieldset > div > input[type="time"],
+  .input-group-sm
+  .input-wrapper > input[type="time"],
+  .input-group-sm .autocompleted > input[type="time"],
+  .input-group-sm div.searchable-select > input[type="time"],
   .input-group-sm ul.modifiers-input > li > input[type="time"],
+  .input-group-sm .autocompleted > ul.autocomplete > li > input[type="time"],
   .input-group-sm div.searchable-select > ul > li > input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm
@@ -1614,7 +1662,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-sm form.single > div > input[type="datetime-local"],
   .input-group-sm
   form.single > fieldset > div > input[type="datetime-local"],
+  .input-group-sm
+  .input-wrapper > input[type="datetime-local"],
+  .input-group-sm .autocompleted > input[type="datetime-local"],
+  .input-group-sm div.searchable-select > input[type="datetime-local"],
   .input-group-sm ul.modifiers-input > li > input[type="datetime-local"],
+  .input-group-sm .autocompleted > ul.autocomplete > li > input[type="datetime-local"],
   .input-group-sm div.searchable-select > ul > li > input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm
@@ -1623,7 +1676,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-sm form.single > div > input[type="month"],
   .input-group-sm
   form.single > fieldset > div > input[type="month"],
+  .input-group-sm
+  .input-wrapper > input[type="month"],
+  .input-group-sm .autocompleted > input[type="month"],
+  .input-group-sm div.searchable-select > input[type="month"],
   .input-group-sm ul.modifiers-input > li > input[type="month"],
+  .input-group-sm .autocompleted > ul.autocomplete > li > input[type="month"],
   .input-group-sm div.searchable-select > ul > li > input[type="month"] {
     line-height: 1.8625rem; }
   input[type="date"].input-lg,
@@ -1632,7 +1690,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-lg form.single > div > input[type="date"],
   .input-group-lg
   form.single > fieldset > div > input[type="date"],
+  .input-group-lg
+  .input-wrapper > input[type="date"],
+  .input-group-lg .autocompleted > input[type="date"],
+  .input-group-lg div.searchable-select > input[type="date"],
   .input-group-lg ul.modifiers-input > li > input[type="date"],
+  .input-group-lg .autocompleted > ul.autocomplete > li > input[type="date"],
   .input-group-lg div.searchable-select > ul > li > input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg
@@ -1641,7 +1704,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-lg form.single > div > input[type="time"],
   .input-group-lg
   form.single > fieldset > div > input[type="time"],
+  .input-group-lg
+  .input-wrapper > input[type="time"],
+  .input-group-lg .autocompleted > input[type="time"],
+  .input-group-lg div.searchable-select > input[type="time"],
   .input-group-lg ul.modifiers-input > li > input[type="time"],
+  .input-group-lg .autocompleted > ul.autocomplete > li > input[type="time"],
   .input-group-lg div.searchable-select > ul > li > input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg
@@ -1650,7 +1718,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-lg form.single > div > input[type="datetime-local"],
   .input-group-lg
   form.single > fieldset > div > input[type="datetime-local"],
+  .input-group-lg
+  .input-wrapper > input[type="datetime-local"],
+  .input-group-lg .autocompleted > input[type="datetime-local"],
+  .input-group-lg div.searchable-select > input[type="datetime-local"],
   .input-group-lg ul.modifiers-input > li > input[type="datetime-local"],
+  .input-group-lg .autocompleted > ul.autocomplete > li > input[type="datetime-local"],
   .input-group-lg div.searchable-select > ul > li > input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg
@@ -1659,7 +1732,12 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   .input-group-lg form.single > div > input[type="month"],
   .input-group-lg
   form.single > fieldset > div > input[type="month"],
+  .input-group-lg
+  .input-wrapper > input[type="month"],
+  .input-group-lg .autocompleted > input[type="month"],
+  .input-group-lg div.searchable-select > input[type="month"],
   .input-group-lg ul.modifiers-input > li > input[type="month"],
+  .input-group-lg .autocompleted > ul.autocomplete > li > input[type="month"],
   .input-group-lg div.searchable-select > ul > li > input[type="month"] {
     line-height: 3.16667rem; } }
 
@@ -1673,26 +1751,32 @@ form.single > fieldset > div > select, ul.tags-input, ul.modifiers-input > li > 
   form.single > div.input-group-sm > select.form-control-static,
   form.single > fieldset > div.input-group-sm > input.form-control-static,
   form.single > fieldset > div.input-group-sm > textarea.form-control-static,
-  form.single > fieldset > div.input-group-sm > select.form-control-static, .input-group-sm > ul.form-control-static.tags-input, ul.modifiers-input > li.input-group-sm > ul.form-control-static, ul.modifiers-input > li.input-group-sm > input.form-control-static, div.searchable-select > ul > li.input-group-sm > input.form-control-static,
+  form.single > fieldset > div.input-group-sm > select.form-control-static, .input-wrapper.input-group-sm > input.form-control-static, .autocompleted.input-group-sm > input.form-control-static, div.searchable-select.input-group-sm > input.form-control-static, .input-wrapper.input-group-sm > textarea.form-control-static, .autocompleted.input-group-sm > textarea.form-control-static, div.searchable-select.input-group-sm > textarea.form-control-static, .input-wrapper.input-group-sm > select.form-control-static, .autocompleted.input-group-sm > select.form-control-static, div.searchable-select.input-group-sm > select.form-control-static, .input-group-sm > ul.form-control-static.tags-input, ul.modifiers-input > li.input-group-sm > ul.form-control-static, ul.modifiers-input > li.input-group-sm > input.form-control-static, .autocompleted > ul.autocomplete > li.input-group-sm > input.form-control-static, div.searchable-select > ul > li.input-group-sm > input.form-control-static,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, section.data-table > nav >
   div.input-group-sm > div.input-group-btn > a.form-control-static,
   form.single.input-group-sm > div.input-group-btn > button.form-control-static[type='submit'],
   form.single >
   fieldset.input-group-sm > div.input-group-btn > button.form-control-static[type='submit'],
+  .input-group-sm > .input-wrapper.input-group-btn > button.form-control-static[type='submit'],
+  .input-group-sm > .autocompleted.input-group-btn > button.form-control-static[type='submit'],
+  .input-group-sm > div.searchable-select.input-group-btn > button.form-control-static[type='submit'],
   ul.modifiers-input.input-group-sm > li.input-group-btn > button.form-control-static,
   .input-group-sm > .input-group-btn > div.form-control-static.searchable-select, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, section.data-table > nav > div > div.input-group-lg > input.form-control-static, form.single > div.input-group-lg > input.form-control-static,
   form.single > div.input-group-lg > textarea.form-control-static,
   form.single > div.input-group-lg > select.form-control-static,
   form.single > fieldset > div.input-group-lg > input.form-control-static,
   form.single > fieldset > div.input-group-lg > textarea.form-control-static,
-  form.single > fieldset > div.input-group-lg > select.form-control-static, .input-group-lg > ul.form-control-static.tags-input, ul.modifiers-input > li.input-group-lg > ul.form-control-static, ul.modifiers-input > li.input-group-lg > input.form-control-static, div.searchable-select > ul > li.input-group-lg > input.form-control-static,
+  form.single > fieldset > div.input-group-lg > select.form-control-static, .input-wrapper.input-group-lg > input.form-control-static, .autocompleted.input-group-lg > input.form-control-static, div.searchable-select.input-group-lg > input.form-control-static, .input-wrapper.input-group-lg > textarea.form-control-static, .autocompleted.input-group-lg > textarea.form-control-static, div.searchable-select.input-group-lg > textarea.form-control-static, .input-wrapper.input-group-lg > select.form-control-static, .autocompleted.input-group-lg > select.form-control-static, div.searchable-select.input-group-lg > select.form-control-static, .input-group-lg > ul.form-control-static.tags-input, ul.modifiers-input > li.input-group-lg > ul.form-control-static, ul.modifiers-input > li.input-group-lg > input.form-control-static, .autocompleted > ul.autocomplete > li.input-group-lg > input.form-control-static, div.searchable-select > ul > li.input-group-lg > input.form-control-static,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn, section.data-table > nav >
   div.input-group-lg > div.input-group-btn > a.form-control-static,
   form.single.input-group-lg > div.input-group-btn > button.form-control-static[type='submit'],
   form.single >
   fieldset.input-group-lg > div.input-group-btn > button.form-control-static[type='submit'],
+  .input-group-lg > .input-wrapper.input-group-btn > button.form-control-static[type='submit'],
+  .input-group-lg > .autocompleted.input-group-btn > button.form-control-static[type='submit'],
+  .input-group-lg > div.searchable-select.input-group-btn > button.form-control-static[type='submit'],
   ul.modifiers-input.input-group-lg > li.input-group-btn > button.form-control-static,
   .input-group-lg > .input-group-btn > div.form-control-static.searchable-select {
     padding-right: 0;
@@ -1703,13 +1787,16 @@ form.single > div.input-group-sm > textarea,
 form.single > div.input-group-sm > select,
 form.single > fieldset > div.input-group-sm > input,
 form.single > fieldset > div.input-group-sm > textarea,
-form.single > fieldset > div.input-group-sm > select, .input-group-sm > ul.tags-input, ul.modifiers-input > li.input-group-sm > ul, ul.modifiers-input > li.input-group-sm > input, div.searchable-select > ul > li.input-group-sm > input,
+form.single > fieldset > div.input-group-sm > select, .input-wrapper.input-group-sm > input, .autocompleted.input-group-sm > input, div.searchable-select.input-group-sm > input, .input-wrapper.input-group-sm > textarea, .autocompleted.input-group-sm > textarea, div.searchable-select.input-group-sm > textarea, .input-wrapper.input-group-sm > select, .autocompleted.input-group-sm > select, div.searchable-select.input-group-sm > select, .input-group-sm > ul.tags-input, ul.modifiers-input > li.input-group-sm > ul, ul.modifiers-input > li.input-group-sm > input, .autocompleted > ul.autocomplete > li.input-group-sm > input, div.searchable-select > ul > li.input-group-sm > input,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, section.data-table > nav >
 div.input-group-sm > div.input-group-btn > a,
 form.single.input-group-sm > div.input-group-btn > button[type='submit'],
 form.single >
 fieldset.input-group-sm > div.input-group-btn > button[type='submit'],
+.input-group-sm > .input-wrapper.input-group-btn > button[type='submit'],
+.input-group-sm > .autocompleted.input-group-btn > button[type='submit'],
+.input-group-sm > div.searchable-select.input-group-btn > button[type='submit'],
 ul.modifiers-input.input-group-sm > li.input-group-btn > button,
 .input-group-sm > .input-group-btn > div.searchable-select {
   padding: 0.275rem 0.75rem;
@@ -1722,13 +1809,16 @@ form.single > div.input-group-lg > textarea,
 form.single > div.input-group-lg > select,
 form.single > fieldset > div.input-group-lg > input,
 form.single > fieldset > div.input-group-lg > textarea,
-form.single > fieldset > div.input-group-lg > select, .input-group-lg > ul.tags-input, ul.modifiers-input > li.input-group-lg > ul, ul.modifiers-input > li.input-group-lg > input, div.searchable-select > ul > li.input-group-lg > input,
+form.single > fieldset > div.input-group-lg > select, .input-wrapper.input-group-lg > input, .autocompleted.input-group-lg > input, div.searchable-select.input-group-lg > input, .input-wrapper.input-group-lg > textarea, .autocompleted.input-group-lg > textarea, div.searchable-select.input-group-lg > textarea, .input-wrapper.input-group-lg > select, .autocompleted.input-group-lg > select, div.searchable-select.input-group-lg > select, .input-group-lg > ul.tags-input, ul.modifiers-input > li.input-group-lg > ul, ul.modifiers-input > li.input-group-lg > input, .autocompleted > ul.autocomplete > li.input-group-lg > input, div.searchable-select > ul > li.input-group-lg > input,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, section.data-table > nav >
 div.input-group-lg > div.input-group-btn > a,
 form.single.input-group-lg > div.input-group-btn > button[type='submit'],
 form.single >
 fieldset.input-group-lg > div.input-group-btn > button[type='submit'],
+.input-group-lg > .input-wrapper.input-group-btn > button[type='submit'],
+.input-group-lg > .autocompleted.input-group-btn > button[type='submit'],
+.input-group-lg > div.searchable-select.input-group-btn > button[type='submit'],
 ul.modifiers-input.input-group-lg > li.input-group-btn > button,
 .input-group-lg > .input-group-btn > div.searchable-select {
   padding: 0.75rem 1.25rem;
@@ -1737,7 +1827,8 @@ ul.modifiers-input.input-group-lg > li.input-group-btn > button,
   border-radius: 0.3rem; }
 
 .form-group, form.single > div,
-form.single > fieldset > div {
+form.single > fieldset > div,
+.input-wrapper, .autocompleted, div.searchable-select {
   margin-bottom: 1rem; }
 
 .radio,
@@ -1799,7 +1890,10 @@ input[type="checkbox"].disabled {
 .form-control-warning,
 .form-control-danger,
 form.single > div.has-danger > input,
-form.single > fieldset > div.has-danger > input {
+form.single > fieldset > div.has-danger > input,
+.input-wrapper.has-danger > input,
+.has-danger.autocompleted > input,
+div.has-danger.searchable-select > input {
   padding-right: 2.25rem;
   background-repeat: no-repeat;
   background-position: center right 0.5625rem;
@@ -1822,7 +1916,10 @@ form.single > div > textarea, .has-success
 form.single > div > select, .has-success
 form.single > fieldset > div > input, .has-success
 form.single > fieldset > div > textarea, .has-success
-form.single > fieldset > div > select, .has-success ul.tags-input, .has-success ul.modifiers-input > li > ul, .has-success ul.modifiers-input > li > input, .has-success div.searchable-select > ul > li > input {
+form.single > fieldset > div > select, .has-success
+.input-wrapper > input, .has-success .autocompleted > input, .has-success div.searchable-select > input, .has-success
+.input-wrapper > textarea, .has-success .autocompleted > textarea, .has-success div.searchable-select > textarea, .has-success
+.input-wrapper > select, .has-success .autocompleted > select, .has-success div.searchable-select > select, .has-success ul.tags-input, .has-success ul.modifiers-input > li > ul, .has-success ul.modifiers-input > li > input, .has-success .autocompleted > ul.autocomplete > li > input, .has-success div.searchable-select > ul > li > input {
   border-color: #5cb85c; }
 
 .has-success .input-group-addon {
@@ -1853,7 +1950,10 @@ form.single > div > textarea, .has-warning
 form.single > div > select, .has-warning
 form.single > fieldset > div > input, .has-warning
 form.single > fieldset > div > textarea, .has-warning
-form.single > fieldset > div > select, .has-warning ul.tags-input, .has-warning ul.modifiers-input > li > ul, .has-warning ul.modifiers-input > li > input, .has-warning div.searchable-select > ul > li > input {
+form.single > fieldset > div > select, .has-warning
+.input-wrapper > input, .has-warning .autocompleted > input, .has-warning div.searchable-select > input, .has-warning
+.input-wrapper > textarea, .has-warning .autocompleted > textarea, .has-warning div.searchable-select > textarea, .has-warning
+.input-wrapper > select, .has-warning .autocompleted > select, .has-warning div.searchable-select > select, .has-warning ul.tags-input, .has-warning ul.modifiers-input > li > ul, .has-warning ul.modifiers-input > li > input, .has-warning .autocompleted > ul.autocomplete > li > input, .has-warning div.searchable-select > ul > li > input {
   border-color: #f0ad4e; }
 
 .has-warning .input-group-addon {
@@ -1884,7 +1984,10 @@ form.single > div > textarea, .has-danger
 form.single > div > select, .has-danger
 form.single > fieldset > div > input, .has-danger
 form.single > fieldset > div > textarea, .has-danger
-form.single > fieldset > div > select, .has-danger ul.tags-input, .has-danger ul.modifiers-input > li > ul, .has-danger ul.modifiers-input > li > input, .has-danger div.searchable-select > ul > li > input {
+form.single > fieldset > div > select, .has-danger
+.input-wrapper > input, .has-danger .autocompleted > input, .has-danger div.searchable-select > input, .has-danger
+.input-wrapper > textarea, .has-danger .autocompleted > textarea, .has-danger div.searchable-select > textarea, .has-danger
+.input-wrapper > select, .has-danger .autocompleted > select, .has-danger div.searchable-select > select, .has-danger ul.tags-input, .has-danger ul.modifiers-input > li > ul, .has-danger ul.modifiers-input > li > input, .has-danger .autocompleted > ul.autocomplete > li > input, .has-danger div.searchable-select > ul > li > input {
   border-color: #d9534f; }
 
 .has-danger .input-group-addon {
@@ -1896,12 +1999,14 @@ form.single > fieldset > div > select, .has-danger ul.tags-input, .has-danger ul
   color: #d9534f; }
 
 .has-danger .form-control-danger, form.single > div.has-danger > input,
-form.single > fieldset > div.has-danger > input {
+form.single > fieldset > div.has-danger > input,
+.input-wrapper.has-danger > input, .has-danger.autocompleted > input, div.has-danger.searchable-select > input {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4="); }
 
 @media (min-width: 544px) {
   .form-inline .form-group, .form-inline form.single > div, .form-inline
-  form.single > fieldset > div {
+  form.single > fieldset > div, .form-inline
+  .input-wrapper, .form-inline .autocompleted, .form-inline div.searchable-select {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle; }
@@ -1910,7 +2015,10 @@ form.single > fieldset > div.has-danger > input {
   form.single > div > select, .form-inline
   form.single > fieldset > div > input, .form-inline
   form.single > fieldset > div > textarea, .form-inline
-  form.single > fieldset > div > select, .form-inline ul.tags-input, .form-inline ul.modifiers-input > li > ul, .form-inline ul.modifiers-input > li > input, .form-inline div.searchable-select > ul > li > input {
+  form.single > fieldset > div > select, .form-inline
+  .input-wrapper > input, .form-inline .autocompleted > input, .form-inline div.searchable-select > input, .form-inline
+  .input-wrapper > textarea, .form-inline .autocompleted > textarea, .form-inline div.searchable-select > textarea, .form-inline
+  .input-wrapper > select, .form-inline .autocompleted > select, .form-inline div.searchable-select > select, .form-inline ul.tags-input, .form-inline ul.modifiers-input > li > ul, .form-inline ul.modifiers-input > li > input, .form-inline .autocompleted > ul.autocomplete > li > input, .form-inline div.searchable-select > ul > li > input {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
@@ -1934,9 +2042,22 @@ form.single > fieldset > div.has-danger > input {
     form.single > fieldset > div > textarea,
     .form-inline .input-group
     form.single > fieldset > div > select,
+    .form-inline .input-group
+    .input-wrapper > input,
+    .form-inline .input-group .autocompleted > input,
+    .form-inline .input-group div.searchable-select > input,
+    .form-inline .input-group
+    .input-wrapper > textarea,
+    .form-inline .input-group .autocompleted > textarea,
+    .form-inline .input-group div.searchable-select > textarea,
+    .form-inline .input-group
+    .input-wrapper > select,
+    .form-inline .input-group .autocompleted > select,
+    .form-inline .input-group div.searchable-select > select,
     .form-inline .input-group ul.tags-input,
     .form-inline .input-group ul.modifiers-input > li > ul,
     .form-inline .input-group ul.modifiers-input > li > input,
+    .form-inline .input-group .autocompleted > ul.autocomplete > li > input,
     .form-inline .input-group div.searchable-select > ul > li > input {
       width: auto; }
   .form-inline .input-group > .form-control, .form-inline section.data-table > nav > div > div.input-group > input, .form-inline form.single > div.input-group > input, .form-inline
@@ -1944,7 +2065,7 @@ form.single > fieldset > div.has-danger > input {
   form.single > div.input-group > select, .form-inline
   form.single > fieldset > div.input-group > input, .form-inline
   form.single > fieldset > div.input-group > textarea, .form-inline
-  form.single > fieldset > div.input-group > select, .form-inline .input-group > ul.tags-input, .form-inline ul.modifiers-input > li.input-group > ul, .form-inline ul.modifiers-input > li.input-group > input, .form-inline div.searchable-select > ul > li.input-group > input {
+  form.single > fieldset > div.input-group > select, .form-inline .input-wrapper.input-group > input, .form-inline .autocompleted.input-group > input, .form-inline div.searchable-select.input-group > input, .form-inline .input-wrapper.input-group > textarea, .form-inline .autocompleted.input-group > textarea, .form-inline div.searchable-select.input-group > textarea, .form-inline .input-wrapper.input-group > select, .form-inline .autocompleted.input-group > select, .form-inline div.searchable-select.input-group > select, .form-inline .input-group > ul.tags-input, .form-inline ul.modifiers-input > li.input-group > ul, .form-inline ul.modifiers-input > li.input-group > input, .form-inline .autocompleted > ul.autocomplete > li.input-group > input, .form-inline div.searchable-select > ul > li.input-group > input {
     width: 100%; }
   .form-inline .form-control-label {
     margin-bottom: 0;
@@ -1966,7 +2087,8 @@ form.single > fieldset > div.has-danger > input {
     top: 0; } }
 
 .btn, section.data-table > nav > div > div > a, form.single > div > button[type='submit'],
-form.single > fieldset > div > button[type='submit'], ul.modifiers-input > li > button, div.searchable-select {
+form.single > fieldset > div > button[type='submit'],
+.input-wrapper > button[type='submit'], .autocompleted > button[type='submit'], div.searchable-select > button[type='submit'], ul.modifiers-input > li > button, div.searchable-select {
   display: inline-block;
   font-weight: normal;
   text-align: center;
@@ -1980,30 +2102,43 @@ form.single > fieldset > div > button[type='submit'], ul.modifiers-input > li > 
   line-height: 1.5;
   border-radius: 0.25rem; }
   .btn:focus, section.data-table > nav > div > div > a:focus, form.single > div > button[type='submit']:focus,
-  form.single > fieldset > div > button[type='submit']:focus, ul.modifiers-input > li > button:focus, div.searchable-select:focus, .btn.focus, section.data-table > nav > div > div > a.focus, form.single > div > button.focus[type='submit'],
-  form.single > fieldset > div > button.focus[type='submit'], ul.modifiers-input > li > button.focus, div.focus.searchable-select, .btn:active:focus, section.data-table > nav > div > div > a:active:focus, form.single > div > button[type='submit']:active:focus,
-  form.single > fieldset > div > button[type='submit']:active:focus, ul.modifiers-input > li > button:active:focus, div.searchable-select:active:focus, .btn:active.focus, section.data-table > nav > div > div > a:active.focus, form.single > div > button[type='submit']:active.focus,
-  form.single > fieldset > div > button[type='submit']:active.focus, ul.modifiers-input > li > button:active.focus, div.searchable-select:active.focus, .btn.active:focus, section.data-table > nav > div > div > a.active:focus, form.single > div > button.active[type='submit']:focus,
-  form.single > fieldset > div > button.active[type='submit']:focus, ul.modifiers-input > li > button.active:focus, div.active.searchable-select:focus, .btn.active.focus, section.data-table > nav > div > div > a.active.focus, form.single > div > button.active.focus[type='submit'],
-  form.single > fieldset > div > button.active.focus[type='submit'], ul.modifiers-input > li > button.active.focus, div.active.focus.searchable-select {
+  form.single > fieldset > div > button[type='submit']:focus,
+  .input-wrapper > button[type='submit']:focus, .autocompleted > button[type='submit']:focus, div.searchable-select > button[type='submit']:focus, ul.modifiers-input > li > button:focus, div.searchable-select:focus, .btn.focus, section.data-table > nav > div > div > a.focus, form.single > div > button.focus[type='submit'],
+  form.single > fieldset > div > button.focus[type='submit'],
+  .input-wrapper > button.focus[type='submit'], .autocompleted > button.focus[type='submit'], div.searchable-select > button.focus[type='submit'], ul.modifiers-input > li > button.focus, div.focus.searchable-select, .btn:active:focus, section.data-table > nav > div > div > a:active:focus, form.single > div > button[type='submit']:active:focus,
+  form.single > fieldset > div > button[type='submit']:active:focus,
+  .input-wrapper > button[type='submit']:active:focus, .autocompleted > button[type='submit']:active:focus, div.searchable-select > button[type='submit']:active:focus, ul.modifiers-input > li > button:active:focus, div.searchable-select:active:focus, .btn:active.focus, section.data-table > nav > div > div > a:active.focus, form.single > div > button[type='submit']:active.focus,
+  form.single > fieldset > div > button[type='submit']:active.focus,
+  .input-wrapper > button[type='submit']:active.focus, .autocompleted > button[type='submit']:active.focus, div.searchable-select > button[type='submit']:active.focus, ul.modifiers-input > li > button:active.focus, div.searchable-select:active.focus, .btn.active:focus, section.data-table > nav > div > div > a.active:focus, form.single > div > button.active[type='submit']:focus,
+  form.single > fieldset > div > button.active[type='submit']:focus,
+  .input-wrapper > button.active[type='submit']:focus, .autocompleted > button.active[type='submit']:focus, div.searchable-select > button.active[type='submit']:focus, ul.modifiers-input > li > button.active:focus, div.active.searchable-select:focus, .btn.active.focus, section.data-table > nav > div > div > a.active.focus, form.single > div > button.active.focus[type='submit'],
+  form.single > fieldset > div > button.active.focus[type='submit'],
+  .input-wrapper > button.active.focus[type='submit'], .autocompleted > button.active.focus[type='submit'], div.searchable-select > button.active.focus[type='submit'], ul.modifiers-input > li > button.active.focus, div.active.focus.searchable-select {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:focus, section.data-table > nav > div > div > a:focus, form.single > div > button[type='submit']:focus,
-  form.single > fieldset > div > button[type='submit']:focus, ul.modifiers-input > li > button:focus, div.searchable-select:focus, .btn:hover, section.data-table > nav > div > div > a:hover, form.single > div > button[type='submit']:hover,
-  form.single > fieldset > div > button[type='submit']:hover, ul.modifiers-input > li > button:hover, div.searchable-select:hover {
+  form.single > fieldset > div > button[type='submit']:focus,
+  .input-wrapper > button[type='submit']:focus, .autocompleted > button[type='submit']:focus, div.searchable-select > button[type='submit']:focus, ul.modifiers-input > li > button:focus, div.searchable-select:focus, .btn:hover, section.data-table > nav > div > div > a:hover, form.single > div > button[type='submit']:hover,
+  form.single > fieldset > div > button[type='submit']:hover,
+  .input-wrapper > button[type='submit']:hover, .autocompleted > button[type='submit']:hover, div.searchable-select > button[type='submit']:hover, ul.modifiers-input > li > button:hover, div.searchable-select:hover {
     text-decoration: none; }
   .btn.focus, section.data-table > nav > div > div > a.focus, form.single > div > button.focus[type='submit'],
-  form.single > fieldset > div > button.focus[type='submit'], ul.modifiers-input > li > button.focus, div.focus.searchable-select {
+  form.single > fieldset > div > button.focus[type='submit'],
+  .input-wrapper > button.focus[type='submit'], .autocompleted > button.focus[type='submit'], div.searchable-select > button.focus[type='submit'], ul.modifiers-input > li > button.focus, div.focus.searchable-select {
     text-decoration: none; }
   .btn:active, section.data-table > nav > div > div > a:active, form.single > div > button[type='submit']:active,
-  form.single > fieldset > div > button[type='submit']:active, ul.modifiers-input > li > button:active, div.searchable-select:active, .btn.active, section.data-table > nav > div > div > a.active, form.single > div > button.active[type='submit'],
-  form.single > fieldset > div > button.active[type='submit'], ul.modifiers-input > li > button.active, div.active.searchable-select {
+  form.single > fieldset > div > button[type='submit']:active,
+  .input-wrapper > button[type='submit']:active, .autocompleted > button[type='submit']:active, div.searchable-select > button[type='submit']:active, ul.modifiers-input > li > button:active, div.searchable-select:active, .btn.active, section.data-table > nav > div > div > a.active, form.single > div > button.active[type='submit'],
+  form.single > fieldset > div > button.active[type='submit'],
+  .input-wrapper > button.active[type='submit'], .autocompleted > button.active[type='submit'], div.searchable-select > button.active[type='submit'], ul.modifiers-input > li > button.active, div.active.searchable-select {
     background-image: none;
     outline: 0; }
   .btn.disabled, section.data-table > nav > div > div > a.disabled, form.single > div > button.disabled[type='submit'],
-  form.single > fieldset > div > button.disabled[type='submit'], ul.modifiers-input > li > button.disabled, div.disabled.searchable-select, .btn:disabled, section.data-table > nav > div > div > a:disabled, form.single > div > button[type='submit']:disabled,
-  form.single > fieldset > div > button[type='submit']:disabled, ul.modifiers-input > li > button:disabled, div.searchable-select:disabled {
+  form.single > fieldset > div > button.disabled[type='submit'],
+  .input-wrapper > button.disabled[type='submit'], .autocompleted > button.disabled[type='submit'], div.searchable-select > button.disabled[type='submit'], ul.modifiers-input > li > button.disabled, div.disabled.searchable-select, .btn:disabled, section.data-table > nav > div > div > a:disabled, form.single > div > button[type='submit']:disabled,
+  form.single > fieldset > div > button[type='submit']:disabled,
+  .input-wrapper > button[type='submit']:disabled, .autocompleted > button[type='submit']:disabled, div.searchable-select > button[type='submit']:disabled, ul.modifiers-input > li > button:disabled, div.searchable-select:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
@@ -2013,64 +2148,94 @@ fieldset[disabled] section.data-table > nav > div > div > a {
   pointer-events: none; }
 
 .btn-primary, form.single > div > button[type='submit'],
-form.single > fieldset > div > button[type='submit'] {
+form.single > fieldset > div > button[type='submit'],
+.input-wrapper > button[type='submit'], .autocompleted > button[type='submit'], div.searchable-select > button[type='submit'] {
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8; }
   .btn-primary:hover, form.single > div > button[type='submit']:hover,
-  form.single > fieldset > div > button[type='submit']:hover {
+  form.single > fieldset > div > button[type='submit']:hover,
+  .input-wrapper > button[type='submit']:hover, .autocompleted > button[type='submit']:hover, div.searchable-select > button[type='submit']:hover {
     color: #fff;
     background-color: #025aa5;
     border-color: #01549b; }
   .btn-primary:focus, form.single > div > button[type='submit']:focus,
-  form.single > fieldset > div > button[type='submit']:focus, .btn-primary.focus, form.single > div > button.focus[type='submit'],
-  form.single > fieldset > div > button.focus[type='submit'] {
+  form.single > fieldset > div > button[type='submit']:focus,
+  .input-wrapper > button[type='submit']:focus, .autocompleted > button[type='submit']:focus, div.searchable-select > button[type='submit']:focus, .btn-primary.focus, form.single > div > button.focus[type='submit'],
+  form.single > fieldset > div > button.focus[type='submit'],
+  .input-wrapper > button.focus[type='submit'], .autocompleted > button.focus[type='submit'], div.searchable-select > button.focus[type='submit'] {
     color: #fff;
     background-color: #025aa5;
     border-color: #01549b; }
   .btn-primary:active, form.single > div > button[type='submit']:active,
-  form.single > fieldset > div > button[type='submit']:active, .btn-primary.active, form.single > div > button.active[type='submit'],
+  form.single > fieldset > div > button[type='submit']:active,
+  .input-wrapper > button[type='submit']:active, .autocompleted > button[type='submit']:active, div.searchable-select > button[type='submit']:active, .btn-primary.active, form.single > div > button.active[type='submit'],
   form.single > fieldset > div > button.active[type='submit'],
+  .input-wrapper > button.active[type='submit'], .autocompleted > button.active[type='submit'], div.searchable-select > button.active[type='submit'],
   .open > .btn-primary.dropdown-toggle, form.single >
   div.open > button.dropdown-toggle[type='submit'],
   form.single > fieldset >
-  div.open > button.dropdown-toggle[type='submit'] {
+  div.open > button.dropdown-toggle[type='submit'],
+  .input-wrapper.open > button.dropdown-toggle[type='submit'],
+  .autocompleted.open > button.dropdown-toggle[type='submit'],
+  div.searchable-select.open > button.dropdown-toggle[type='submit'] {
     color: #fff;
     background-color: #025aa5;
     border-color: #01549b;
     background-image: none; }
     .btn-primary:active:hover, form.single > div > button[type='submit']:active:hover,
-    form.single > fieldset > div > button[type='submit']:active:hover, .btn-primary:active:focus, form.single > div > button[type='submit']:active:focus,
-    form.single > fieldset > div > button[type='submit']:active:focus, .btn-primary:active.focus, form.single > div > button[type='submit']:active.focus,
-    form.single > fieldset > div > button[type='submit']:active.focus, .btn-primary.active:hover, form.single > div > button.active[type='submit']:hover,
-    form.single > fieldset > div > button.active[type='submit']:hover, .btn-primary.active:focus, form.single > div > button.active[type='submit']:focus,
-    form.single > fieldset > div > button.active[type='submit']:focus, .btn-primary.active.focus, form.single > div > button.active.focus[type='submit'],
+    form.single > fieldset > div > button[type='submit']:active:hover,
+    .input-wrapper > button[type='submit']:active:hover, .autocompleted > button[type='submit']:active:hover, div.searchable-select > button[type='submit']:active:hover, .btn-primary:active:focus, form.single > div > button[type='submit']:active:focus,
+    form.single > fieldset > div > button[type='submit']:active:focus,
+    .input-wrapper > button[type='submit']:active:focus, .autocompleted > button[type='submit']:active:focus, div.searchable-select > button[type='submit']:active:focus, .btn-primary:active.focus, form.single > div > button[type='submit']:active.focus,
+    form.single > fieldset > div > button[type='submit']:active.focus,
+    .input-wrapper > button[type='submit']:active.focus, .autocompleted > button[type='submit']:active.focus, div.searchable-select > button[type='submit']:active.focus, .btn-primary.active:hover, form.single > div > button.active[type='submit']:hover,
+    form.single > fieldset > div > button.active[type='submit']:hover,
+    .input-wrapper > button.active[type='submit']:hover, .autocompleted > button.active[type='submit']:hover, div.searchable-select > button.active[type='submit']:hover, .btn-primary.active:focus, form.single > div > button.active[type='submit']:focus,
+    form.single > fieldset > div > button.active[type='submit']:focus,
+    .input-wrapper > button.active[type='submit']:focus, .autocompleted > button.active[type='submit']:focus, div.searchable-select > button.active[type='submit']:focus, .btn-primary.active.focus, form.single > div > button.active.focus[type='submit'],
     form.single > fieldset > div > button.active.focus[type='submit'],
+    .input-wrapper > button.active.focus[type='submit'], .autocompleted > button.active.focus[type='submit'], div.searchable-select > button.active.focus[type='submit'],
     .open > .btn-primary.dropdown-toggle:hover, form.single >
     div.open > button.dropdown-toggle[type='submit']:hover,
     form.single > fieldset >
     div.open > button.dropdown-toggle[type='submit']:hover,
+    .input-wrapper.open > button.dropdown-toggle[type='submit']:hover,
+    .autocompleted.open > button.dropdown-toggle[type='submit']:hover,
+    div.searchable-select.open > button.dropdown-toggle[type='submit']:hover,
     .open > .btn-primary.dropdown-toggle:focus, form.single >
     div.open > button.dropdown-toggle[type='submit']:focus,
     form.single > fieldset >
     div.open > button.dropdown-toggle[type='submit']:focus,
+    .input-wrapper.open > button.dropdown-toggle[type='submit']:focus,
+    .autocompleted.open > button.dropdown-toggle[type='submit']:focus,
+    div.searchable-select.open > button.dropdown-toggle[type='submit']:focus,
     .open > .btn-primary.dropdown-toggle.focus, form.single >
     div.open > button.dropdown-toggle.focus[type='submit'],
     form.single > fieldset >
-    div.open > button.dropdown-toggle.focus[type='submit'] {
+    div.open > button.dropdown-toggle.focus[type='submit'],
+    .input-wrapper.open > button.dropdown-toggle.focus[type='submit'],
+    .autocompleted.open > button.dropdown-toggle.focus[type='submit'],
+    div.searchable-select.open > button.dropdown-toggle.focus[type='submit'] {
       color: #fff;
       background-color: #014682;
       border-color: #01315a; }
   .btn-primary.disabled:focus, form.single > div > button.disabled[type='submit']:focus,
-  form.single > fieldset > div > button.disabled[type='submit']:focus, .btn-primary.disabled.focus, form.single > div > button.disabled.focus[type='submit'],
-  form.single > fieldset > div > button.disabled.focus[type='submit'], .btn-primary:disabled:focus, form.single > div > button[type='submit']:disabled:focus,
-  form.single > fieldset > div > button[type='submit']:disabled:focus, .btn-primary:disabled.focus, form.single > div > button[type='submit']:disabled.focus,
-  form.single > fieldset > div > button[type='submit']:disabled.focus {
+  form.single > fieldset > div > button.disabled[type='submit']:focus,
+  .input-wrapper > button.disabled[type='submit']:focus, .autocompleted > button.disabled[type='submit']:focus, div.searchable-select > button.disabled[type='submit']:focus, .btn-primary.disabled.focus, form.single > div > button.disabled.focus[type='submit'],
+  form.single > fieldset > div > button.disabled.focus[type='submit'],
+  .input-wrapper > button.disabled.focus[type='submit'], .autocompleted > button.disabled.focus[type='submit'], div.searchable-select > button.disabled.focus[type='submit'], .btn-primary:disabled:focus, form.single > div > button[type='submit']:disabled:focus,
+  form.single > fieldset > div > button[type='submit']:disabled:focus,
+  .input-wrapper > button[type='submit']:disabled:focus, .autocompleted > button[type='submit']:disabled:focus, div.searchable-select > button[type='submit']:disabled:focus, .btn-primary:disabled.focus, form.single > div > button[type='submit']:disabled.focus,
+  form.single > fieldset > div > button[type='submit']:disabled.focus,
+  .input-wrapper > button[type='submit']:disabled.focus, .autocompleted > button[type='submit']:disabled.focus, div.searchable-select > button[type='submit']:disabled.focus {
     background-color: #0275d8;
     border-color: #0275d8; }
   .btn-primary.disabled:hover, form.single > div > button.disabled[type='submit']:hover,
-  form.single > fieldset > div > button.disabled[type='submit']:hover, .btn-primary:disabled:hover, form.single > div > button[type='submit']:disabled:hover,
-  form.single > fieldset > div > button[type='submit']:disabled:hover {
+  form.single > fieldset > div > button.disabled[type='submit']:hover,
+  .input-wrapper > button.disabled[type='submit']:hover, .autocompleted > button.disabled[type='submit']:hover, div.searchable-select > button.disabled[type='submit']:hover, .btn-primary:disabled:hover, form.single > div > button[type='submit']:disabled:hover,
+  form.single > fieldset > div > button[type='submit']:disabled:hover,
+  .input-wrapper > button[type='submit']:disabled:hover, .autocompleted > button[type='submit']:disabled:hover, div.searchable-select > button[type='submit']:disabled:hover {
     background-color: #0275d8;
     border-color: #0275d8; }
 
@@ -2379,14 +2544,14 @@ form.single > fieldset > div > button[type='submit'] {
     text-decoration: none; }
 
 .btn-lg, .btn-group-lg > .btn, section.data-table > nav > div > div.btn-group-lg > a, form.single > div.btn-group-lg > button[type='submit'],
-form.single > fieldset > div.btn-group-lg > button[type='submit'], ul.modifiers-input > li.btn-group-lg > button, .btn-group-lg > div.searchable-select {
+form.single > fieldset > div.btn-group-lg > button[type='submit'], .input-wrapper.btn-group-lg > button[type='submit'], .autocompleted.btn-group-lg > button[type='submit'], div.searchable-select.btn-group-lg > button[type='submit'], ul.modifiers-input > li.btn-group-lg > button, .btn-group-lg > div.searchable-select {
   padding: 0.75rem 1.25rem;
   font-size: 1.25rem;
   line-height: 1.33333;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn, section.data-table > nav > div > div.btn-group-sm > a, form.single > div.btn-group-sm > button[type='submit'],
-form.single > fieldset > div.btn-group-sm > button[type='submit'], ul.modifiers-input > li.btn-group-sm > button, .btn-group-sm > div.searchable-select, ul.modifiers-input > li > button {
+form.single > fieldset > div.btn-group-sm > button[type='submit'], .input-wrapper.btn-group-sm > button[type='submit'], .autocompleted.btn-group-sm > button[type='submit'], div.searchable-select.btn-group-sm > button[type='submit'], ul.modifiers-input > li.btn-group-sm > button, .btn-group-sm > div.searchable-select, ul.modifiers-input > li > button {
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2446,7 +2611,7 @@ input[type="button"].btn-block {
   border-top: 0;
   border-bottom: 0.3em solid; }
 
-.dropdown-menu, div.searchable-select > ul {
+.dropdown-menu, .autocompleted > ul.autocomplete, div.searchable-select > ul.autocomplete, div.searchable-select.autocompleted > ul, div.searchable-select > ul {
   position: absolute;
   top: 100%;
   left: 0;
@@ -2471,7 +2636,7 @@ input[type="button"].btn-block {
   overflow: hidden;
   background-color: #e5e5e5; }
 
-.dropdown-item, div.searchable-select > ul > li {
+.dropdown-item, .autocompleted > ul.autocomplete > li, div.searchable-select > ul.autocomplete > li, div.searchable-select.autocompleted > ul > li, div.searchable-select > ul > li {
   display: block;
   width: 100%;
   padding: 3px 20px;
@@ -2483,25 +2648,25 @@ input[type="button"].btn-block {
   white-space: nowrap;
   background: none;
   border: 0; }
-  .dropdown-item:focus, div.searchable-select > ul > li:focus, .dropdown-item:hover, div.searchable-select > ul > li:hover {
+  .dropdown-item:focus, .autocompleted > ul.autocomplete > li:focus, div.searchable-select > ul > li:focus, .dropdown-item:hover, .autocompleted > ul.autocomplete > li:hover, div.searchable-select > ul > li:hover {
     color: #2b2d2f;
     text-decoration: none;
     background-color: #f5f5f5; }
-  .dropdown-item.active, div.searchable-select > ul > li.active, .dropdown-item.active:focus, div.searchable-select > ul > li.active:focus, .dropdown-item.active:hover, div.searchable-select > ul > li.active:hover {
+  .dropdown-item.active, .autocompleted > ul.autocomplete > li.active, div.searchable-select > ul > li.active, .dropdown-item.active:focus, .autocompleted > ul.autocomplete > li.active:focus, div.searchable-select > ul > li.active:focus, .dropdown-item.active:hover, .autocompleted > ul.autocomplete > li.active:hover, div.searchable-select > ul > li.active:hover {
     color: #fff;
     text-decoration: none;
     background-color: #0275d8;
     outline: 0; }
-  .dropdown-item.disabled, div.searchable-select > ul > li.disabled, .dropdown-item.disabled:focus, div.searchable-select > ul > li.disabled:focus, .dropdown-item.disabled:hover, div.searchable-select > ul > li.disabled:hover {
+  .dropdown-item.disabled, .autocompleted > ul.autocomplete > li.disabled, div.searchable-select > ul > li.disabled, .dropdown-item.disabled:focus, .autocompleted > ul.autocomplete > li.disabled:focus, div.searchable-select > ul > li.disabled:focus, .dropdown-item.disabled:hover, .autocompleted > ul.autocomplete > li.disabled:hover, div.searchable-select > ul > li.disabled:hover {
     color: #818a91; }
-  .dropdown-item.disabled:focus, div.searchable-select > ul > li.disabled:focus, .dropdown-item.disabled:hover, div.searchable-select > ul > li.disabled:hover {
+  .dropdown-item.disabled:focus, .autocompleted > ul.autocomplete > li.disabled:focus, div.searchable-select > ul > li.disabled:focus, .dropdown-item.disabled:hover, .autocompleted > ul.autocomplete > li.disabled:hover, div.searchable-select > ul > li.disabled:hover {
     text-decoration: none;
     cursor: not-allowed;
     background-color: transparent;
     background-image: none;
     filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)"; }
 
-.open > .dropdown-menu, div.searchable-select.open > ul {
+.open > .dropdown-menu, .autocompleted.open > ul.autocomplete, div.searchable-select.open > ul {
   display: block; }
 
 .open > a {
@@ -2531,7 +2696,7 @@ input[type="button"].btn-block {
   left: 0;
   z-index: 990; }
 
-.pull-right > .dropdown-menu, div.searchable-select.pull-right > ul {
+.pull-right > .dropdown-menu, .autocompleted.pull-right > ul.autocomplete, div.searchable-select.pull-right > ul {
   right: 0;
   left: auto; }
 
@@ -2541,8 +2706,9 @@ input[type="button"].btn-block {
   border-top: 0;
   border-bottom: 0.3em solid; }
 
-.dropup .dropdown-menu, .dropup div.searchable-select > ul,
+.dropup .dropdown-menu, .dropup .autocompleted > ul.autocomplete, .dropup div.searchable-select > ul,
 .navbar-fixed-bottom .dropdown .dropdown-menu,
+.navbar-fixed-bottom .dropdown .autocompleted > ul.autocomplete,
 .navbar-fixed-bottom .dropdown div.searchable-select > ul {
   top: auto;
   bottom: 100%;
@@ -2554,64 +2720,90 @@ input[type="button"].btn-block {
   display: inline-block;
   vertical-align: middle; }
   .btn-group > .btn, section.data-table > nav > div > div.btn-group > a, form.single > div.btn-group > button[type='submit'],
-  form.single > fieldset > div.btn-group > button[type='submit'], ul.modifiers-input > li.btn-group > button, .btn-group > div.searchable-select,
+  form.single > fieldset > div.btn-group > button[type='submit'], .input-wrapper.btn-group > button[type='submit'], .autocompleted.btn-group > button[type='submit'], div.searchable-select.btn-group > button[type='submit'], ul.modifiers-input > li.btn-group > button, .btn-group > div.searchable-select,
   .btn-group-vertical > .btn, section.data-table > nav > div >
   div.btn-group-vertical > a, form.single >
   div.btn-group-vertical > button[type='submit'],
   form.single > fieldset >
-  div.btn-group-vertical > button[type='submit'], ul.modifiers-input >
+  div.btn-group-vertical > button[type='submit'],
+  .input-wrapper.btn-group-vertical > button[type='submit'],
+  .autocompleted.btn-group-vertical > button[type='submit'],
+  div.searchable-select.btn-group-vertical > button[type='submit'], ul.modifiers-input >
   li.btn-group-vertical > button,
   .btn-group-vertical > div.searchable-select {
     position: relative;
     float: left; }
     .btn-group > .btn:focus, section.data-table > nav > div > div.btn-group > a:focus, form.single > div.btn-group > button[type='submit']:focus,
-    form.single > fieldset > div.btn-group > button[type='submit']:focus, ul.modifiers-input > li.btn-group > button:focus, .btn-group > div.searchable-select:focus, .btn-group > .btn:active, section.data-table > nav > div > div.btn-group > a:active, form.single > div.btn-group > button[type='submit']:active,
-    form.single > fieldset > div.btn-group > button[type='submit']:active, ul.modifiers-input > li.btn-group > button:active, .btn-group > div.searchable-select:active, .btn-group > .btn.active, section.data-table > nav > div > div.btn-group > a.active, form.single > div.btn-group > button.active[type='submit'],
-    form.single > fieldset > div.btn-group > button.active[type='submit'], ul.modifiers-input > li.btn-group > button.active, .btn-group > div.active.searchable-select,
+    form.single > fieldset > div.btn-group > button[type='submit']:focus, .input-wrapper.btn-group > button[type='submit']:focus, .autocompleted.btn-group > button[type='submit']:focus, div.searchable-select.btn-group > button[type='submit']:focus, ul.modifiers-input > li.btn-group > button:focus, .btn-group > div.searchable-select:focus, .btn-group > .btn:active, section.data-table > nav > div > div.btn-group > a:active, form.single > div.btn-group > button[type='submit']:active,
+    form.single > fieldset > div.btn-group > button[type='submit']:active, .input-wrapper.btn-group > button[type='submit']:active, .autocompleted.btn-group > button[type='submit']:active, div.searchable-select.btn-group > button[type='submit']:active, ul.modifiers-input > li.btn-group > button:active, .btn-group > div.searchable-select:active, .btn-group > .btn.active, section.data-table > nav > div > div.btn-group > a.active, form.single > div.btn-group > button.active[type='submit'],
+    form.single > fieldset > div.btn-group > button.active[type='submit'], .input-wrapper.btn-group > button.active[type='submit'], .autocompleted.btn-group > button.active[type='submit'], div.searchable-select.btn-group > button.active[type='submit'], ul.modifiers-input > li.btn-group > button.active, .btn-group > div.active.searchable-select,
     .btn-group-vertical > .btn:focus, section.data-table > nav > div >
     div.btn-group-vertical > a:focus, form.single >
     div.btn-group-vertical > button[type='submit']:focus,
     form.single > fieldset >
-    div.btn-group-vertical > button[type='submit']:focus, ul.modifiers-input >
+    div.btn-group-vertical > button[type='submit']:focus,
+    .input-wrapper.btn-group-vertical > button[type='submit']:focus,
+    .autocompleted.btn-group-vertical > button[type='submit']:focus,
+    div.searchable-select.btn-group-vertical > button[type='submit']:focus, ul.modifiers-input >
     li.btn-group-vertical > button:focus,
     .btn-group-vertical > div.searchable-select:focus,
     .btn-group-vertical > .btn:active, section.data-table > nav > div >
     div.btn-group-vertical > a:active, form.single >
     div.btn-group-vertical > button[type='submit']:active,
     form.single > fieldset >
-    div.btn-group-vertical > button[type='submit']:active, ul.modifiers-input >
+    div.btn-group-vertical > button[type='submit']:active,
+    .input-wrapper.btn-group-vertical > button[type='submit']:active,
+    .autocompleted.btn-group-vertical > button[type='submit']:active,
+    div.searchable-select.btn-group-vertical > button[type='submit']:active, ul.modifiers-input >
     li.btn-group-vertical > button:active,
     .btn-group-vertical > div.searchable-select:active,
     .btn-group-vertical > .btn.active, section.data-table > nav > div >
     div.btn-group-vertical > a.active, form.single >
     div.btn-group-vertical > button.active[type='submit'],
     form.single > fieldset >
-    div.btn-group-vertical > button.active[type='submit'], ul.modifiers-input >
+    div.btn-group-vertical > button.active[type='submit'],
+    .input-wrapper.btn-group-vertical > button.active[type='submit'],
+    .autocompleted.btn-group-vertical > button.active[type='submit'],
+    div.searchable-select.btn-group-vertical > button.active[type='submit'], ul.modifiers-input >
     li.btn-group-vertical > button.active,
     .btn-group-vertical > div.active.searchable-select {
       z-index: 2; }
     .btn-group > .btn:hover, section.data-table > nav > div > div.btn-group > a:hover, form.single > div.btn-group > button[type='submit']:hover,
-    form.single > fieldset > div.btn-group > button[type='submit']:hover, ul.modifiers-input > li.btn-group > button:hover, .btn-group > div.searchable-select:hover,
+    form.single > fieldset > div.btn-group > button[type='submit']:hover, .input-wrapper.btn-group > button[type='submit']:hover, .autocompleted.btn-group > button[type='submit']:hover, div.searchable-select.btn-group > button[type='submit']:hover, ul.modifiers-input > li.btn-group > button:hover, .btn-group > div.searchable-select:hover,
     .btn-group-vertical > .btn:hover, section.data-table > nav > div >
     div.btn-group-vertical > a:hover, form.single >
     div.btn-group-vertical > button[type='submit']:hover,
     form.single > fieldset >
-    div.btn-group-vertical > button[type='submit']:hover, ul.modifiers-input >
+    div.btn-group-vertical > button[type='submit']:hover,
+    .input-wrapper.btn-group-vertical > button[type='submit']:hover,
+    .autocompleted.btn-group-vertical > button[type='submit']:hover,
+    div.searchable-select.btn-group-vertical > button[type='submit']:hover, ul.modifiers-input >
     li.btn-group-vertical > button:hover,
     .btn-group-vertical > div.searchable-select:hover {
       z-index: 2; }
 
 .btn-group .btn + .btn, .btn-group section.data-table > nav > div > div > a + .btn, .btn-group form.single > div > button[type='submit'] + .btn, .btn-group
-form.single > fieldset > div > button[type='submit'] + .btn, .btn-group ul.modifiers-input > li > button + .btn, .btn-group div.searchable-select + .btn, .btn-group section.data-table > nav > div > div > .btn + a, .btn-group section.data-table > nav > div > div > a + a, .btn-group section.data-table > nav > div > div > div.searchable-select + a, .btn-group form.single > div > .btn + button[type='submit'], .btn-group form.single > div > button[type='submit'] + button[type='submit'], .btn-group form.single > div > div.searchable-select + button[type='submit'], .btn-group
+form.single > fieldset > div > button[type='submit'] + .btn, .btn-group
+.input-wrapper > button[type='submit'] + .btn, .btn-group .autocompleted > button[type='submit'] + .btn, .btn-group div.searchable-select > button[type='submit'] + .btn, .btn-group ul.modifiers-input > li > button + .btn, .btn-group div.searchable-select + .btn, .btn-group section.data-table > nav > div > div > .btn + a, .btn-group section.data-table > nav > div > div > a + a, .btn-group section.data-table > nav > div >
+div.input-wrapper > button[type='submit'] + a, .btn-group section.data-table > nav > div > div.autocompleted > button[type='submit'] + a, .btn-group section.data-table > nav > div > div.searchable-select > button[type='submit'] + a, .btn-group section.data-table > nav > div > div > div.searchable-select + a, .btn-group form.single > div > .btn + button[type='submit'], .btn-group form.single > div > button[type='submit'] + button[type='submit'], .btn-group form.single > div > div.searchable-select + button[type='submit'], .btn-group
 form.single > fieldset > div > .btn + button[type='submit'], .btn-group
 form.single > fieldset > div > button[type='submit'] + button[type='submit'], .btn-group
-form.single > fieldset > div > div.searchable-select + button[type='submit'], .btn-group ul.modifiers-input > li > .btn + button, .btn-group ul.modifiers-input > li > button + button, .btn-group ul.modifiers-input > li > div.searchable-select + button, .btn-group .btn + div.searchable-select, .btn-group section.data-table > nav > div > div > a + div.searchable-select, .btn-group form.single > div > button[type='submit'] + div.searchable-select, .btn-group
-form.single > fieldset > div > button[type='submit'] + div.searchable-select, .btn-group ul.modifiers-input > li > button + div.searchable-select, .btn-group div.searchable-select + div.searchable-select,
+form.single > fieldset > div > div.searchable-select + button[type='submit'], .btn-group
+.input-wrapper > .btn + button[type='submit'], .btn-group section.data-table > nav > div > div.input-wrapper > a + button[type='submit'], .btn-group
+.input-wrapper > button[type='submit'] + button[type='submit'], .btn-group ul.modifiers-input > li.input-wrapper > button + button[type='submit'], .btn-group
+.input-wrapper > div.searchable-select + button[type='submit'], .btn-group .autocompleted > .btn + button[type='submit'], .btn-group section.data-table > nav > div > div.autocompleted > a + button[type='submit'], .btn-group .autocompleted > button[type='submit'] + button[type='submit'], .btn-group ul.modifiers-input > li.autocompleted > button + button[type='submit'], .btn-group .autocompleted > div.searchable-select + button[type='submit'], .btn-group div.searchable-select > .btn + button[type='submit'], .btn-group section.data-table > nav > div > div.searchable-select > a + button[type='submit'], .btn-group div.searchable-select > button[type='submit'] + button[type='submit'], .btn-group div.searchable-select > div.searchable-select + button[type='submit'], .btn-group ul.modifiers-input > li > .btn + button, .btn-group ul.modifiers-input >
+li.input-wrapper > button[type='submit'] + button, .btn-group ul.modifiers-input > li.autocompleted > button[type='submit'] + button, .btn-group ul.modifiers-input > li > button + button, .btn-group ul.modifiers-input > li > div.searchable-select + button, .btn-group .btn + div.searchable-select, .btn-group section.data-table > nav > div > div > a + div.searchable-select, .btn-group form.single > div > button[type='submit'] + div.searchable-select, .btn-group
+form.single > fieldset > div > button[type='submit'] + div.searchable-select, .btn-group
+.input-wrapper > button[type='submit'] + div.searchable-select, .btn-group .autocompleted > button[type='submit'] + div.searchable-select, .btn-group div.searchable-select > button[type='submit'] + div.searchable-select, .btn-group ul.modifiers-input > li > button + div.searchable-select, .btn-group div.searchable-select + div.searchable-select,
 .btn-group .btn + .btn-group,
 .btn-group section.data-table > nav > div > div > a + .btn-group,
 .btn-group form.single > div > button[type='submit'] + .btn-group,
 .btn-group
 form.single > fieldset > div > button[type='submit'] + .btn-group,
+.btn-group
+.input-wrapper > button[type='submit'] + .btn-group,
+.btn-group .autocompleted > button[type='submit'] + .btn-group,
+.btn-group div.searchable-select > button[type='submit'] + .btn-group,
 .btn-group ul.modifiers-input > li > button + .btn-group,
 .btn-group div.searchable-select + .btn-group,
 .btn-group .btn-group + .btn,
@@ -2619,6 +2811,10 @@ form.single > fieldset > div > button[type='submit'] + .btn-group,
 .btn-group form.single > div > .btn-group + button[type='submit'],
 .btn-group
 form.single > fieldset > div > .btn-group + button[type='submit'],
+.btn-group
+.input-wrapper > .btn-group + button[type='submit'],
+.btn-group .autocompleted > .btn-group + button[type='submit'],
+.btn-group div.searchable-select > .btn-group + button[type='submit'],
 .btn-group ul.modifiers-input > li > .btn-group + button,
 .btn-group .btn-group + div.searchable-select,
 .btn-group .btn-group + .btn-group {
@@ -2634,25 +2830,25 @@ form.single > fieldset > div > .btn-group + button[type='submit'],
   .btn-toolbar .input-group {
     float: left; }
   .btn-toolbar > .btn, section.data-table > nav > div > div.btn-toolbar > a, form.single > div.btn-toolbar > button[type='submit'],
-  form.single > fieldset > div.btn-toolbar > button[type='submit'], ul.modifiers-input > li.btn-toolbar > button, .btn-toolbar > div.searchable-select,
+  form.single > fieldset > div.btn-toolbar > button[type='submit'], .input-wrapper.btn-toolbar > button[type='submit'], .autocompleted.btn-toolbar > button[type='submit'], div.searchable-select.btn-toolbar > button[type='submit'], ul.modifiers-input > li.btn-toolbar > button, .btn-toolbar > div.searchable-select,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), section.data-table > nav > div > div.btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), form.single > div.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle),
-form.single > fieldset > div.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle), ul.modifiers-input > li.btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+form.single > fieldset > div.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle), .input-wrapper.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle), .autocompleted.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle), div.searchable-select.btn-group > button[type='submit']:not(:first-child):not(:last-child):not(.dropdown-toggle), ul.modifiers-input > li.btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
 .btn-group > .btn:first-child, section.data-table > nav > div > div.btn-group > a:first-child, form.single > div.btn-group > button[type='submit']:first-child,
-form.single > fieldset > div.btn-group > button[type='submit']:first-child, ul.modifiers-input > li.btn-group > button:first-child, .btn-group > div.searchable-select:first-child {
+form.single > fieldset > div.btn-group > button[type='submit']:first-child, .input-wrapper.btn-group > button[type='submit']:first-child, .autocompleted.btn-group > button[type='submit']:first-child, div.searchable-select.btn-group > button[type='submit']:first-child, ul.modifiers-input > li.btn-group > button:first-child, .btn-group > div.searchable-select:first-child {
   margin-left: 0; }
   .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), section.data-table > nav > div > div.btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), form.single > div.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle),
-  form.single > fieldset > div.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle), ul.modifiers-input > li.btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:first-child:not(:last-child):not(.dropdown-toggle) {
+  form.single > fieldset > div.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle), .input-wrapper.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle), .autocompleted.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle), div.searchable-select.btn-group > button[type='submit']:first-child:not(:last-child):not(.dropdown-toggle), ul.modifiers-input > li.btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > div.searchable-select:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group > .btn:last-child:not(:first-child), section.data-table > nav > div > div.btn-group > a:last-child:not(:first-child), form.single > div.btn-group > button[type='submit']:last-child:not(:first-child),
-form.single > fieldset > div.btn-group > button[type='submit']:last-child:not(:first-child), ul.modifiers-input > li.btn-group > button:last-child:not(:first-child), .btn-group > div.searchable-select:last-child:not(:first-child),
+form.single > fieldset > div.btn-group > button[type='submit']:last-child:not(:first-child), .input-wrapper.btn-group > button[type='submit']:last-child:not(:first-child), .autocompleted.btn-group > button[type='submit']:last-child:not(:first-child), div.searchable-select.btn-group > button[type='submit']:last-child:not(:first-child), ul.modifiers-input > li.btn-group > button:last-child:not(:first-child), .btn-group > div.searchable-select:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2661,17 +2857,17 @@ form.single > fieldset > div.btn-group > button[type='submit']:last-child:not(:f
   float: left; }
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, section.data-table > nav > div.btn-group > div.btn-group:not(:first-child):not(:last-child) > a, form.single.btn-group > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'],
-form.single > fieldset.btn-group > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], ul.modifiers-input.btn-group > li.btn-group:not(:first-child):not(:last-child) > button, .btn-group > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
+form.single > fieldset.btn-group > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group > .input-wrapper.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group > .autocompleted.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group > div.searchable-select.btn-group:not(:first-child):not(:last-child) > button[type='submit'], ul.modifiers-input.btn-group > li.btn-group:not(:first-child):not(:last-child) > button, .btn-group > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
   border-radius: 0; }
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, section.data-table > nav > div.btn-group > div.btn-group:first-child:not(:last-child) > a:last-child, form.single.btn-group > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child,
-form.single > fieldset.btn-group > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, ul.modifiers-input.btn-group > li.btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
+form.single > fieldset.btn-group > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group > .input-wrapper.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group > .autocompleted.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group > div.searchable-select.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, ul.modifiers-input.btn-group > li.btn-group:first-child:not(:last-child) > button:last-child, .btn-group > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, section.data-table > nav > div.btn-group > div.btn-group:last-child:not(:first-child) > a:first-child, form.single.btn-group > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child,
-form.single > fieldset.btn-group > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, ul.modifiers-input.btn-group > li.btn-group:last-child:not(:first-child) > button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
+form.single > fieldset.btn-group > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group > .input-wrapper.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group > .autocompleted.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group > div.searchable-select.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, ul.modifiers-input.btn-group > li.btn-group:last-child:not(:first-child) > button:first-child, .btn-group > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2680,36 +2876,40 @@ form.single > fieldset.btn-group > div.btn-group:last-child:not(:first-child) > 
   outline: 0; }
 
 .btn-group > .btn + .dropdown-toggle, section.data-table > nav > div > div.btn-group > a + .dropdown-toggle, form.single > div.btn-group > button[type='submit'] + .dropdown-toggle,
-form.single > fieldset > div.btn-group > button[type='submit'] + .dropdown-toggle, ul.modifiers-input > li.btn-group > button + .dropdown-toggle, .btn-group > div.searchable-select + .dropdown-toggle {
+form.single > fieldset > div.btn-group > button[type='submit'] + .dropdown-toggle, .input-wrapper.btn-group > button[type='submit'] + .dropdown-toggle, .autocompleted.btn-group > button[type='submit'] + .dropdown-toggle, div.searchable-select.btn-group > button[type='submit'] + .dropdown-toggle, ul.modifiers-input > li.btn-group > button + .dropdown-toggle, .btn-group > div.searchable-select + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px; }
 
 .btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, section.data-table > nav > div > div.btn-group-lg.btn-group > a + .dropdown-toggle, form.single > div.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle,
-form.single > fieldset > div.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle, ul.modifiers-input > li.btn-group-lg.btn-group > button + .dropdown-toggle, .btn-group-lg.btn-group > div.searchable-select + .dropdown-toggle {
+form.single > fieldset > div.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle, .input-wrapper.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle, .autocompleted.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle, div.searchable-select.btn-group-lg.btn-group > button[type='submit'] + .dropdown-toggle, ul.modifiers-input > li.btn-group-lg.btn-group > button + .dropdown-toggle, .btn-group-lg.btn-group > div.searchable-select + .dropdown-toggle {
   padding-right: 12px;
   padding-left: 12px; }
 
 .btn .caret, section.data-table > nav > div > div > a .caret, form.single > div > button[type='submit'] .caret,
-form.single > fieldset > div > button[type='submit'] .caret, ul.modifiers-input > li > button .caret, div.searchable-select .caret {
+form.single > fieldset > div > button[type='submit'] .caret,
+.input-wrapper > button[type='submit'] .caret, .autocompleted > button[type='submit'] .caret, ul.modifiers-input > li > button .caret, div.searchable-select .caret {
   margin-left: 0; }
 
 .btn-lg .caret, .btn-group-lg > .btn .caret, section.data-table > nav > div > div.btn-group-lg > a .caret, form.single > div.btn-group-lg > button[type='submit'] .caret,
-form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, ul.modifiers-input > li.btn-group-lg > button .caret, .btn-group-lg > div.searchable-select .caret {
+form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, .input-wrapper.btn-group-lg > button[type='submit'] .caret, .autocompleted.btn-group-lg > button[type='submit'] .caret, div.searchable-select.btn-group-lg > button[type='submit'] .caret, ul.modifiers-input > li.btn-group-lg > button .caret, .btn-group-lg > div.searchable-select .caret {
   border-width: 0.3em 0.3em 0;
   border-bottom-width: 0; }
 
 .dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup section.data-table > nav > div > div.btn-group-lg > a .caret, .dropup form.single > div.btn-group-lg > button[type='submit'] .caret, .dropup
-form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, .dropup ul.modifiers-input > li.btn-group-lg > button .caret, .dropup .btn-group-lg > div.searchable-select .caret {
+form.single > fieldset > div.btn-group-lg > button[type='submit'] .caret, .dropup .input-wrapper.btn-group-lg > button[type='submit'] .caret, .dropup .autocompleted.btn-group-lg > button[type='submit'] .caret, .dropup div.searchable-select.btn-group-lg > button[type='submit'] .caret, .dropup ul.modifiers-input > li.btn-group-lg > button .caret, .dropup .btn-group-lg > div.searchable-select .caret {
   border-width: 0 0.3em 0.3em; }
 
 .btn-group-vertical > .btn, section.data-table > nav > div > div.btn-group-vertical > a, form.single > div.btn-group-vertical > button[type='submit'],
-form.single > fieldset > div.btn-group-vertical > button[type='submit'], ul.modifiers-input > li.btn-group-vertical > button, .btn-group-vertical > div.searchable-select,
+form.single > fieldset > div.btn-group-vertical > button[type='submit'], .input-wrapper.btn-group-vertical > button[type='submit'], .autocompleted.btn-group-vertical > button[type='submit'], div.searchable-select.btn-group-vertical > button[type='submit'], ul.modifiers-input > li.btn-group-vertical > button, .btn-group-vertical > div.searchable-select,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn, section.data-table > nav >
 div.btn-group-vertical > div.btn-group > a,
 form.single.btn-group-vertical > div.btn-group > button[type='submit'],
 form.single >
 fieldset.btn-group-vertical > div.btn-group > button[type='submit'],
+.btn-group-vertical > .input-wrapper.btn-group > button[type='submit'],
+.btn-group-vertical > .autocompleted.btn-group > button[type='submit'],
+.btn-group-vertical > div.searchable-select.btn-group > button[type='submit'],
 ul.modifiers-input.btn-group-vertical > li.btn-group > button,
 .btn-group-vertical > .btn-group > div.searchable-select {
   display: block;
@@ -2723,27 +2923,33 @@ ul.modifiers-input.btn-group-vertical > li.btn-group > button,
   clear: both; }
 
 .btn-group-vertical > .btn-group > .btn, section.data-table > nav > div.btn-group-vertical > div.btn-group > a, form.single.btn-group-vertical > div.btn-group > button[type='submit'],
-form.single > fieldset.btn-group-vertical > div.btn-group > button[type='submit'], ul.modifiers-input.btn-group-vertical > li.btn-group > button, .btn-group-vertical > .btn-group > div.searchable-select {
+form.single > fieldset.btn-group-vertical > div.btn-group > button[type='submit'], .btn-group-vertical > .input-wrapper.btn-group > button[type='submit'], .btn-group-vertical > .autocompleted.btn-group > button[type='submit'], .btn-group-vertical > div.searchable-select.btn-group > button[type='submit'], ul.modifiers-input.btn-group-vertical > li.btn-group > button, .btn-group-vertical > .btn-group > div.searchable-select {
   float: none; }
 
 .btn-group-vertical > .btn + .btn, section.data-table > nav > div > div.btn-group-vertical > a + .btn, form.single > div.btn-group-vertical > button[type='submit'] + .btn,
-form.single > fieldset > div.btn-group-vertical > button[type='submit'] + .btn, ul.modifiers-input > li.btn-group-vertical > button + .btn, .btn-group-vertical > div.searchable-select + .btn, section.data-table > nav > div > div.btn-group-vertical > .btn + a, section.data-table > nav > div > div.btn-group-vertical > a + a, section.data-table > nav > div > div.btn-group-vertical > div.searchable-select + a, form.single > div.btn-group-vertical > .btn + button[type='submit'], form.single > div.btn-group-vertical > button[type='submit'] + button[type='submit'], form.single > div.btn-group-vertical > div.searchable-select + button[type='submit'],
+form.single > fieldset > div.btn-group-vertical > button[type='submit'] + .btn, .input-wrapper.btn-group-vertical > button[type='submit'] + .btn, .autocompleted.btn-group-vertical > button[type='submit'] + .btn, div.searchable-select.btn-group-vertical > button[type='submit'] + .btn, ul.modifiers-input > li.btn-group-vertical > button + .btn, .btn-group-vertical > div.searchable-select + .btn, section.data-table > nav > div > div.btn-group-vertical > .btn + a, section.data-table > nav > div > div.btn-group-vertical > a + a, section.data-table > nav > div > div.input-wrapper.btn-group-vertical > button[type='submit'] + a, section.data-table > nav > div > div.autocompleted.btn-group-vertical > button[type='submit'] + a, section.data-table > nav > div > div.searchable-select.btn-group-vertical > button[type='submit'] + a, section.data-table > nav > div > div.btn-group-vertical > div.searchable-select + a, form.single > div.btn-group-vertical > .btn + button[type='submit'], form.single > div.btn-group-vertical > button[type='submit'] + button[type='submit'], form.single > div.btn-group-vertical > div.searchable-select + button[type='submit'],
 form.single > fieldset > div.btn-group-vertical > .btn + button[type='submit'],
 form.single > fieldset > div.btn-group-vertical > button[type='submit'] + button[type='submit'],
-form.single > fieldset > div.btn-group-vertical > div.searchable-select + button[type='submit'], ul.modifiers-input > li.btn-group-vertical > .btn + button, ul.modifiers-input > li.btn-group-vertical > button + button, ul.modifiers-input > li.btn-group-vertical > div.searchable-select + button, .btn-group-vertical > .btn + div.searchable-select, section.data-table > nav > div > div.btn-group-vertical > a + div.searchable-select, form.single > div.btn-group-vertical > button[type='submit'] + div.searchable-select,
-form.single > fieldset > div.btn-group-vertical > button[type='submit'] + div.searchable-select, ul.modifiers-input > li.btn-group-vertical > button + div.searchable-select, .btn-group-vertical > div.searchable-select + div.searchable-select,
+form.single > fieldset > div.btn-group-vertical > div.searchable-select + button[type='submit'], .input-wrapper.btn-group-vertical > .btn + button[type='submit'], section.data-table > nav > div > div.input-wrapper.btn-group-vertical > a + button[type='submit'], .input-wrapper.btn-group-vertical > button[type='submit'] + button[type='submit'], .input-wrapper.btn-group-vertical > div.searchable-select + button[type='submit'], .autocompleted.btn-group-vertical > .btn + button[type='submit'], section.data-table > nav > div > div.autocompleted.btn-group-vertical > a + button[type='submit'], .autocompleted.btn-group-vertical > button[type='submit'] + button[type='submit'], .autocompleted.btn-group-vertical > div.searchable-select + button[type='submit'], div.searchable-select.btn-group-vertical > .btn + button[type='submit'], section.data-table > nav > div > div.searchable-select.btn-group-vertical > a + button[type='submit'], div.searchable-select.btn-group-vertical > button[type='submit'] + button[type='submit'], div.searchable-select.btn-group-vertical > div.searchable-select + button[type='submit'], ul.modifiers-input > li.btn-group-vertical > .btn + button, ul.modifiers-input > li.btn-group-vertical > button + button, ul.modifiers-input > li.btn-group-vertical > div.searchable-select + button, .btn-group-vertical > .btn + div.searchable-select, section.data-table > nav > div > div.btn-group-vertical > a + div.searchable-select, form.single > div.btn-group-vertical > button[type='submit'] + div.searchable-select,
+form.single > fieldset > div.btn-group-vertical > button[type='submit'] + div.searchable-select, .input-wrapper.btn-group-vertical > button[type='submit'] + div.searchable-select, .autocompleted.btn-group-vertical > button[type='submit'] + div.searchable-select, div.searchable-select.btn-group-vertical > button[type='submit'] + div.searchable-select, ul.modifiers-input > li.btn-group-vertical > button + div.searchable-select, .btn-group-vertical > div.searchable-select + div.searchable-select,
 .btn-group-vertical > .btn + .btn-group, section.data-table > nav > div >
 div.btn-group-vertical > a + .btn-group, form.single >
 div.btn-group-vertical > button[type='submit'] + .btn-group,
 form.single > fieldset >
-div.btn-group-vertical > button[type='submit'] + .btn-group, ul.modifiers-input >
+div.btn-group-vertical > button[type='submit'] + .btn-group,
+.input-wrapper.btn-group-vertical > button[type='submit'] + .btn-group,
+.autocompleted.btn-group-vertical > button[type='submit'] + .btn-group,
+div.searchable-select.btn-group-vertical > button[type='submit'] + .btn-group, ul.modifiers-input >
 li.btn-group-vertical > button + .btn-group,
 .btn-group-vertical > div.searchable-select + .btn-group,
 .btn-group-vertical > .btn-group + .btn, section.data-table > nav > div >
 div.btn-group-vertical > .btn-group + a, form.single >
 div.btn-group-vertical > .btn-group + button[type='submit'],
 form.single > fieldset >
-div.btn-group-vertical > .btn-group + button[type='submit'], ul.modifiers-input >
+div.btn-group-vertical > .btn-group + button[type='submit'],
+.input-wrapper.btn-group-vertical > .btn-group + button[type='submit'],
+.autocompleted.btn-group-vertical > .btn-group + button[type='submit'],
+div.searchable-select.btn-group-vertical > .btn-group + button[type='submit'], ul.modifiers-input >
 li.btn-group-vertical > .btn-group + button,
 .btn-group-vertical > .btn-group + div.searchable-select,
 .btn-group-vertical > .btn-group + .btn-group {
@@ -2751,43 +2957,46 @@ li.btn-group-vertical > .btn-group + button,
   margin-left: 0; }
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child), section.data-table > nav > div > div.btn-group-vertical > a:not(:first-child):not(:last-child), form.single > div.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child),
-form.single > fieldset > div.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child), ul.modifiers-input > li.btn-group-vertical > button:not(:first-child):not(:last-child), .btn-group-vertical > div.searchable-select:not(:first-child):not(:last-child) {
+form.single > fieldset > div.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child), .input-wrapper.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child), .autocompleted.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child), div.searchable-select.btn-group-vertical > button[type='submit']:not(:first-child):not(:last-child), ul.modifiers-input > li.btn-group-vertical > button:not(:first-child):not(:last-child), .btn-group-vertical > div.searchable-select:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
 .btn-group-vertical > .btn:first-child:not(:last-child), section.data-table > nav > div > div.btn-group-vertical > a:first-child:not(:last-child), form.single > div.btn-group-vertical > button[type='submit']:first-child:not(:last-child),
-form.single > fieldset > div.btn-group-vertical > button[type='submit']:first-child:not(:last-child), ul.modifiers-input > li.btn-group-vertical > button:first-child:not(:last-child), .btn-group-vertical > div.searchable-select:first-child:not(:last-child) {
+form.single > fieldset > div.btn-group-vertical > button[type='submit']:first-child:not(:last-child), .input-wrapper.btn-group-vertical > button[type='submit']:first-child:not(:last-child), .autocompleted.btn-group-vertical > button[type='submit']:first-child:not(:last-child), div.searchable-select.btn-group-vertical > button[type='submit']:first-child:not(:last-child), ul.modifiers-input > li.btn-group-vertical > button:first-child:not(:last-child), .btn-group-vertical > div.searchable-select:first-child:not(:last-child) {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn:last-child:not(:first-child), section.data-table > nav > div > div.btn-group-vertical > a:last-child:not(:first-child), form.single > div.btn-group-vertical > button[type='submit']:last-child:not(:first-child),
-form.single > fieldset > div.btn-group-vertical > button[type='submit']:last-child:not(:first-child), ul.modifiers-input > li.btn-group-vertical > button:last-child:not(:first-child), .btn-group-vertical > div.searchable-select:last-child:not(:first-child) {
+form.single > fieldset > div.btn-group-vertical > button[type='submit']:last-child:not(:first-child), .input-wrapper.btn-group-vertical > button[type='submit']:last-child:not(:first-child), .autocompleted.btn-group-vertical > button[type='submit']:last-child:not(:first-child), div.searchable-select.btn-group-vertical > button[type='submit']:last-child:not(:first-child), ul.modifiers-input > li.btn-group-vertical > button:last-child:not(:first-child), .btn-group-vertical > div.searchable-select:last-child:not(:first-child) {
   border-bottom-left-radius: 0.25rem;
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, section.data-table > nav > div.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > a, form.single.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'],
-form.single > fieldset.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], ul.modifiers-input.btn-group-vertical > li.btn-group:not(:first-child):not(:last-child) > button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
+form.single > fieldset.btn-group-vertical > div.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group-vertical > .input-wrapper.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group-vertical > .autocompleted.btn-group:not(:first-child):not(:last-child) > button[type='submit'], .btn-group-vertical > div.searchable-select.btn-group:not(:first-child):not(:last-child) > button[type='submit'], ul.modifiers-input.btn-group-vertical > li.btn-group:not(:first-child):not(:last-child) > button, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > div.searchable-select {
   border-radius: 0; }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, section.data-table > nav > div.btn-group-vertical > div.btn-group:first-child:not(:last-child) > a:last-child, form.single.btn-group-vertical > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child,
-form.single > fieldset.btn-group-vertical > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, ul.modifiers-input.btn-group-vertical > li.btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
+form.single > fieldset.btn-group-vertical > div.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group-vertical > .input-wrapper.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group-vertical > .autocompleted.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, .btn-group-vertical > div.searchable-select.btn-group:first-child:not(:last-child) > button[type='submit']:last-child, ul.modifiers-input.btn-group-vertical > li.btn-group:first-child:not(:last-child) > button:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > div.searchable-select:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, section.data-table > nav > div.btn-group-vertical > div.btn-group:last-child:not(:first-child) > a:first-child, form.single.btn-group-vertical > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child,
-form.single > fieldset.btn-group-vertical > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, ul.modifiers-input.btn-group-vertical > li.btn-group:last-child:not(:first-child) > button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
+form.single > fieldset.btn-group-vertical > div.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group-vertical > .input-wrapper.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group-vertical > .autocompleted.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, .btn-group-vertical > div.searchable-select.btn-group:last-child:not(:first-child) > button[type='submit']:first-child, ul.modifiers-input.btn-group-vertical > li.btn-group:last-child:not(:first-child) > button:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > div.searchable-select:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
 [data-toggle="buttons"] > .btn input[type="radio"], section.data-table > nav > div > div[data-toggle="buttons"] > a input[type="radio"], form.single > div[data-toggle="buttons"] > button[type='submit'] input[type="radio"],
-form.single > fieldset > div[data-toggle="buttons"] > button[type='submit'] input[type="radio"], ul.modifiers-input > li[data-toggle="buttons"] > button input[type="radio"], [data-toggle="buttons"] > div.searchable-select input[type="radio"],
+form.single > fieldset > div[data-toggle="buttons"] > button[type='submit'] input[type="radio"], .input-wrapper[data-toggle="buttons"] > button[type='submit'] input[type="radio"], .autocompleted[data-toggle="buttons"] > button[type='submit'] input[type="radio"], div.searchable-select[data-toggle="buttons"] > button[type='submit'] input[type="radio"], ul.modifiers-input > li[data-toggle="buttons"] > button input[type="radio"], [data-toggle="buttons"] > div.searchable-select input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], section.data-table > nav > div >
 div[data-toggle="buttons"] > a input[type="checkbox"], form.single >
 div[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"],
 form.single > fieldset >
-div[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"], ul.modifiers-input >
+div[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"],
+.input-wrapper[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"],
+.autocompleted[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"],
+div.searchable-select[data-toggle="buttons"] > button[type='submit'] input[type="checkbox"], ul.modifiers-input >
 li[data-toggle="buttons"] > button input[type="checkbox"],
 [data-toggle="buttons"] > div.searchable-select input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], section.data-table > nav >
@@ -2795,6 +3004,9 @@ div[data-toggle="buttons"] > div.btn-group > a input[type="radio"],
 form.single[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="radio"],
 form.single >
 fieldset[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="radio"],
+[data-toggle="buttons"] > .input-wrapper.btn-group > button[type='submit'] input[type="radio"],
+[data-toggle="buttons"] > .autocompleted.btn-group > button[type='submit'] input[type="radio"],
+[data-toggle="buttons"] > div.searchable-select.btn-group > button[type='submit'] input[type="radio"],
 ul.modifiers-input[data-toggle="buttons"] > li.btn-group > button input[type="radio"],
 [data-toggle="buttons"] > .btn-group > div.searchable-select input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], section.data-table > nav >
@@ -2802,6 +3014,9 @@ div[data-toggle="buttons"] > div.btn-group > a input[type="checkbox"],
 form.single[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="checkbox"],
 form.single >
 fieldset[data-toggle="buttons"] > div.btn-group > button[type='submit'] input[type="checkbox"],
+[data-toggle="buttons"] > .input-wrapper.btn-group > button[type='submit'] input[type="checkbox"],
+[data-toggle="buttons"] > .autocompleted.btn-group > button[type='submit'] input[type="checkbox"],
+[data-toggle="buttons"] > div.searchable-select.btn-group > button[type='submit'] input[type="checkbox"],
 ul.modifiers-input[data-toggle="buttons"] > li.btn-group > button input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > div.searchable-select input[type="checkbox"] {
   position: absolute;
@@ -2816,7 +3031,10 @@ ul.modifiers-input[data-toggle="buttons"] > li.btn-group > button input[type="ch
   form.single > div > select, .input-group
   form.single > fieldset > div > input, .input-group
   form.single > fieldset > div > textarea, .input-group
-  form.single > fieldset > div > select, .input-group ul.tags-input, .input-group ul.modifiers-input > li > ul, .input-group ul.modifiers-input > li > input, .input-group div.searchable-select > ul > li > input {
+  form.single > fieldset > div > select, .input-group
+  .input-wrapper > input, .input-group .autocompleted > input, .input-group div.searchable-select > input, .input-group
+  .input-wrapper > textarea, .input-group .autocompleted > textarea, .input-group div.searchable-select > textarea, .input-group
+  .input-wrapper > select, .input-group .autocompleted > select, .input-group div.searchable-select > select, .input-group ul.tags-input, .input-group ul.modifiers-input > li > ul, .input-group ul.modifiers-input > li > input, .input-group .autocompleted > ul.autocomplete > li > input, .input-group div.searchable-select > ul > li > input {
     position: relative;
     z-index: 2;
     flex: 1;
@@ -2826,18 +3044,27 @@ ul.modifiers-input[data-toggle="buttons"] > li.btn-group > button input[type="ch
     form.single > div > select:focus, .input-group
     form.single > fieldset > div > input:focus, .input-group
     form.single > fieldset > div > textarea:focus, .input-group
-    form.single > fieldset > div > select:focus, .input-group ul.tags-input:focus, .input-group ul.modifiers-input > li > ul:focus, .input-group ul.tags-input.active, .input-group ul.modifiers-input > li > ul.active, .input-group ul.modifiers-input > li.active > ul, .input-group
-    ul.modifiers-input > li.active > input, .input-group ul.modifiers-input > li > input:focus, .input-group div.searchable-select > ul > li > input:focus, .input-group .form-control:active, .input-group section.data-table > nav > div > div > input:active, .input-group form.single > div > input:active, .input-group
+    form.single > fieldset > div > select:focus, .input-group
+    .input-wrapper > input:focus, .input-group .autocompleted > input:focus, .input-group div.searchable-select > input:focus, .input-group
+    .input-wrapper > textarea:focus, .input-group .autocompleted > textarea:focus, .input-group div.searchable-select > textarea:focus, .input-group
+    .input-wrapper > select:focus, .input-group .autocompleted > select:focus, .input-group div.searchable-select > select:focus, .input-group ul.tags-input:focus, .input-group ul.modifiers-input > li > ul:focus, .input-group ul.tags-input.active, .input-group ul.modifiers-input > li > ul.active, .input-group ul.modifiers-input > li.active > ul, .input-group
+    ul.modifiers-input > li.active > input, .input-group ul.modifiers-input > li > input:focus, .input-group .autocompleted > ul.autocomplete > li > input:focus, .input-group div.searchable-select > ul > li > input:focus, .input-group .form-control:active, .input-group section.data-table > nav > div > div > input:active, .input-group form.single > div > input:active, .input-group
     form.single > div > textarea:active, .input-group
     form.single > div > select:active, .input-group
     form.single > fieldset > div > input:active, .input-group
     form.single > fieldset > div > textarea:active, .input-group
-    form.single > fieldset > div > select:active, .input-group ul.tags-input:active, .input-group ul.modifiers-input > li > ul:active, .input-group ul.modifiers-input > li > input:active, .input-group div.searchable-select > ul > li > input:active, .input-group .form-control:hover, .input-group section.data-table > nav > div > div > input:hover, .input-group form.single > div > input:hover, .input-group
+    form.single > fieldset > div > select:active, .input-group
+    .input-wrapper > input:active, .input-group .autocompleted > input:active, .input-group div.searchable-select > input:active, .input-group
+    .input-wrapper > textarea:active, .input-group .autocompleted > textarea:active, .input-group div.searchable-select > textarea:active, .input-group
+    .input-wrapper > select:active, .input-group .autocompleted > select:active, .input-group div.searchable-select > select:active, .input-group ul.tags-input:active, .input-group ul.modifiers-input > li > ul:active, .input-group ul.modifiers-input > li > input:active, .input-group .autocompleted > ul.autocomplete > li > input:active, .input-group div.searchable-select > ul > li > input:active, .input-group .form-control:hover, .input-group section.data-table > nav > div > div > input:hover, .input-group form.single > div > input:hover, .input-group
     form.single > div > textarea:hover, .input-group
     form.single > div > select:hover, .input-group
     form.single > fieldset > div > input:hover, .input-group
     form.single > fieldset > div > textarea:hover, .input-group
-    form.single > fieldset > div > select:hover, .input-group ul.tags-input:hover, .input-group ul.modifiers-input > li > ul:hover, .input-group ul.modifiers-input > li > input:hover, .input-group div.searchable-select > ul > li > input:hover {
+    form.single > fieldset > div > select:hover, .input-group
+    .input-wrapper > input:hover, .input-group .autocompleted > input:hover, .input-group div.searchable-select > input:hover, .input-group
+    .input-wrapper > textarea:hover, .input-group .autocompleted > textarea:hover, .input-group div.searchable-select > textarea:hover, .input-group
+    .input-wrapper > select:hover, .input-group .autocompleted > select:hover, .input-group div.searchable-select > select:hover, .input-group ul.tags-input:hover, .input-group ul.modifiers-input > li > ul:hover, .input-group ul.modifiers-input > li > input:hover, .input-group .autocompleted > ul.autocomplete > li > input:hover, .input-group div.searchable-select > ul > li > input:hover {
       z-index: 3; }
 
 .input-group-addon:not(:first-child):not(:last-child),
@@ -2855,9 +3082,22 @@ form.single > fieldset > div > input:not(:first-child):not(:last-child),
 form.single > fieldset > div > textarea:not(:first-child):not(:last-child),
 .input-group
 form.single > fieldset > div > select:not(:first-child):not(:last-child),
+.input-group
+.input-wrapper > input:not(:first-child):not(:last-child),
+.input-group .autocompleted > input:not(:first-child):not(:last-child),
+.input-group div.searchable-select > input:not(:first-child):not(:last-child),
+.input-group
+.input-wrapper > textarea:not(:first-child):not(:last-child),
+.input-group .autocompleted > textarea:not(:first-child):not(:last-child),
+.input-group div.searchable-select > textarea:not(:first-child):not(:last-child),
+.input-group
+.input-wrapper > select:not(:first-child):not(:last-child),
+.input-group .autocompleted > select:not(:first-child):not(:last-child),
+.input-group div.searchable-select > select:not(:first-child):not(:last-child),
 .input-group ul.tags-input:not(:first-child):not(:last-child),
 .input-group ul.modifiers-input > li > ul:not(:first-child):not(:last-child),
 .input-group ul.modifiers-input > li > input:not(:first-child):not(:last-child),
+.input-group .autocompleted > ul.autocomplete > li > input:not(:first-child):not(:last-child),
 .input-group div.searchable-select > ul > li > input:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
@@ -2881,13 +3121,16 @@ form.single > fieldset > div > select:not(:first-child):not(:last-child),
   form.single > div.input-group-sm > select.input-group-addon,
   form.single > fieldset > div.input-group-sm > input.input-group-addon,
   form.single > fieldset > div.input-group-sm > textarea.input-group-addon,
-  form.single > fieldset > div.input-group-sm > select.input-group-addon, ul.modifiers-input > li.input-group-sm > ul.input-group-addon, ul.modifiers-input > li.input-group-sm > input.input-group-addon, div.searchable-select > ul > li.input-group-sm > input.input-group-addon,
+  form.single > fieldset > div.input-group-sm > select.input-group-addon, ul.modifiers-input > li.input-group-sm > ul.input-group-addon, ul.modifiers-input > li.input-group-sm > input.input-group-addon, .autocompleted > ul.autocomplete > li.input-group-sm > input.input-group-addon, div.searchable-select > ul > li.input-group-sm > input.input-group-addon,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn, section.data-table > nav >
   div.input-group-sm > div.input-group-btn > a.input-group-addon,
   form.single.input-group-sm > div.input-group-btn > button.input-group-addon[type='submit'],
   form.single >
   fieldset.input-group-sm > div.input-group-btn > button.input-group-addon[type='submit'],
+  .input-group-sm > .input-wrapper.input-group-btn > button.input-group-addon[type='submit'],
+  .input-group-sm > .autocompleted.input-group-btn > button.input-group-addon[type='submit'],
+  .input-group-sm > div.searchable-select.input-group-btn > button.input-group-addon[type='submit'],
   ul.modifiers-input.input-group-sm > li.input-group-btn > button.input-group-addon,
   .input-group-sm > .input-group-btn > div.input-group-addon.searchable-select {
     padding: 0.275rem 0.75rem;
@@ -2898,13 +3141,16 @@ form.single > fieldset > div > select:not(:first-child):not(:last-child),
   form.single > div.input-group-lg > select.input-group-addon,
   form.single > fieldset > div.input-group-lg > input.input-group-addon,
   form.single > fieldset > div.input-group-lg > textarea.input-group-addon,
-  form.single > fieldset > div.input-group-lg > select.input-group-addon, ul.modifiers-input > li.input-group-lg > ul.input-group-addon, ul.modifiers-input > li.input-group-lg > input.input-group-addon, div.searchable-select > ul > li.input-group-lg > input.input-group-addon,
+  form.single > fieldset > div.input-group-lg > select.input-group-addon, ul.modifiers-input > li.input-group-lg > ul.input-group-addon, ul.modifiers-input > li.input-group-lg > input.input-group-addon, .autocompleted > ul.autocomplete > li.input-group-lg > input.input-group-addon, div.searchable-select > ul > li.input-group-lg > input.input-group-addon,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn, section.data-table > nav >
   div.input-group-lg > div.input-group-btn > a.input-group-addon,
   form.single.input-group-lg > div.input-group-btn > button.input-group-addon[type='submit'],
   form.single >
   fieldset.input-group-lg > div.input-group-btn > button.input-group-addon[type='submit'],
+  .input-group-lg > .input-wrapper.input-group-btn > button.input-group-addon[type='submit'],
+  .input-group-lg > .autocompleted.input-group-btn > button.input-group-addon[type='submit'],
+  .input-group-lg > div.searchable-select.input-group-btn > button.input-group-addon[type='submit'],
   ul.modifiers-input.input-group-lg > li.input-group-btn > button.input-group-addon,
   .input-group-lg > .input-group-btn > div.input-group-addon.searchable-select {
     padding: 0.75rem 1.25rem;
@@ -2919,13 +3165,19 @@ form.single > div > textarea:first-child, .input-group
 form.single > div > select:first-child, .input-group
 form.single > fieldset > div > input:first-child, .input-group
 form.single > fieldset > div > textarea:first-child, .input-group
-form.single > fieldset > div > select:first-child, .input-group ul.tags-input:first-child, .input-group ul.modifiers-input > li > ul:first-child, .input-group ul.modifiers-input > li > input:first-child, .input-group div.searchable-select > ul > li > input:first-child,
+form.single > fieldset > div > select:first-child, .input-group
+.input-wrapper > input:first-child, .input-group .autocompleted > input:first-child, .input-group div.searchable-select > input:first-child, .input-group
+.input-wrapper > textarea:first-child, .input-group .autocompleted > textarea:first-child, .input-group div.searchable-select > textarea:first-child, .input-group
+.input-wrapper > select:first-child, .input-group .autocompleted > select:first-child, .input-group div.searchable-select > select:first-child, .input-group ul.tags-input:first-child, .input-group ul.modifiers-input > li > ul:first-child, .input-group ul.modifiers-input > li > input:first-child, .input-group .autocompleted > ul.autocomplete > li > input:first-child, .input-group div.searchable-select > ul > li > input:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn, section.data-table > nav > div >
 div.input-group-btn:first-child > a, form.single >
 div.input-group-btn:first-child > button[type='submit'],
 form.single > fieldset >
-div.input-group-btn:first-child > button[type='submit'], ul.modifiers-input >
+div.input-group-btn:first-child > button[type='submit'],
+.input-wrapper.input-group-btn:first-child > button[type='submit'],
+.autocompleted.input-group-btn:first-child > button[type='submit'],
+div.searchable-select.input-group-btn:first-child > button[type='submit'], ul.modifiers-input >
 li.input-group-btn:first-child > button,
 .input-group-btn:first-child > div.searchable-select,
 .input-group-btn:first-child > .btn-group > .btn, section.data-table > nav >
@@ -2933,6 +3185,9 @@ div.input-group-btn:first-child > div.btn-group > a,
 form.single.input-group-btn:first-child > div.btn-group > button[type='submit'],
 form.single >
 fieldset.input-group-btn:first-child > div.btn-group > button[type='submit'],
+.input-group-btn:first-child > .input-wrapper.btn-group > button[type='submit'],
+.input-group-btn:first-child > .autocompleted.btn-group > button[type='submit'],
+.input-group-btn:first-child > div.searchable-select.btn-group > button[type='submit'],
 ul.modifiers-input.input-group-btn:first-child > li.btn-group > button,
 .input-group-btn:first-child > .btn-group > div.searchable-select,
 .input-group-btn:first-child > .dropdown-toggle,
@@ -2940,7 +3195,10 @@ ul.modifiers-input.input-group-btn:first-child > li.btn-group > button,
 div.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), form.single >
 div.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle),
 form.single > fieldset >
-div.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle), ul.modifiers-input >
+div.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle),
+.input-wrapper.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle),
+.autocompleted.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle),
+div.searchable-select.input-group-btn:last-child > button[type='submit']:not(:last-child):not(.dropdown-toggle), ul.modifiers-input >
 li.input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > div.searchable-select:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, section.data-table > nav >
@@ -2948,6 +3206,9 @@ div.input-group-btn:last-child > div.btn-group:not(:last-child) > a,
 form.single.input-group-btn:last-child > div.btn-group:not(:last-child) > button[type='submit'],
 form.single >
 fieldset.input-group-btn:last-child > div.btn-group:not(:last-child) > button[type='submit'],
+.input-group-btn:last-child > .input-wrapper.btn-group:not(:last-child) > button[type='submit'],
+.input-group-btn:last-child > .autocompleted.btn-group:not(:last-child) > button[type='submit'],
+.input-group-btn:last-child > div.searchable-select.btn-group:not(:last-child) > button[type='submit'],
 ul.modifiers-input.input-group-btn:last-child > li.btn-group:not(:last-child) > button,
 .input-group-btn:last-child > .btn-group:not(:last-child) > div.searchable-select {
   border-bottom-right-radius: 0;
@@ -2961,13 +3222,19 @@ form.single > div > textarea:last-child, .input-group
 form.single > div > select:last-child, .input-group
 form.single > fieldset > div > input:last-child, .input-group
 form.single > fieldset > div > textarea:last-child, .input-group
-form.single > fieldset > div > select:last-child, .input-group ul.tags-input:last-child, .input-group ul.modifiers-input > li > ul:last-child, .input-group ul.modifiers-input > li > input:last-child, .input-group div.searchable-select > ul > li > input:last-child,
+form.single > fieldset > div > select:last-child, .input-group
+.input-wrapper > input:last-child, .input-group .autocompleted > input:last-child, .input-group div.searchable-select > input:last-child, .input-group
+.input-wrapper > textarea:last-child, .input-group .autocompleted > textarea:last-child, .input-group div.searchable-select > textarea:last-child, .input-group
+.input-wrapper > select:last-child, .input-group .autocompleted > select:last-child, .input-group div.searchable-select > select:last-child, .input-group ul.tags-input:last-child, .input-group ul.modifiers-input > li > ul:last-child, .input-group ul.modifiers-input > li > input:last-child, .input-group .autocompleted > ul.autocomplete > li > input:last-child, .input-group div.searchable-select > ul > li > input:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn, section.data-table > nav > div >
 div.input-group-btn:last-child > a, form.single >
 div.input-group-btn:last-child > button[type='submit'],
 form.single > fieldset >
-div.input-group-btn:last-child > button[type='submit'], ul.modifiers-input >
+div.input-group-btn:last-child > button[type='submit'],
+.input-wrapper.input-group-btn:last-child > button[type='submit'],
+.autocompleted.input-group-btn:last-child > button[type='submit'],
+div.searchable-select.input-group-btn:last-child > button[type='submit'], ul.modifiers-input >
 li.input-group-btn:last-child > button,
 .input-group-btn:last-child > div.searchable-select,
 .input-group-btn:last-child > .btn-group > .btn, section.data-table > nav >
@@ -2975,6 +3242,9 @@ div.input-group-btn:last-child > div.btn-group > a,
 form.single.input-group-btn:last-child > div.btn-group > button[type='submit'],
 form.single >
 fieldset.input-group-btn:last-child > div.btn-group > button[type='submit'],
+.input-group-btn:last-child > .input-wrapper.btn-group > button[type='submit'],
+.input-group-btn:last-child > .autocompleted.btn-group > button[type='submit'],
+.input-group-btn:last-child > div.searchable-select.btn-group > button[type='submit'],
 ul.modifiers-input.input-group-btn:last-child > li.btn-group > button,
 .input-group-btn:last-child > .btn-group > div.searchable-select,
 .input-group-btn:last-child > .dropdown-toggle,
@@ -2982,7 +3252,10 @@ ul.modifiers-input.input-group-btn:last-child > li.btn-group > button,
 div.input-group-btn:first-child > a:not(:first-child), form.single >
 div.input-group-btn:first-child > button[type='submit']:not(:first-child),
 form.single > fieldset >
-div.input-group-btn:first-child > button[type='submit']:not(:first-child), ul.modifiers-input >
+div.input-group-btn:first-child > button[type='submit']:not(:first-child),
+.input-wrapper.input-group-btn:first-child > button[type='submit']:not(:first-child),
+.autocompleted.input-group-btn:first-child > button[type='submit']:not(:first-child),
+div.searchable-select.input-group-btn:first-child > button[type='submit']:not(:first-child), ul.modifiers-input >
 li.input-group-btn:first-child > button:not(:first-child),
 .input-group-btn:first-child > div.searchable-select:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, section.data-table > nav >
@@ -2990,6 +3263,9 @@ div.input-group-btn:first-child > div.btn-group:not(:first-child) > a,
 form.single.input-group-btn:first-child > div.btn-group:not(:first-child) > button[type='submit'],
 form.single >
 fieldset.input-group-btn:first-child > div.btn-group:not(:first-child) > button[type='submit'],
+.input-group-btn:first-child > .input-wrapper.btn-group:not(:first-child) > button[type='submit'],
+.input-group-btn:first-child > .autocompleted.btn-group:not(:first-child) > button[type='submit'],
+.input-group-btn:first-child > div.searchable-select.btn-group:not(:first-child) > button[type='submit'],
 ul.modifiers-input.input-group-btn:first-child > li.btn-group:not(:first-child) > button,
 .input-group-btn:first-child > .btn-group:not(:first-child) > div.searchable-select {
   border-bottom-left-radius: 0;
@@ -3003,33 +3279,33 @@ ul.modifiers-input.input-group-btn:first-child > li.btn-group:not(:first-child) 
   font-size: 0;
   white-space: nowrap; }
   .input-group-btn > .btn, section.data-table > nav > div > div.input-group-btn > a, form.single > div.input-group-btn > button[type='submit'],
-  form.single > fieldset > div.input-group-btn > button[type='submit'], ul.modifiers-input > li.input-group-btn > button, .input-group-btn > div.searchable-select {
+  form.single > fieldset > div.input-group-btn > button[type='submit'], .input-wrapper.input-group-btn > button[type='submit'], .autocompleted.input-group-btn > button[type='submit'], div.searchable-select.input-group-btn > button[type='submit'], ul.modifiers-input > li.input-group-btn > button, .input-group-btn > div.searchable-select {
     position: relative; }
     .input-group-btn > .btn + .btn, section.data-table > nav > div > div.input-group-btn > a + .btn, form.single > div.input-group-btn > button[type='submit'] + .btn,
-    form.single > fieldset > div.input-group-btn > button[type='submit'] + .btn, ul.modifiers-input > li.input-group-btn > button + .btn, .input-group-btn > div.searchable-select + .btn, section.data-table > nav > div > div.input-group-btn > .btn + a, section.data-table > nav > div > div.input-group-btn > a + a, section.data-table > nav > div > div.input-group-btn > div.searchable-select + a, form.single > div.input-group-btn > .btn + button[type='submit'], form.single > div.input-group-btn > button[type='submit'] + button[type='submit'], form.single > div.input-group-btn > div.searchable-select + button[type='submit'],
+    form.single > fieldset > div.input-group-btn > button[type='submit'] + .btn, .input-wrapper.input-group-btn > button[type='submit'] + .btn, .autocompleted.input-group-btn > button[type='submit'] + .btn, div.searchable-select.input-group-btn > button[type='submit'] + .btn, ul.modifiers-input > li.input-group-btn > button + .btn, .input-group-btn > div.searchable-select + .btn, section.data-table > nav > div > div.input-group-btn > .btn + a, section.data-table > nav > div > div.input-group-btn > a + a, section.data-table > nav > div > div.input-wrapper.input-group-btn > button[type='submit'] + a, section.data-table > nav > div > div.autocompleted.input-group-btn > button[type='submit'] + a, section.data-table > nav > div > div.searchable-select.input-group-btn > button[type='submit'] + a, section.data-table > nav > div > div.input-group-btn > div.searchable-select + a, form.single > div.input-group-btn > .btn + button[type='submit'], form.single > div.input-group-btn > button[type='submit'] + button[type='submit'], form.single > div.input-group-btn > div.searchable-select + button[type='submit'],
     form.single > fieldset > div.input-group-btn > .btn + button[type='submit'],
     form.single > fieldset > div.input-group-btn > button[type='submit'] + button[type='submit'],
-    form.single > fieldset > div.input-group-btn > div.searchable-select + button[type='submit'], ul.modifiers-input > li.input-group-btn > .btn + button, ul.modifiers-input > li.input-group-btn > button + button, ul.modifiers-input > li.input-group-btn > div.searchable-select + button, .input-group-btn > .btn + div.searchable-select, section.data-table > nav > div > div.input-group-btn > a + div.searchable-select, form.single > div.input-group-btn > button[type='submit'] + div.searchable-select,
-    form.single > fieldset > div.input-group-btn > button[type='submit'] + div.searchable-select, ul.modifiers-input > li.input-group-btn > button + div.searchable-select, .input-group-btn > div.searchable-select + div.searchable-select {
+    form.single > fieldset > div.input-group-btn > div.searchable-select + button[type='submit'], .input-wrapper.input-group-btn > .btn + button[type='submit'], section.data-table > nav > div > div.input-wrapper.input-group-btn > a + button[type='submit'], .input-wrapper.input-group-btn > button[type='submit'] + button[type='submit'], .input-wrapper.input-group-btn > div.searchable-select + button[type='submit'], .autocompleted.input-group-btn > .btn + button[type='submit'], section.data-table > nav > div > div.autocompleted.input-group-btn > a + button[type='submit'], .autocompleted.input-group-btn > button[type='submit'] + button[type='submit'], .autocompleted.input-group-btn > div.searchable-select + button[type='submit'], div.searchable-select.input-group-btn > .btn + button[type='submit'], section.data-table > nav > div > div.searchable-select.input-group-btn > a + button[type='submit'], div.searchable-select.input-group-btn > button[type='submit'] + button[type='submit'], div.searchable-select.input-group-btn > div.searchable-select + button[type='submit'], ul.modifiers-input > li.input-group-btn > .btn + button, ul.modifiers-input > li.input-group-btn > button + button, ul.modifiers-input > li.input-group-btn > div.searchable-select + button, .input-group-btn > .btn + div.searchable-select, section.data-table > nav > div > div.input-group-btn > a + div.searchable-select, form.single > div.input-group-btn > button[type='submit'] + div.searchable-select,
+    form.single > fieldset > div.input-group-btn > button[type='submit'] + div.searchable-select, .input-wrapper.input-group-btn > button[type='submit'] + div.searchable-select, .autocompleted.input-group-btn > button[type='submit'] + div.searchable-select, div.searchable-select.input-group-btn > button[type='submit'] + div.searchable-select, ul.modifiers-input > li.input-group-btn > button + div.searchable-select, .input-group-btn > div.searchable-select + div.searchable-select {
       margin-left: -1px; }
     .input-group-btn > .btn:focus, section.data-table > nav > div > div.input-group-btn > a:focus, form.single > div.input-group-btn > button[type='submit']:focus,
-    form.single > fieldset > div.input-group-btn > button[type='submit']:focus, ul.modifiers-input > li.input-group-btn > button:focus, .input-group-btn > div.searchable-select:focus, .input-group-btn > .btn:active, section.data-table > nav > div > div.input-group-btn > a:active, form.single > div.input-group-btn > button[type='submit']:active,
-    form.single > fieldset > div.input-group-btn > button[type='submit']:active, ul.modifiers-input > li.input-group-btn > button:active, .input-group-btn > div.searchable-select:active, .input-group-btn > .btn:hover, section.data-table > nav > div > div.input-group-btn > a:hover, form.single > div.input-group-btn > button[type='submit']:hover,
-    form.single > fieldset > div.input-group-btn > button[type='submit']:hover, ul.modifiers-input > li.input-group-btn > button:hover, .input-group-btn > div.searchable-select:hover {
+    form.single > fieldset > div.input-group-btn > button[type='submit']:focus, .input-wrapper.input-group-btn > button[type='submit']:focus, .autocompleted.input-group-btn > button[type='submit']:focus, div.searchable-select.input-group-btn > button[type='submit']:focus, ul.modifiers-input > li.input-group-btn > button:focus, .input-group-btn > div.searchable-select:focus, .input-group-btn > .btn:active, section.data-table > nav > div > div.input-group-btn > a:active, form.single > div.input-group-btn > button[type='submit']:active,
+    form.single > fieldset > div.input-group-btn > button[type='submit']:active, .input-wrapper.input-group-btn > button[type='submit']:active, .autocompleted.input-group-btn > button[type='submit']:active, div.searchable-select.input-group-btn > button[type='submit']:active, ul.modifiers-input > li.input-group-btn > button:active, .input-group-btn > div.searchable-select:active, .input-group-btn > .btn:hover, section.data-table > nav > div > div.input-group-btn > a:hover, form.single > div.input-group-btn > button[type='submit']:hover,
+    form.single > fieldset > div.input-group-btn > button[type='submit']:hover, .input-wrapper.input-group-btn > button[type='submit']:hover, .autocompleted.input-group-btn > button[type='submit']:hover, div.searchable-select.input-group-btn > button[type='submit']:hover, ul.modifiers-input > li.input-group-btn > button:hover, .input-group-btn > div.searchable-select:hover {
       z-index: 3; }
   .input-group-btn:first-child > .btn, section.data-table > nav > div > div.input-group-btn:first-child > a, form.single > div.input-group-btn:first-child > button[type='submit'],
-  form.single > fieldset > div.input-group-btn:first-child > button[type='submit'], ul.modifiers-input > li.input-group-btn:first-child > button, .input-group-btn:first-child > div.searchable-select,
+  form.single > fieldset > div.input-group-btn:first-child > button[type='submit'], .input-wrapper.input-group-btn:first-child > button[type='submit'], .autocompleted.input-group-btn:first-child > button[type='submit'], div.searchable-select.input-group-btn:first-child > button[type='submit'], ul.modifiers-input > li.input-group-btn:first-child > button, .input-group-btn:first-child > div.searchable-select,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
   .input-group-btn:last-child > .btn, section.data-table > nav > div > div.input-group-btn:last-child > a, form.single > div.input-group-btn:last-child > button[type='submit'],
-  form.single > fieldset > div.input-group-btn:last-child > button[type='submit'], ul.modifiers-input > li.input-group-btn:last-child > button, .input-group-btn:last-child > div.searchable-select,
+  form.single > fieldset > div.input-group-btn:last-child > button[type='submit'], .input-wrapper.input-group-btn:last-child > button[type='submit'], .autocompleted.input-group-btn:last-child > button[type='submit'], div.searchable-select.input-group-btn:last-child > button[type='submit'], ul.modifiers-input > li.input-group-btn:last-child > button, .input-group-btn:last-child > div.searchable-select,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
     .input-group-btn:last-child > .btn:focus, section.data-table > nav > div > div.input-group-btn:last-child > a:focus, form.single > div.input-group-btn:last-child > button[type='submit']:focus,
-    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:focus, ul.modifiers-input > li.input-group-btn:last-child > button:focus, .input-group-btn:last-child > div.searchable-select:focus, .input-group-btn:last-child > .btn:active, section.data-table > nav > div > div.input-group-btn:last-child > a:active, form.single > div.input-group-btn:last-child > button[type='submit']:active,
-    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:active, ul.modifiers-input > li.input-group-btn:last-child > button:active, .input-group-btn:last-child > div.searchable-select:active, .input-group-btn:last-child > .btn:hover, section.data-table > nav > div > div.input-group-btn:last-child > a:hover, form.single > div.input-group-btn:last-child > button[type='submit']:hover,
-    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:hover, ul.modifiers-input > li.input-group-btn:last-child > button:hover, .input-group-btn:last-child > div.searchable-select:hover,
+    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:focus, .input-wrapper.input-group-btn:last-child > button[type='submit']:focus, .autocompleted.input-group-btn:last-child > button[type='submit']:focus, div.searchable-select.input-group-btn:last-child > button[type='submit']:focus, ul.modifiers-input > li.input-group-btn:last-child > button:focus, .input-group-btn:last-child > div.searchable-select:focus, .input-group-btn:last-child > .btn:active, section.data-table > nav > div > div.input-group-btn:last-child > a:active, form.single > div.input-group-btn:last-child > button[type='submit']:active,
+    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:active, .input-wrapper.input-group-btn:last-child > button[type='submit']:active, .autocompleted.input-group-btn:last-child > button[type='submit']:active, div.searchable-select.input-group-btn:last-child > button[type='submit']:active, ul.modifiers-input > li.input-group-btn:last-child > button:active, .input-group-btn:last-child > div.searchable-select:active, .input-group-btn:last-child > .btn:hover, section.data-table > nav > div > div.input-group-btn:last-child > a:hover, form.single > div.input-group-btn:last-child > button[type='submit']:hover,
+    form.single > fieldset > div.input-group-btn:last-child > button[type='submit']:hover, .input-wrapper.input-group-btn:last-child > button[type='submit']:hover, .autocompleted.input-group-btn:last-child > button[type='submit']:hover, div.searchable-select.input-group-btn:last-child > button[type='submit']:hover, ul.modifiers-input > li.input-group-btn:last-child > button:hover, .input-group-btn:last-child > div.searchable-select:hover,
     .input-group-btn:last-child > .btn-group:focus,
     .input-group-btn:last-child > .btn-group:active,
     .input-group-btn:last-child > .btn-group:hover {
@@ -3260,7 +3536,7 @@ ul.modifiers-input.input-group-btn:first-child > li.btn-group:not(:first-child) 
 .tab-content > .active {
   display: block; }
 
-.nav-tabs .dropdown-menu, .nav-tabs div.searchable-select > ul {
+.nav-tabs .dropdown-menu, .nav-tabs .autocompleted > ul.autocomplete, .nav-tabs div.searchable-select > ul {
   margin-top: -1px;
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
@@ -3737,9 +4013,12 @@ ul.modifiers-input.input-group-btn:first-child > li.btn-group:not(:first-child) 
     display: none; }
 
 .btn .label, section.data-table > nav > div > div > a .label, form.single > div > button[type='submit'] .label,
-form.single > fieldset > div > button[type='submit'] .label, ul.modifiers-input > li > button .label, div.searchable-select .label, .btn ul.tags-input > li:not(:last-child), section.data-table > nav > div > div > a ul.tags-input > li:not(:last-child), form.single > div > button[type='submit'] ul.tags-input > li:not(:last-child),
-form.single > fieldset > div > button[type='submit'] ul.tags-input > li:not(:last-child), ul.modifiers-input > li > button ul.tags-input > li:not(:last-child), div.searchable-select ul.tags-input > li:not(:last-child), .btn ul.modifiers-input > li > ul > li:not(:last-child), section.data-table > nav > div > div > a ul.modifiers-input > li > ul > li:not(:last-child), form.single > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child),
-form.single > fieldset > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child), ul.modifiers-input > li > button ul.modifiers-input > li > ul > li:not(:last-child), div.searchable-select ul.modifiers-input > li > ul > li:not(:last-child) {
+form.single > fieldset > div > button[type='submit'] .label,
+.input-wrapper > button[type='submit'] .label, .autocompleted > button[type='submit'] .label, ul.modifiers-input > li > button .label, div.searchable-select .label, .btn ul.tags-input > li:not(:last-child), section.data-table > nav > div > div > a ul.tags-input > li:not(:last-child), form.single > div > button[type='submit'] ul.tags-input > li:not(:last-child),
+form.single > fieldset > div > button[type='submit'] ul.tags-input > li:not(:last-child),
+.input-wrapper > button[type='submit'] ul.tags-input > li:not(:last-child), .autocompleted > button[type='submit'] ul.tags-input > li:not(:last-child), div.searchable-select > button[type='submit'] ul.tags-input > li:not(:last-child), ul.modifiers-input > li > button ul.tags-input > li:not(:last-child), div.searchable-select ul.tags-input > li:not(:last-child), .btn ul.modifiers-input > li > ul > li:not(:last-child), section.data-table > nav > div > div > a ul.modifiers-input > li > ul > li:not(:last-child), form.single > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child),
+form.single > fieldset > div > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child),
+.input-wrapper > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child), .autocompleted > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child), div.searchable-select > button[type='submit'] ul.modifiers-input > li > ul > li:not(:last-child), ul.modifiers-input > li > button ul.modifiers-input > li > ul > li:not(:last-child), div.searchable-select ul.modifiers-input > li > ul > li:not(:last-child) {
   position: relative;
   top: -1px; }
 
@@ -4308,19 +4587,33 @@ button.close {
     display: table;
     clear: both; }
   .modal-footer .btn + .btn, .modal-footer section.data-table > nav > div > div > a + .btn, .modal-footer form.single > div > button[type='submit'] + .btn, .modal-footer
-  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer ul.modifiers-input > li > button + .btn, .modal-footer div.searchable-select + .btn, .modal-footer section.data-table > nav > div > div > .btn + a, .modal-footer section.data-table > nav > div > div > a + a, .modal-footer section.data-table > nav > div > div > div.searchable-select + a, .modal-footer form.single > div > .btn + button[type='submit'], .modal-footer form.single > div > button[type='submit'] + button[type='submit'], .modal-footer form.single > div > div.searchable-select + button[type='submit'], .modal-footer
+  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer
+  .input-wrapper > button[type='submit'] + .btn, .modal-footer .autocompleted > button[type='submit'] + .btn, .modal-footer div.searchable-select > button[type='submit'] + .btn, .modal-footer ul.modifiers-input > li > button + .btn, .modal-footer div.searchable-select + .btn, .modal-footer section.data-table > nav > div > div > .btn + a, .modal-footer section.data-table > nav > div > div > a + a, .modal-footer section.data-table > nav > div >
+  div.input-wrapper > button[type='submit'] + a, .modal-footer section.data-table > nav > div > div.autocompleted > button[type='submit'] + a, .modal-footer section.data-table > nav > div > div.searchable-select > button[type='submit'] + a, .modal-footer section.data-table > nav > div > div > div.searchable-select + a, .modal-footer form.single > div > .btn + button[type='submit'], .modal-footer form.single > div > button[type='submit'] + button[type='submit'], .modal-footer form.single > div > div.searchable-select + button[type='submit'], .modal-footer
   form.single > fieldset > div > .btn + button[type='submit'], .modal-footer
   form.single > fieldset > div > button[type='submit'] + button[type='submit'], .modal-footer
-  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer ul.modifiers-input > li > .btn + button, .modal-footer ul.modifiers-input > li > button + button, .modal-footer ul.modifiers-input > li > div.searchable-select + button, .modal-footer .btn + div.searchable-select, .modal-footer section.data-table > nav > div > div > a + div.searchable-select, .modal-footer form.single > div > button[type='submit'] + div.searchable-select, .modal-footer
-  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer ul.modifiers-input > li > button + div.searchable-select, .modal-footer div.searchable-select + div.searchable-select {
+  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer
+  .input-wrapper > .btn + button[type='submit'], .modal-footer section.data-table > nav > div > div.input-wrapper > a + button[type='submit'], .modal-footer
+  .input-wrapper > button[type='submit'] + button[type='submit'], .modal-footer ul.modifiers-input > li.input-wrapper > button + button[type='submit'], .modal-footer
+  .input-wrapper > div.searchable-select + button[type='submit'], .modal-footer .autocompleted > .btn + button[type='submit'], .modal-footer section.data-table > nav > div > div.autocompleted > a + button[type='submit'], .modal-footer .autocompleted > button[type='submit'] + button[type='submit'], .modal-footer ul.modifiers-input > li.autocompleted > button + button[type='submit'], .modal-footer .autocompleted > div.searchable-select + button[type='submit'], .modal-footer div.searchable-select > .btn + button[type='submit'], .modal-footer section.data-table > nav > div > div.searchable-select > a + button[type='submit'], .modal-footer div.searchable-select > button[type='submit'] + button[type='submit'], .modal-footer div.searchable-select > div.searchable-select + button[type='submit'], .modal-footer ul.modifiers-input > li > .btn + button, .modal-footer ul.modifiers-input >
+  li.input-wrapper > button[type='submit'] + button, .modal-footer ul.modifiers-input > li.autocompleted > button[type='submit'] + button, .modal-footer ul.modifiers-input > li > button + button, .modal-footer ul.modifiers-input > li > div.searchable-select + button, .modal-footer .btn + div.searchable-select, .modal-footer section.data-table > nav > div > div > a + div.searchable-select, .modal-footer form.single > div > button[type='submit'] + div.searchable-select, .modal-footer
+  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer
+  .input-wrapper > button[type='submit'] + div.searchable-select, .modal-footer .autocompleted > button[type='submit'] + div.searchable-select, .modal-footer div.searchable-select > button[type='submit'] + div.searchable-select, .modal-footer ul.modifiers-input > li > button + div.searchable-select, .modal-footer div.searchable-select + div.searchable-select {
     margin-bottom: 0;
     margin-left: 5px; }
   .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group section.data-table > nav > div > div > a + .btn, .modal-footer .btn-group form.single > div > button[type='submit'] + .btn, .modal-footer .btn-group
-  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer .btn-group ul.modifiers-input > li > button + .btn, .modal-footer .btn-group div.searchable-select + .btn, .modal-footer .btn-group section.data-table > nav > div > div > .btn + a, .modal-footer .btn-group section.data-table > nav > div > div > a + a, .modal-footer .btn-group section.data-table > nav > div > div > div.searchable-select + a, .modal-footer .btn-group form.single > div > .btn + button[type='submit'], .modal-footer .btn-group form.single > div > button[type='submit'] + button[type='submit'], .modal-footer .btn-group form.single > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group
+  form.single > fieldset > div > button[type='submit'] + .btn, .modal-footer .btn-group
+  .input-wrapper > button[type='submit'] + .btn, .modal-footer .btn-group .autocompleted > button[type='submit'] + .btn, .modal-footer .btn-group div.searchable-select > button[type='submit'] + .btn, .modal-footer .btn-group ul.modifiers-input > li > button + .btn, .modal-footer .btn-group div.searchable-select + .btn, .modal-footer .btn-group section.data-table > nav > div > div > .btn + a, .modal-footer .btn-group section.data-table > nav > div > div > a + a, .modal-footer .btn-group section.data-table > nav > div >
+  div.input-wrapper > button[type='submit'] + a, .modal-footer .btn-group section.data-table > nav > div > div.autocompleted > button[type='submit'] + a, .modal-footer .btn-group section.data-table > nav > div > div.searchable-select > button[type='submit'] + a, .modal-footer .btn-group section.data-table > nav > div > div > div.searchable-select + a, .modal-footer .btn-group form.single > div > .btn + button[type='submit'], .modal-footer .btn-group form.single > div > button[type='submit'] + button[type='submit'], .modal-footer .btn-group form.single > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group
   form.single > fieldset > div > .btn + button[type='submit'], .modal-footer .btn-group
   form.single > fieldset > div > button[type='submit'] + button[type='submit'], .modal-footer .btn-group
-  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group ul.modifiers-input > li > .btn + button, .modal-footer .btn-group ul.modifiers-input > li > button + button, .modal-footer .btn-group ul.modifiers-input > li > div.searchable-select + button, .modal-footer .btn-group .btn + div.searchable-select, .modal-footer .btn-group section.data-table > nav > div > div > a + div.searchable-select, .modal-footer .btn-group form.single > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group
-  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group ul.modifiers-input > li > button + div.searchable-select, .modal-footer .btn-group div.searchable-select + div.searchable-select {
+  form.single > fieldset > div > div.searchable-select + button[type='submit'], .modal-footer .btn-group
+  .input-wrapper > .btn + button[type='submit'], .modal-footer .btn-group section.data-table > nav > div > div.input-wrapper > a + button[type='submit'], .modal-footer .btn-group
+  .input-wrapper > button[type='submit'] + button[type='submit'], .modal-footer .btn-group ul.modifiers-input > li.input-wrapper > button + button[type='submit'], .modal-footer .btn-group
+  .input-wrapper > div.searchable-select + button[type='submit'], .modal-footer .btn-group .autocompleted > .btn + button[type='submit'], .modal-footer .btn-group section.data-table > nav > div > div.autocompleted > a + button[type='submit'], .modal-footer .btn-group .autocompleted > button[type='submit'] + button[type='submit'], .modal-footer .btn-group ul.modifiers-input > li.autocompleted > button + button[type='submit'], .modal-footer .btn-group .autocompleted > div.searchable-select + button[type='submit'], .modal-footer .btn-group div.searchable-select > .btn + button[type='submit'], .modal-footer .btn-group section.data-table > nav > div > div.searchable-select > a + button[type='submit'], .modal-footer .btn-group div.searchable-select > button[type='submit'] + button[type='submit'], .modal-footer .btn-group div.searchable-select > div.searchable-select + button[type='submit'], .modal-footer .btn-group ul.modifiers-input > li > .btn + button, .modal-footer .btn-group ul.modifiers-input >
+  li.input-wrapper > button[type='submit'] + button, .modal-footer .btn-group ul.modifiers-input > li.autocompleted > button[type='submit'] + button, .modal-footer .btn-group ul.modifiers-input > li > button + button, .modal-footer .btn-group ul.modifiers-input > li > div.searchable-select + button, .modal-footer .btn-group .btn + div.searchable-select, .modal-footer .btn-group section.data-table > nav > div > div > a + div.searchable-select, .modal-footer .btn-group form.single > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group
+  form.single > fieldset > div > button[type='submit'] + div.searchable-select, .modal-footer .btn-group
+  .input-wrapper > button[type='submit'] + div.searchable-select, .modal-footer .btn-group .autocompleted > button[type='submit'] + div.searchable-select, .modal-footer .btn-group div.searchable-select > button[type='submit'] + div.searchable-select, .modal-footer .btn-group ul.modifiers-input > li > button + div.searchable-select, .modal-footer .btn-group div.searchable-select + div.searchable-select {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -4666,7 +4959,8 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
   .carousel-caption .btn, .carousel-caption section.data-table > nav > div > div > a, .carousel-caption form.single > div > button[type='submit'], .carousel-caption
-  form.single > fieldset > div > button[type='submit'], .carousel-caption ul.modifiers-input > li > button, .carousel-caption div.searchable-select {
+  form.single > fieldset > div > button[type='submit'], .carousel-caption
+  .input-wrapper > button[type='submit'], .carousel-caption .autocompleted > button[type='submit'], .carousel-caption div.searchable-select > button[type='submit'], .carousel-caption ul.modifiers-input > li > button, .carousel-caption div.searchable-select {
     text-shadow: none; }
 
 @media (min-width: 544px) {
@@ -4837,7 +5131,8 @@ button.close {
   font-style: italic; }
 
 .text-muted, form.single > div > small,
-form.single > fieldset > div > small {
+form.single > fieldset > div > small,
+.input-wrapper > small, .autocompleted > small, div.searchable-select > small {
   color: #818a91; }
 
 .text-primary {
@@ -5339,33 +5634,53 @@ section.data-table > nav {
       margin: 0 0.3rem;
       display: inline-block; }
 
+form.single > div.input-wrapper, form.single > div.autocompleted, form.single > div.searchable-select,
+form.single > fieldset > div.input-wrapper,
+form.single > fieldset > div.autocompleted,
+form.single > fieldset > div.searchable-select,
+.input-wrapper.input-wrapper,
+.autocompleted,
+div.searchable-select {
+  margin-bottom: 0; }
+
 @media (min-width: 1200px) {
   form.single > div,
-  form.single > fieldset > div {
+  form.single > fieldset > div,
+  .input-wrapper,
+  .autocompleted,
+  div.searchable-select {
     position: relative;
     padding: 0 20%; } }
 
 form.single > div.has-danger,
-form.single > fieldset > div.has-danger {
+form.single > fieldset > div.has-danger,
+.input-wrapper.has-danger,
+.has-danger.autocompleted,
+div.has-danger.searchable-select {
   color: #d9534f; }
   form.single > div.has-danger > small,
-  form.single > fieldset > div.has-danger > small {
+  form.single > fieldset > div.has-danger > small,
+  .input-wrapper.has-danger > small, .has-danger.autocompleted > small, div.has-danger.searchable-select > small {
     color: #d9534f; }
   form.single > div.has-danger > input,
-  form.single > fieldset > div.has-danger > input {
+  form.single > fieldset > div.has-danger > input,
+  .input-wrapper.has-danger > input, .has-danger.autocompleted > input, div.has-danger.searchable-select > input {
     color: inherit;
     border-color: #d9534f; }
 
 form.single > div > label,
-form.single > fieldset > div > label {
+form.single > fieldset > div > label,
+.input-wrapper > label, .autocompleted > label, div.searchable-select > label {
   padding: 0.375rem 0.75rem 0.375rem 0;
   margin-bottom: 0; }
   form.single > div > label:first-child,
-  form.single > fieldset > div > label:first-child {
+  form.single > fieldset > div > label:first-child,
+  .input-wrapper > label:first-child, .autocompleted > label:first-child, div.searchable-select > label:first-child {
     display: block; }
     @media (min-width: 1200px) {
       form.single > div > label:first-child,
-      form.single > fieldset > div > label:first-child {
+      form.single > fieldset > div > label:first-child,
+      .input-wrapper > label:first-child, .autocompleted > label:first-child, div.searchable-select > label:first-child {
         width: 20%;
         text-align: right;
         margin: 0;
@@ -5375,13 +5690,17 @@ form.single > fieldset > div > label {
 form.single > div > .checkboxes.inline > label,
 form.single > div > .radios.inline > label,
 form.single > fieldset > div > .checkboxes.inline > label,
-form.single > fieldset > div > .radios.inline > label {
+form.single > fieldset > div > .radios.inline > label,
+.input-wrapper > .checkboxes.inline > label, .autocompleted > .checkboxes.inline > label, div.searchable-select > .checkboxes.inline > label,
+.input-wrapper > .radios.inline > label, .autocompleted > .radios.inline > label, div.searchable-select > .radios.inline > label {
   display: inline-block; }
 
 form.single > div > .checkboxes > label,
 form.single > div > .radios > label,
 form.single > fieldset > div > .checkboxes > label,
-form.single > fieldset > div > .radios > label {
+form.single > fieldset > div > .radios > label,
+.input-wrapper > .checkboxes > label, .autocompleted > .checkboxes > label, div.searchable-select > .checkboxes > label,
+.input-wrapper > .radios > label, .autocompleted > .radios > label, div.searchable-select > .radios > label {
   padding: 0.375rem 0.75rem;
   padding-left: 1.3rem;
   display: block;
@@ -5393,30 +5712,39 @@ form.single > fieldset > div > .radios > label {
   form.single > fieldset > div > .checkboxes > label > input[type='checkbox'],
   form.single > fieldset > div > .checkboxes > label > input[type='radio'],
   form.single > fieldset > div > .radios > label > input[type='checkbox'],
-  form.single > fieldset > div > .radios > label > input[type='radio'] {
+  form.single > fieldset > div > .radios > label > input[type='radio'],
+  .input-wrapper > .checkboxes > label > input[type='checkbox'], .autocompleted > .checkboxes > label > input[type='checkbox'], div.searchable-select > .checkboxes > label > input[type='checkbox'],
+  .input-wrapper > .checkboxes > label > input[type='radio'], .autocompleted > .checkboxes > label > input[type='radio'], div.searchable-select > .checkboxes > label > input[type='radio'],
+  .input-wrapper > .radios > label > input[type='checkbox'], .autocompleted > .radios > label > input[type='checkbox'], div.searchable-select > .radios > label > input[type='checkbox'],
+  .input-wrapper > .radios > label > input[type='radio'], .autocompleted > .radios > label > input[type='radio'], div.searchable-select > .radios > label > input[type='radio'] {
     margin-left: -1.3rem;
     margin-right: 0.3rem; }
 
 form.single > div > input[type='checkbox'],
-form.single > fieldset > div > input[type='checkbox'] {
+form.single > fieldset > div > input[type='checkbox'],
+.input-wrapper > input[type='checkbox'], .autocompleted > input[type='checkbox'], div.searchable-select > input[type='checkbox'] {
   width: auto; }
   @media (min-width: 1200px) {
     form.single > div > input[type='checkbox'],
-    form.single > fieldset > div > input[type='checkbox'] {
+    form.single > fieldset > div > input[type='checkbox'],
+    .input-wrapper > input[type='checkbox'], .autocompleted > input[type='checkbox'], div.searchable-select > input[type='checkbox'] {
       height: 2.2rem; } }
 
 @media (min-width: 1200px) {
   form.single > div > small,
-  form.single > fieldset > div > small {
+  form.single > fieldset > div > small,
+  .input-wrapper > small, .autocompleted > small, div.searchable-select > small {
     width: 100%;
     margin-top: 0.1rem; } }
 
 form.single > div > div.searchable-select,
-form.single > fieldset > div > div.searchable-select {
+form.single > fieldset > div > div.searchable-select,
+.input-wrapper > div.searchable-select, .autocompleted > div.searchable-select, div.searchable-select > div.searchable-select {
   width: 100%;
   text-align: left; }
   form.single > div > div.searchable-select > ul,
-  form.single > fieldset > div > div.searchable-select > ul {
+  form.single > fieldset > div > div.searchable-select > ul,
+  .input-wrapper > div.searchable-select > ul, .autocompleted > div.searchable-select > ul, div.searchable-select > div.searchable-select > ul {
     width: 100%; }
 
 ul.tags-input, ul.modifiers-input > li > ul {
@@ -5485,31 +5813,37 @@ ul.modifiers-input {
           order: 2;
           margin-left: -1px; } }
 
-div.searchable-select {
+.autocompleted, div.searchable-select {
   position: relative; }
-  div.searchable-select > select {
-    display: none; }
-  div.searchable-select > span:before {
-    content: '';
-    float: right;
-    margin-left: 1rem; }
-  div.searchable-select > ul {
+  .autocompleted > ul.autocomplete, div.searchable-select > ul.autocomplete, div.searchable-select > ul {
     cursor: default;
-    overflow: auto; }
+    overflow: auto;
+    width: 100%; }
     @media (max-width: 767px) {
-      div.searchable-select > ul {
+      .autocompleted > ul.autocomplete, div.searchable-select > ul.autocomplete, div.searchable-select.autocompleted > ul, div.searchable-select > ul {
         position: fixed;
         top: 0;
         height: 100%;
         padding-top: 3.7rem; }
-        div.searchable-select > ul > li:first-child {
+        .autocompleted > ul.autocomplete > li:first-child, div.searchable-select > ul.autocomplete > li:first-child, div.searchable-select.autocompleted > ul > li:first-child, div.searchable-select > ul > li:first-child {
           position: fixed;
           top: 3px;
           background-color: #FFF; } }
-    div.searchable-select > ul > li:first-child {
+    .autocompleted > ul.autocomplete > li:first-child, div.searchable-select > ul.autocomplete > li:first-child, div.searchable-select.autocompleted > ul > li:first-child, div.searchable-select > ul > li:first-child {
       border-bottom: 1px solid #e5e5e5;
       padding: 8px 20px; }
-    div.searchable-select > ul > li > input {
+    @media (min-width: 768px) {
+      .autocompleted > ul.autocomplete.no-desktop-search > li:first-child, div.searchable-select > ul.autocomplete.no-desktop-search > li:first-child, div.searchable-select.autocompleted > ul.no-desktop-search > li:first-child, div.searchable-select > ul.no-desktop-search > li:first-child {
+        display: none; } }
+    .autocompleted > ul.autocomplete > li > input, div.searchable-select > ul.autocomplete > li > input, div.searchable-select.autocompleted > ul > li > input, div.searchable-select > ul > li > input {
       min-width: 15rem; }
+
+div.searchable-select > select {
+  display: none; }
+
+div.searchable-select > span:before {
+  content: '';
+  float: right;
+  margin-left: 1rem; }
 
 /*# sourceMappingURL=admin.css.map */
