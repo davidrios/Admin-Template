@@ -110,6 +110,24 @@
       });
     }();
   }
+
+  document
+    .getElementById('image-tags')
+    .querySelector('input')
+    .addEventListener('focus', function(ev) {
+      document
+        .getElementById('image-tags')
+        .nextElementSibling.classList.add('visible');
+    })
+
+  document
+    .getElementById('image-tags')
+    .querySelector('input')
+    .addEventListener('blur', function(ev) {
+      document
+        .getElementById('image-tags')
+        .nextElementSibling.classList.remove('visible');
+    })
   // END TAGS INPUT
 
   // MODIFIERS INPUT
