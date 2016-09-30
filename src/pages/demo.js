@@ -78,6 +78,18 @@
   handleHashChange({newURL: window.location.toString(), oldURL: null});
   // END CONTENT
 
+  document
+    .getElementById('input5')
+    .addEventListener('focus', function(ev) {
+      ev.target.nextElementSibling.classList.add('visible');
+    })
+
+  document
+    .getElementById('input5')
+    .addEventListener('blur', function(ev) {
+      ev.target.nextElementSibling.classList.remove('visible');
+    })
+
   // TAGS INPUT
   var tagsInputs = document.querySelectorAll('ul.tags-input');
   for (var i = 0; i < tagsInputs.length; i++) {
@@ -109,6 +121,10 @@
       !function() {
         var item = modifiersInput.children[j];
         var inputs = item.querySelectorAll('input');
+
+        if (item.querySelector('ul') == null) {
+          return;
+        }
 
         item.querySelector('ul').addEventListener('click', function(ev) {
           inputs[1].focus();

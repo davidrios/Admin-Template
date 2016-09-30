@@ -16,15 +16,14 @@ $menu-inactive-text-color: #CCC
   &:focus
     outline: none
 
-body > nav:first-child,
-div.app-root > nav:first-child
+nav.side-menu
   background-color: $menu-background-color
   color: $menu-text-color
   height: 100%
   overflow: auto
   position: fixed
-  width: 250px
-  left: -250px
+  width: $side-menu-width
+  left: -$side-menu-width
   transition: left 0.3s ease-out
   z-index: 999
   
