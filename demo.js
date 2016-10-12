@@ -78,6 +78,18 @@
   handleHashChange({newURL: window.location.toString(), oldURL: null});
   // END CONTENT
 
+  document
+    .getElementById('input5')
+    .addEventListener('focus', function(ev) {
+      ev.target.nextElementSibling.classList.add('visible');
+    })
+
+  document
+    .getElementById('input5')
+    .addEventListener('blur', function(ev) {
+      ev.target.nextElementSibling.classList.remove('visible');
+    })
+
   // TAGS INPUT
   var tagsInputs = document.querySelectorAll('ul.tags-input');
   for (var i = 0; i < tagsInputs.length; i++) {
@@ -98,6 +110,24 @@
       });
     }();
   }
+
+  document
+    .getElementById('image-tags')
+    .querySelector('input')
+    .addEventListener('focus', function(ev) {
+      document
+        .getElementById('image-tags')
+        .nextElementSibling.classList.add('visible');
+    })
+
+  document
+    .getElementById('image-tags')
+    .querySelector('input')
+    .addEventListener('blur', function(ev) {
+      document
+        .getElementById('image-tags')
+        .nextElementSibling.classList.remove('visible');
+    })
   // END TAGS INPUT
 
   // MODIFIERS INPUT
@@ -109,6 +139,10 @@
       !function() {
         var item = modifiersInput.children[j];
         var inputs = item.querySelectorAll('input');
+
+        if (item.querySelector('ul') == null) {
+          return;
+        }
 
         item.querySelector('ul').addEventListener('click', function(ev) {
           inputs[1].focus();
@@ -147,4 +181,35 @@
     }();
   }
   // END SEARCHABLE SELECT
+
+  // DATE/TIME INPUT
+  var dateInputs = document.querySelectorAll('div.datetime-input.date');
+  for (var i = 0; i < dateInputs.length; i++) {
+    !function() {
+      var dateInput = dateInputs[i];
+      var input = dateInput.querySelector('input');
+      var calendar = dateInput.querySelector('div.calendar');
+      var mobileBackground = dateInput.querySelector('div.mobile-background');
+
+      dateInput.addEventListener('click', function(ev) {
+        if (ev.target === dateInput) {
+          input.focus();
+        }
+      });
+
+      input.addEventListener('focus', function(ev) {
+        calendar.classList.add('visible');
+        mobileBackground.classList.add('visible');
+      });
+
+      for (var el of dateInput.querySelectorAll('a[data-action="cancel"], a[data-action="ok"]')) {
+        el.addEventListener('click', function(ev) {
+          ev.preventDefault();
+          calendar.classList.remove('visible');
+          mobileBackground.classList.remove('visible');
+        });
+      }
+    }();
+  }
+  // END DATE/TIME INPUT
 }();
