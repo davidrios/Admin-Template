@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="side-menu">
       <a id="menu-close" href="#" class="fa fa-angle-left hidden-lg-up pull-right"></a>
       <h2>Menu</h2>
       <ul>
@@ -25,12 +25,12 @@
       </ul>
     </nav>
 
-    <header>
+    <header class="top-bar">
       <a id="user-settings" href="#" class="fa fa-cogs pull-right"></a>
       <a id="menu-toggle" href="#" class="fa fa-bars hidden-lg-up"></a>
     </header>
 
-    <section data-link="#data-table">
+    <section class="container" data-link="#data-table">
       <h1>Table</h1>
       <section class="data-table">
         <table>
@@ -122,17 +122,17 @@
       </section>
     </section>
 
-    <section data-link="#forms">
+    <section class="container" data-link="#forms">
       <h1>Forms</h1>
       <h2>Single</h2>
-      <form class="single">
+      <form class="form-container single">
         <div>
           <label for="input1">Test</label>
           <input id="input1" type="text" value="" placeholder="test" />
           <small>A help text.</small>
         </div>
 
-        <fieldset disabled="">
+        <fieldset class="form-container single" disabled="">
           <div>
             <label for="input2">Disabled</label>
             <input id="input2" type="text" value="value" />
@@ -211,9 +211,29 @@
       </form>
     </section>
 
-    <section data-link="#forms2">
+    <section class="container" data-link="#forms2">
       <h1>Form Components</h1>
-      <form class="single">
+      <form class="form-container single">
+        <div>
+          <label for="input5">Test 4</label>
+          <div class="form-element autocompleted wrapper">
+            <input id="input5" type="text" value="" placeholder="test" />
+            <ul class="autocomplete no-desktop-search">
+              <li><input type="text" /></li>
+              <li>Value 1</li>
+              <li>Value 2</li>
+              <li>Value 3</li>
+              <li>Value 4</li>
+              <li>Value 5</li>
+              <li>Value 6</li>
+              <li>Value 7</li>
+              <li>Value 8</li>
+              <li>Value 9</li>
+            </ul>
+          </div>
+          <small>Autocompleted text input.</small>
+        </div>
+
         <div>
           <label for="tags-input">Tags input</label>
           <ul class="tags-input">
@@ -227,6 +247,23 @@
           </ul>
         </div>
         <div><label for="tags-input">Tags input no spaces</label><ul class="tags-input nospaces"><li>tag1<i class="fa fa-close"></i></li><li>tag2<i class="fa fa-close"></i></li><li>other tag<i class="fa fa-close"></i></li><li>tag3<i class="fa fa-close"></i></li><li>tag4<i class="fa fa-close"></i></li><li>yet another tag<i class="fa fa-close"></i></li><li><input id="tags-input" type="text" /></li></ul></div>
+
+        <div>
+          <label for="tags-input">Tags input with images and autocomplete</label>
+          <div class="form-element autocompleted wrapper">
+            <ul id="image-tags" class="tags-input">
+              <li><img src="50x40.png" />tag1<i class="fa fa-close"></i></li>
+              <li><img src="50x40.png" />tag2<i class="fa fa-close"></i></li>
+              <li><input type="text" /></li>
+            </ul>
+            <ul class="autocomplete no-desktop-search">
+              <li><input type="text" /></li>
+              <li><img src="50x40.png" />Value 1</li>
+              <li><img src="50x40.png" />Value 2</li>
+              <li><img src="50x40.png" />Value 3</li>
+            </ul>
+          </div>
+        </div>
 
         <div>
           <label>Modifiers input</label>
@@ -278,6 +315,108 @@
               <li>Value 8</li>
               <li>Value 9</li>
             </ul>
+          </div>
+        </div>
+
+        <div>
+          <label for="file-input">File input</label>
+          <div class="input-group">
+            <div class="file-input">
+              <input id="file-input" type="file" />
+              No file selected
+            </div>
+            <div class="input-group-addon fa fa-file"></div>
+          </div>
+        </div>
+
+        <div>
+          <label for="date-input">Date input</label>
+          <div class="input-group">
+            <div class="datetime-input date">
+              <input id="date-input" type="text" placeholder="No date selected." readonly />
+              <div class="mobile-background"></div>
+              <div class="calendar">
+                <div>
+                  <a class="fa fa-chevron-left"></a>
+                  <a>September 2016</a>
+                  <a class="fa fa-chevron-right"></a>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Su</th>
+                      <th>Mo</th>
+                      <th>Tu</th>
+                      <th>We</th>
+                      <th>Th</th>
+                      <th>Fr</th>
+                      <th>Sa</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>31</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>12</td>
+                      <td class="selected">13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                    </tr>
+                    <tr>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td>24</td>
+                    </tr>
+                    <tr>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div>
+                  <a data-action="cancel">Cancel</a>
+                  <a href="#" data-action="ok" class="primary">OK</a>
+                </div>
+              </div>
+            </div>
+            <div class="input-group-addon fa fa-calendar"></div>
           </div>
         </div>
 
